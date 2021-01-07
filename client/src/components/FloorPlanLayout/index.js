@@ -17,7 +17,7 @@ function FloorPlanLayout() {
                 <p>In this layout, we display the areas in source order for any screen less that 500 pixels wide. We go to a two column layout, and then to a three column layout by redefining the grid, and the placement of items on the grid.</p>
             </article>
             <aside className="side">Sidebar Search</aside>
-            <div className="ad">Sidebar Current Bin</div>
+            <div className="ad">Sidebar Bin</div>
             <footer className="main-footer">The footer</footer>
         </div>
     );

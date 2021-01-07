@@ -1,0 +1,57 @@
+.main-head {
+    grid-area: header;
+    background-color: blue;
+    border: solid white;
+    color: white;
+  }
+  
+  .content {
+    grid-area: content;
+    background-color: blue;
+    border: solid white;
+    color: white;
+  }
+
+  .main-nav {
+    grid-area: nav;
+    background-color: blue;
+    border: solid white;
+    color: white;
+  }
+
+  .side {
+    grid-area: sidebar;
+    background-color: blue;
+    border: solid white;
+    color: white;
+  }
+
+  .ad {
+    grid-area: ad;
+    background-color: blue;
+    border: solid white;
+    color: white;
+  }
+
+  .main-footer {
+    grid-area: footer;
+    background-color: blue;
+    border: solid white;
+    color: white;
+  }
+
+  .wrapper {
+    display: grid;
+    gap: 20px;
+    grid-template-areas:
+      "header"
+      "nav"
+      "content"
+      "sidebar"
+      "ad"
+      "footer";
+  }
+
+  a {
+      color: white;
+  }
