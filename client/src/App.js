@@ -6,8 +6,8 @@ function App() {
   return (
 
     <StoreProvider>
-    <h1>lets do this</h1>
-  </StoreProvider>
+      <h1>lets do this</h1>
+    </StoreProvider>
   );
 }
 
