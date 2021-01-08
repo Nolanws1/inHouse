@@ -3,7 +3,7 @@ import "./index.css";
 
 function FloorPlanLayout() {
     return (
-        <div classNameName="wrapper">
+        <div className="wrapper">
             <header className="main-head">The header</header>
             <nav className="main-nav">
                 <ul>
