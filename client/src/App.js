@@ -2,13 +2,18 @@ import React from 'react';
 import { StoreProvider } from "./utils/GlobalState";
 //import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import FloorPlanLayout from "./components/FloorPlanLayout";
+import Nav from "./components/Nav";
+import Dashboard from "./components/Dashboard";
+
 
 function App() {
   return (
-
-    <StoreProvider>
-      <FloorPlanLayout />
-    </StoreProvider>
+    <div>
+      <StoreProvider>
+        <FloorPlanLayout />
+      </StoreProvider>
+      <Dashboard />
+    </div>
   );
 }
 
