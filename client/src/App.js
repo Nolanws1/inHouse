@@ -1,19 +1,22 @@
 import React from 'react';
 import { StoreProvider } from "./utils/GlobalState";
 //import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import FloorPlanLayout from "./components/FloorPlanLayout";
-import Nav from "./components/Nav";
-import Dashboard from "./components/Dashboard";
+import FloorPlanLayout from "./components/pages/FloorPlanLayout";
+import NavTabs from "./components/NavTabs";
+import Dashboard from "./components/pages/Dashboard";
+import { Router } from 'express';
+import { Route } from 'react-router-dom';
 
 
 function App() {
   return (
-    <div>
-      <StoreProvider>
-        <FloorPlanLayout />
-      </StoreProvider>
-      <Dashboard />
-    </div>
+    <Router>
+      <div>
+        <NavTabs />
+        <Route path="/dashboard" component={Dashboard} />
+        <Route path="/floorplan" component={FloorPlanLayout} />
+      </div>
+    </Router>
   );
 }
 
