@@ -1,14 +1,19 @@
 import React from 'react';
-import { StoreProvider } from "./utils/GlobalState";
-//import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import FloorPlanLayout from "./components/FloorPlanLayout";
+import { BrowserRouter as Router } from "react-router-dom";
+import Sidebar from "./components/Sidebar/index";
+import Dashboard from "./pages/Dashboard/index";
+
+// import { StoreProvider } from "./utils/GlobalState";
+// import FloorPlanLayout from "./components/FloorPlanLayout";
 
 function App() {
   return (
-
-    <StoreProvider>
-      <FloorPlanLayout />
-    </StoreProvider>
+    <div>
+      <Router>
+      <Sidebar />
+      </Router>
+      <Dashboard />
+    </div>
   );
 }
 
