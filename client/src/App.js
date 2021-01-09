@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { StoreProvider } from "./utils/GlobalState";
 //import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import FloorPlanLayout from "./components/pages/FloorPlanLayout";
@@ -17,6 +18,23 @@ function App() {
         <Route path="/floorplan" component={FloorPlanLayout} />
       </div>
     </Router>
+=======
+import { BrowserRouter as Router } from "react-router-dom";
+import Sidebar from "./components/Sidebar/index";
+import Dashboard from "./pages/Dashboard/index";
+
+// import { StoreProvider } from "./utils/GlobalState";
+// import FloorPlanLayout from "./components/FloorPlanLayout";
+
+function App() {
+  return (
+    <div>
+      <Router>
+      <Sidebar />
+      </Router>
+      <Dashboard />
+    </div>
+>>>>>>> 69e347424b057db9057f216ad9873ba4070c8e0b
   );
 }
 

@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
 import * as FaIcons from "react-icons/fa";
-// import { SidebarData } from './SidebarData';
 import './style.css';
 
 import { Link }  from 'react-router-dom';
