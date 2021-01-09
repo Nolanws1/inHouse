@@ -7,9 +7,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 const Dashboard = () => {
     return (
         <Container className="-fluid">
-            <Router>
-            <Navbar />
-            </Router>
+            <h1>Hello World</h1>
         </Container>
     )
 }
