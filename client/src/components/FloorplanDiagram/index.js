@@ -1,5 +1,12 @@
 import React from "react";
-import "./style.css"
+import "./style.css";
+
+function handleLeave(e) {
+    e.target.style.fill = "white";
+}
+function handleOver(e) {
+    e.target.style.fill = "#007BFF";
+}
 
 function FloorplanDiagram(props) {
 
@@ -339,10 +346,14 @@ function FloorplanDiagram(props) {
                     pointerEvents="all"
                 />
                 <path
-                    fill="red"
+                    fill="white"
                     stroke="#000"
                     pointerEvents="all"
                     d="M120 80h180v30H120z"
+                    // Pointer Events for A1
+                    onMouseOver={handleOver}
+                    onMouseLeave={handleLeave}
+                    onClick={() => console.log("Click event!")}
                 />
                 <switch transform="translate(-.5 -.5)">
                     <foreignObject
@@ -402,10 +413,14 @@ function FloorplanDiagram(props) {
                     </text>
                 </switch>
                 <path
-                    fill="#ff0"
+                    fill="white"
                     stroke="#000"
                     pointerEvents="all"
                     d="M120 110h180v30H120z"
+                    // Pointer Events for B1
+                    onMouseOver={handleOver}
+                    onMouseLeave={handleLeave}
+                    onClick={() => console.log("Click event!")}
                 />
                 <switch transform="translate(-.5 -.5)">
                     <foreignObject
@@ -465,10 +480,14 @@ function FloorplanDiagram(props) {
                     </text>
                 </switch>
                 <path
-                    fill="#ff7f00"
+                    fill="white"
                     stroke="#000"
                     pointerEvents="all"
                     d="M300 80h180v30H300z"
+                    // Pointer Events for A-2
+                    onMouseOver={handleOver}
+                    onMouseLeave={handleLeave}
+                    onClick={() => console.log("Click event!")}
                 />
                 <switch transform="translate(-.5 -.5)">
                     <foreignObject
@@ -528,10 +547,14 @@ function FloorplanDiagram(props) {
                     </text>
                 </switch>
                 <path
-                    fill="#0f0"
+                    fill="white"
                     stroke="#000"
                     pointerEvents="all"
                     d="M300 110h180v30H300z"
+                    // Pointer Events for B2
+                    onMouseOver={handleOver}
+                    onMouseLeave={handleLeave}
+                    onClick={() => console.log("Click event!")}
                 />
                 <switch transform="translate(-.5 -.5)">
                     <foreignObject
@@ -591,10 +614,14 @@ function FloorplanDiagram(props) {
                     </text>
                 </switch>
                 <path
-                    fill="#00f"
+                    fill="white"
                     stroke="#000"
                     pointerEvents="all"
                     d="M120 170h180v30H120z"
+                    // Pointer Events for B3
+                    onMouseOver={handleOver}
+                    onMouseLeave={handleLeave}
+                    onClick={() => console.log("Click event!")}
                 />
                 <switch transform="translate(-.5 -.5)">
                     <foreignObject
@@ -654,10 +681,14 @@ function FloorplanDiagram(props) {
                     </text>
                 </switch>
                 <path
-                    fill="#8b00ff"
+                    fill="white"
                     stroke="#000"
                     pointerEvents="all"
                     d="M120 200h180v30H120z"
+                    // Pointer Events for C1
+                    onMouseOver={handleOver}
+                    onMouseLeave={handleLeave}
+                    onClick={() => console.log("Click event!")}
                 />
                 <switch transform="translate(-.5 -.5)">
                     <foreignObject
@@ -717,10 +748,14 @@ function FloorplanDiagram(props) {
                     </text>
                 </switch>
                 <path
-                    fill="#2e2b5f"
+                    fill="white"
                     stroke="#000"
                     pointerEvents="all"
                     d="M300 170h180v30H300z"
+                    // Pointer Events for B4
+                    onMouseOver={handleOver}
+                    onMouseLeave={handleLeave}
+                    onClick={() => console.log("Click event!")}
                 />
                 <switch transform="translate(-.5 -.5)">
                     <foreignObject
@@ -780,10 +815,15 @@ function FloorplanDiagram(props) {
                     </text>
                 </switch>
                 <path
-                    fill="red"
+
+                    fill="white"
                     stroke="#000"
                     pointerEvents="all"
                     d="M300 200h180v30H300z"
+                    // Pointer Events for C2
+                    onMouseOver={handleOver}
+                    onMouseLeave={handleLeave}
+                    onClick={() => console.log("Click event!")}
                 />
                 <switch transform="translate(-.5 -.5)">
                     <foreignObject
@@ -795,6 +835,7 @@ function FloorplanDiagram(props) {
                         height="100%"
                         requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
                         overflow="visible"
+
                     >
                         <div
                             xmlns="http://www.w3.org/1999/xhtml"
@@ -824,7 +865,7 @@ function FloorplanDiagram(props) {
                                     display="inline-block"
                                     fontSize={16}
                                     fontFamily="Helvetica"
-                                    color="#000"
+                                    color="#red"
                                     pointerEvents="all"
                                 >
                                     {"C-2"}
@@ -843,10 +884,14 @@ function FloorplanDiagram(props) {
                     </text>
                 </switch>
                 <path
-                    fill="#ff7f00"
+                    fill="white"
                     stroke="#000"
                     pointerEvents="all"
                     d="M120 260h180v30H120z"
+                    // Pointer Events for C3
+                    onMouseOver={handleOver}
+                    onMouseLeave={handleLeave}
+                    onClick={() => console.log("Click event!")}
                 />
                 <switch transform="translate(-.5 -.5)">
                     <foreignObject
@@ -906,10 +951,14 @@ function FloorplanDiagram(props) {
                     </text>
                 </switch>
                 <path
-                    fill="#0f0"
+                    fill="white"
                     stroke="#000"
                     pointerEvents="all"
                     d="M120 290h180v30H120z"
+                    // Pointer Events for D1
+                    onMouseOver={handleOver}
+                    onMouseLeave={handleLeave}
+                    onClick={() => console.log("Click event!")}
                 />
                 <switch transform="translate(-.5 -.5)">
                     <foreignObject
@@ -969,10 +1018,14 @@ function FloorplanDiagram(props) {
                     </text>
                 </switch>
                 <path
-                    fill="#ff0"
+                    fill="white"
                     stroke="#000"
                     pointerEvents="all"
                     d="M300 260h180v30H300z"
+                    // Pointer Events for C4
+                    onMouseOver={handleOver}
+                    onMouseLeave={handleLeave}
+                    onClick={() => console.log("Click event!")}
                 />
                 <switch transform="translate(-.5 -.5)">
                     <foreignObject
@@ -1032,10 +1085,14 @@ function FloorplanDiagram(props) {
                     </text>
                 </switch>
                 <path
-                    fill="#00f"
+                    fill="white"
                     stroke="#000"
                     pointerEvents="all"
                     d="M300 290h180v30H300z"
+                    // Pointer Events for D2
+                    onMouseOver={handleOver}
+                    onMouseLeave={handleLeave}
+                    onClick={() => console.log("Click event!")}
                 />
                 <switch transform="translate(-.5 -.5)">
                     <foreignObject
