@@ -131,7 +131,7 @@ function FloorplanDiagram(props) {
                                     color="#000"
                                     pointerEvents="all"
                                 >
-                                    {"Shipping"}
+                                    {"Out"}
                                 </div>
                             </div>
                         </div>
@@ -143,7 +143,7 @@ function FloorplanDiagram(props) {
                         fontSize={16}
                         textAnchor="middle"
                     >
-                        {"Shipping"}
+                        {"Out"}
                     </text>
                 </switch>
                 <path fill="none" pointerEvents="all" d="M590 280h90v20h-90z" />
@@ -188,7 +188,7 @@ function FloorplanDiagram(props) {
                                     color="#000"
                                     pointerEvents="all"
                                 >
-                                    {"Receiving"}
+                                    {"In"}
                                 </div>
                             </div>
                         </div>
@@ -200,7 +200,7 @@ function FloorplanDiagram(props) {
                         fontSize={16}
                         textAnchor="middle"
                     >
-                        {"Receiving"}
+                        {"In"}
                     </text>
                 </switch>
                 <path
@@ -1245,7 +1245,7 @@ function FloorplanDiagram(props) {
                             >
                                 <div
                                     style={{
-                                        lineHeight: 1.2,
+                                        lineHeight: 0,
                                         whiteSpace: "nowrap",
                                     }}
                                     display="inline-block"
@@ -1254,7 +1254,7 @@ function FloorplanDiagram(props) {
                                     color="#000"
                                     pointerEvents="all"
                                 >
-                                    {"4"}
+                                    {"200"}
                                 </div>
                             </div>
                         </div>
@@ -1266,7 +1266,7 @@ function FloorplanDiagram(props) {
                         fontSize={16}
                         textAnchor="middle"
                     >
-                        {"4"}
+                        {"200"}
                     </text>
                 </switch>
                 <path fill="none" pointerEvents="all" d="M305 180h20v20h-20z" />
