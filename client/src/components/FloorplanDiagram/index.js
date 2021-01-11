@@ -374,7 +374,7 @@ function FloorplanDiagram(props) {
                             >
                                 <div
                                     style={{
-                                        lineHeight: 1.2,
+                                        lineHeight: 0,
                                         whiteSpace: "normal",
                                         wordWrap: "normal",
                                     }}
@@ -437,7 +437,7 @@ function FloorplanDiagram(props) {
                             >
                                 <div
                                     style={{
-                                        lineHeight: 1.2,
+                                        lineHeight: 0,
                                         whiteSpace: "normal",
                                         wordWrap: "normal",
                                     }}
@@ -500,7 +500,7 @@ function FloorplanDiagram(props) {
                             >
                                 <div
                                     style={{
-                                        lineHeight: 1.2,
+                                        lineHeight: 0,
                                         whiteSpace: "normal",
                                         wordWrap: "normal",
                                     }}
@@ -563,7 +563,7 @@ function FloorplanDiagram(props) {
                             >
                                 <div
                                     style={{
-                                        lineHeight: 1.2,
+                                        lineHeight: 0,
                                         whiteSpace: "normal",
                                         wordWrap: "normal",
                                     }}
@@ -626,7 +626,7 @@ function FloorplanDiagram(props) {
                             >
                                 <div
                                     style={{
-                                        lineHeight: 1.2,
+                                        lineHeight: 0,
                                         whiteSpace: "normal",
                                         wordWrap: "normal",
                                     }}
@@ -689,7 +689,7 @@ function FloorplanDiagram(props) {
                             >
                                 <div
                                     style={{
-                                        lineHeight: 1.2,
+                                        lineHeight: 0,
                                         whiteSpace: "normal",
                                         wordWrap: "normal",
                                     }}
@@ -752,7 +752,7 @@ function FloorplanDiagram(props) {
                             >
                                 <div
                                     style={{
-                                        lineHeight: 1.2,
+                                        lineHeight: 0,
                                         whiteSpace: "normal",
                                         wordWrap: "normal",
                                     }}
@@ -815,7 +815,7 @@ function FloorplanDiagram(props) {
                             >
                                 <div
                                     style={{
-                                        lineHeight: 1.2,
+                                        lineHeight: 0,
                                         whiteSpace: "normal",
                                         wordWrap: "normal",
                                     }}
@@ -878,7 +878,7 @@ function FloorplanDiagram(props) {
                             >
                                 <div
                                     style={{
-                                        lineHeight: 1.2,
+                                        lineHeight: 0,
                                         whiteSpace: "normal",
                                         wordWrap: "normal",
                                     }}
@@ -941,7 +941,7 @@ function FloorplanDiagram(props) {
                             >
                                 <div
                                     style={{
-                                        lineHeight: 1.2,
+                                        lineHeight: 0,
                                         whiteSpace: "normal",
                                         wordWrap: "normal",
                                     }}
@@ -1004,7 +1004,7 @@ function FloorplanDiagram(props) {
                             >
                                 <div
                                     style={{
-                                        lineHeight: 1.2,
+                                        lineHeight: 0,
                                         whiteSpace: "normal",
                                         wordWrap: "normal",
                                     }}
@@ -1067,7 +1067,7 @@ function FloorplanDiagram(props) {
                             >
                                 <div
                                     style={{
-                                        lineHeight: 1.2,
+                                        lineHeight: 0,
                                         whiteSpace: "normal",
                                         wordWrap: "normal",
                                     }}
