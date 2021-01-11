@@ -3,10 +3,10 @@ const Schema = mongoose.Schema;
 
 const item = new Schema({
   ID: { type: Number, required: true },
-  "Item Number": { type: String, required: true, unique: true },
-  "Item Name": { type: String, required: true },
-  "Category": {type: String},
-  "Qty": { type: Number, required: true },
+  itemNumber: { type: String, required: true, unique: true },
+  itemName: { type: String, required: true },
+  category: {type: String},
+  qty: { type: Number },
 });
 
 const Item = mongoose.model("Item", item);

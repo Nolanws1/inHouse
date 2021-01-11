@@ -3,11 +3,15 @@ const Schema = mongoose.Schema;
 
 const inventory = new Schema({
   ID: { type: Number, required: true },
-  "Warehouse Code": { type: String, required: true },
-  "Isle": { type: String, required: true },
-  "Shelf": { type: String, required: true },
-  "Shelf No": { type: Number, required: true },
-  "Shelf Location": { type: String, required: true },
+  warehouseCode: { type: String, required: true },
+  isle: { type: String, required: true },
+  bin: { type: String, required: true },
+  shelfNo: { type: Number, required: true },
+  binLocation: { type: String, required: true },
+  itemNumber: { type: String, required: true, unique: true },
+  qty: { type: Number, required: true },
+  trxType: { type: String, required: true },
+  modifiedDate: { type: Date, default: Date.now }
 });
 
 const Inventory = mongoose.model("Inventory", inventory);
