@@ -1131,7 +1131,7 @@ function FloorplanDiagram(props) {
                             >
                                 <div
                                     style={{
-                                        lineHeight: 1.2,
+                                        lineHeight: 0,
                                         whiteSpace: "nowrap",
                                     }}
                                     display="inline-block"
@@ -1140,7 +1140,7 @@ function FloorplanDiagram(props) {
                                     color="#000"
                                     pointerEvents="all"
                                 >
-                                    {"2"}
+                                    {"a-2"}
                                 </div>
                             </div>
                         </div>
@@ -1152,7 +1152,7 @@ function FloorplanDiagram(props) {
                         fontSize={16}
                         textAnchor="middle"
                     >
-                        {"2"}
+                        {"a-2"}
                     </text>
                 </switch>
                 <path fill="none" pointerEvents="all" d="M130 120h20v20h-20z" />
@@ -1188,7 +1188,7 @@ function FloorplanDiagram(props) {
                             >
                                 <div
                                     style={{
-                                        lineHeight: 1.2,
+                                        lineHeight: 0,
                                         whiteSpace: "nowrap",
                                     }}
                                     display="inline-block"
@@ -1197,7 +1197,7 @@ function FloorplanDiagram(props) {
                                     color="#000"
                                     pointerEvents="all"
                                 >
-                                    {"3"}
+                                    {"a-3"}
                                 </div>
                             </div>
                         </div>
@@ -1209,7 +1209,7 @@ function FloorplanDiagram(props) {
                         fontSize={16}
                         textAnchor="middle"
                     >
-                        {"3"}
+                        {"a-3"}
                     </text>
                 </switch>
                 <path fill="none" pointerEvents="all" d="M305 120h20v20h-20z" />
@@ -1254,7 +1254,7 @@ function FloorplanDiagram(props) {
                                     color="#000"
                                     pointerEvents="all"
                                 >
-                                    {"200"}
+                                    {"a-4"}
                                 </div>
                             </div>
                         </div>
@@ -1266,7 +1266,7 @@ function FloorplanDiagram(props) {
                         fontSize={16}
                         textAnchor="middle"
                     >
-                        {"200"}
+                        {"a-4"}
                     </text>
                 </switch>
                 <path fill="none" pointerEvents="all" d="M305 180h20v20h-20z" />
@@ -1302,7 +1302,7 @@ function FloorplanDiagram(props) {
                             >
                                 <div
                                     style={{
-                                        lineHeight: 1.2,
+                                        lineHeight: 0,
                                         whiteSpace: "nowrap",
                                     }}
                                     display="inline-block"
@@ -1311,7 +1311,7 @@ function FloorplanDiagram(props) {
                                     color="#000"
                                     pointerEvents="all"
                                 >
-                                    {"6"}
+                                    {"a-5"}
                                 </div>
                             </div>
                         </div>
@@ -1323,7 +1323,7 @@ function FloorplanDiagram(props) {
                         fontSize={16}
                         textAnchor="middle"
                     >
-                        {"6"}
+                        {"a-5"}
                     </text>
                 </switch>
                 <path fill="none" pointerEvents="all" d="M125 180h20v20h-20z" />
@@ -1359,7 +1359,7 @@ function FloorplanDiagram(props) {
                             >
                                 <div
                                     style={{
-                                        lineHeight: 1.2,
+                                        lineHeight: 0,
                                         whiteSpace: "nowrap",
                                     }}
                                     display="inline-block"
@@ -1368,7 +1368,7 @@ function FloorplanDiagram(props) {
                                     color="#000"
                                     pointerEvents="all"
                                 >
-                                    {"5"}
+                                    {"a-6"}
                                 </div>
                             </div>
                         </div>
@@ -1380,7 +1380,7 @@ function FloorplanDiagram(props) {
                         fontSize={16}
                         textAnchor="middle"
                     >
-                        {"5"}
+                        {"a-6"}
                     </text>
                 </switch>
                 <path fill="none" pointerEvents="all" d="M125 210h20v20h-20z" />
@@ -1416,7 +1416,7 @@ function FloorplanDiagram(props) {
                             >
                                 <div
                                     style={{
-                                        lineHeight: 1.2,
+                                        lineHeight: 0,
                                         whiteSpace: "nowrap",
                                     }}
                                     display="inline-block"
@@ -1425,7 +1425,7 @@ function FloorplanDiagram(props) {
                                     color="#000"
                                     pointerEvents="all"
                                 >
-                                    {"7"}
+                                    {"a-7"}
                                 </div>
                             </div>
                         </div>
@@ -1437,7 +1437,7 @@ function FloorplanDiagram(props) {
                         fontSize={16}
                         textAnchor="middle"
                     >
-                        {"7"}
+                        {"a-7"}
                     </text>
                 </switch>
                 <path fill="none" pointerEvents="all" d="M305 210h20v20h-20z" />
@@ -1473,7 +1473,7 @@ function FloorplanDiagram(props) {
                             >
                                 <div
                                     style={{
-                                        lineHeight: 1.2,
+                                        lineHeight: 0,
                                         whiteSpace: "nowrap",
                                     }}
                                     display="inline-block"
@@ -1482,7 +1482,7 @@ function FloorplanDiagram(props) {
                                     color="#000"
                                     pointerEvents="all"
                                 >
-                                    {"8"}
+                                    {"a-8"}
                                 </div>
                             </div>
                         </div>
@@ -1494,7 +1494,7 @@ function FloorplanDiagram(props) {
                         fontSize={16}
                         textAnchor="middle"
                     >
-                        {"8"}
+                        {"a-8"}
                     </text>
                 </switch>
                 <path fill="none" pointerEvents="all" d="M125 270h20v20h-20z" />
@@ -1530,7 +1530,7 @@ function FloorplanDiagram(props) {
                             >
                                 <div
                                     style={{
-                                        lineHeight: 1.2,
+                                        lineHeight: 0,
                                         whiteSpace: "nowrap",
                                     }}
                                     display="inline-block"
@@ -1539,7 +1539,7 @@ function FloorplanDiagram(props) {
                                     color="#000"
                                     pointerEvents="all"
                                 >
-                                    {"9"}
+                                    {"a-9"}
                                 </div>
                             </div>
                         </div>
@@ -1551,7 +1551,7 @@ function FloorplanDiagram(props) {
                         fontSize={16}
                         textAnchor="middle"
                     >
-                        {"9"}
+                        {"a-9"}
                     </text>
                 </switch>
                 <path fill="none" pointerEvents="all" d="M300 270h30v20h-30z" />
@@ -1587,7 +1587,7 @@ function FloorplanDiagram(props) {
                             >
                                 <div
                                     style={{
-                                        lineHeight: 1.2,
+                                        lineHeight: 0,
                                         whiteSpace: "nowrap",
                                     }}
                                     display="inline-block"
@@ -1596,7 +1596,7 @@ function FloorplanDiagram(props) {
                                     color="#000"
                                     pointerEvents="all"
                                 >
-                                    {"10"}
+                                    {"a-10"}
                                 </div>
                             </div>
                         </div>
@@ -1608,7 +1608,7 @@ function FloorplanDiagram(props) {
                         fontSize={16}
                         textAnchor="middle"
                     >
-                        {"10"}
+                        {"a-10"}
                     </text>
                 </switch>
                 <path fill="none" pointerEvents="all" d="M120 300h30v20h-30z" />
@@ -1644,7 +1644,7 @@ function FloorplanDiagram(props) {
                             >
                                 <div
                                     style={{
-                                        lineHeight: 1.2,
+                                        lineHeight: 0,
                                         whiteSpace: "nowrap",
                                     }}
                                     display="inline-block"
@@ -1653,7 +1653,7 @@ function FloorplanDiagram(props) {
                                     color="#000"
                                     pointerEvents="all"
                                 >
-                                    {"11"}
+                                    {"a-11"}
                                 </div>
                             </div>
                         </div>
@@ -1665,7 +1665,7 @@ function FloorplanDiagram(props) {
                         fontSize={16}
                         textAnchor="middle"
                     >
-                        {"11"}
+                        {"a-11"}
                     </text>
                 </switch>
                 <path fill="none" pointerEvents="all" d="M300 300h30v20h-30z" />
@@ -1701,7 +1701,7 @@ function FloorplanDiagram(props) {
                             >
                                 <div
                                     style={{
-                                        lineHeight: 1.2,
+                                        lineHeight: 0,
                                         whiteSpace: "nowrap",
                                     }}
                                     display="inline-block"
@@ -1710,7 +1710,7 @@ function FloorplanDiagram(props) {
                                     color="#000"
                                     pointerEvents="all"
                                 >
-                                    {"12"}
+                                    {"a-12"}
                                 </div>
                             </div>
                         </div>
@@ -1722,7 +1722,7 @@ function FloorplanDiagram(props) {
                         fontSize={16}
                         textAnchor="middle"
                     >
-                        {"12"}
+                        {"a-12"}
                     </text>
                 </switch>
                 <path fill="none" pointerEvents="all" d="M130 90h20v20h-20z" />
@@ -1758,7 +1758,7 @@ function FloorplanDiagram(props) {
                             >
                                 <div
                                     style={{
-                                        lineHeight: 1.2,
+                                        lineHeight: 0,
                                         whiteSpace: "nowrap",
                                     }}
                                     display="inline-block"
@@ -1767,7 +1767,7 @@ function FloorplanDiagram(props) {
                                     color="#000"
                                     pointerEvents="all"
                                 >
-                                    {"1"}
+                                    {"a-1"}
                                 </div>
                             </div>
                         </div>
@@ -1779,7 +1779,7 @@ function FloorplanDiagram(props) {
                         fontSize={16}
                         textAnchor="middle"
                     >
-                        {"1"}
+                        {"a-1"}
                     </text>
                 </switch>
             </svg>
