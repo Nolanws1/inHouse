@@ -5,14 +5,14 @@ a {
 
 .main-head {
     grid-area: header;
-    background-color: blue;
+    background-color: #007BFF;
     border: solid white;
     color: white;
   }
 
   .content {
     grid-area: content;
-    background-color: blue;
+    background-color: #007BFF;
     border: solid white;
     color: white;
   }
@@ -26,21 +26,21 @@ a {
 
   .side {
     grid-area: sidebar;
-    background-color: blue;
+    background-color: #007BFF;
     border: solid white;
     color: white;
   }
 
   .ad {
     grid-area: ad;
-    background-color: blue;
+    background-color: #007BFF;
     border: solid white;
     color: white;
   }
 
   .main-footer {
     grid-area: footer;
-    background-color: blue;
+    background-color: #007BFF;
     border: solid white;
     color: white;
   }

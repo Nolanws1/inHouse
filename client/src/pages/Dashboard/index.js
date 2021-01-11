@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container } from '../../components/Grid/index';
+// import { Container } from '../../components/Grid/index';
 import Navbar from '../../components/NavTabs/index';
 import { BrowserRouter as Router } from "react-router-dom";
 
@@ -18,4 +18,4 @@ const Dashboard = () => {
     )
 }
 
-export default Dashboard
+export default Dashboard;
