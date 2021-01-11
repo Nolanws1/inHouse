@@ -3,15 +3,14 @@ import "./style.css"
 
 function FloorplanDiagram(props) {
     return (
-        <div className="container">
+        <div className="container-svg">
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 xmlnsXlink="http://www.w3.org/1999/xlink"
-                width="10em"
-                height="10em"
-                viewBox="0 0 1 2"
+                width="100%"
+                height="100%"
+                viewBox="0 0 950 450"
                 // preserveAspectRatio="xMidYMin"
-                preserveAspectRatio="xMinYMin meet"
                 {...props}
             >
                 <path fill="#eee" pointerEvents="all" d="M0 0h830v470H0z" />
