@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.css";
+import FloorplanDiagram from "../../components/FloorplanDiagram";
 
 function FloorPlanLayout() {
     return (
@@ -16,8 +17,7 @@ function FloorPlanLayout() {
             </nav>
 
             <article className="content">
-                <h1>Main floor plan area</h1>
-                <p>This is where the full floor plan goes</p>
+                <FloorplanDiagram />
             </article>
 
             <aside className="side">
