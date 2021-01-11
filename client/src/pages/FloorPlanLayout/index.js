@@ -10,11 +10,11 @@ function FloorPlanLayout() {
                 The header component goes here
             </header>
 
-            <nav className="main-nav">
+            {/* <nav className="main-nav">
                 <ul>
                     <li>Collapsible Side Nav Component</li>
                 </ul>
-            </nav>
+            </nav> */}
 
             <article className="content">
                 <FloorplanDiagram />
