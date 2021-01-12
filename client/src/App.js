@@ -10,7 +10,7 @@ function App() {
   return (
     <div>
       <Router>
-      <Sidebar />
+        <Sidebar />
       </Router>
       <Dashboard />
     </div>
