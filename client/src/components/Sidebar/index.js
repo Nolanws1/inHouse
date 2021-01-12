@@ -30,13 +30,13 @@ function Sidebar() {
                 </Link>
                 </li>
                 <li className="navbar-toggle">
-                <Link to="#" className="nav-text">
-                <p> Test2 <FaIcons.FaPaste /></p>
+                <Link to="/dashboard" className="nav-text">
+                <p> Dashboard <FaIcons.FaPaste /></p>
                 </Link>
                 </li>
                 <li className="navbar-toggle">
-                <Link to="#" className="nav-text">
-                <p>Test3 <FaIcons.FaChalkboardTeacher /></p>
+                <Link to="/floorplan" className="nav-text">
+                <p>Floorplan <FaIcons.FaChalkboardTeacher /></p>
                 </Link>
                 </li>
                 

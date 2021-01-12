@@ -13,9 +13,11 @@ function App() {
       <div>
         <Sidebar />
         <NavTabs />
-        <Route path="/" exact component={Dashboard} />
-        <Route path="/dashboard" exact component={Dashboard} />
-        <Route path="/floorplan" exact component={FloorPlanLayout} />
+        <Switch>
+          <Route path="/" exact component={Dashboard} />
+          <Route path="/dashboard" exact component={Dashboard} />
+          <Route path="/floorplan" exact component={FloorPlanLayout} />
+        </Switch>
       </div>
     </Router>
   );
