@@ -9,6 +9,6 @@ const binQty = new Schema({
     modifiedDate: { type: Date, default: Date.now }
 });
 
-const BinQty = mongoose.model("Inventory", binQty);
+const BinQty = mongoose.model("BinQty", binQty);
 
 module.exports = BinQty;
