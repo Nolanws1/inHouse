@@ -4,7 +4,6 @@ const Schema = mongoose.Schema;
 const inventory = new Schema({
   ID: { type: Number, required: true },
   warehouseCode: { type: String, required: true },
-  isle: { type: String, required: true },
   bin: { type: String, required: true },
   shelfNo: { type: Number, required: true },
   binLocation: { type: String, required: true },
