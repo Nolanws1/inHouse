@@ -3,7 +3,7 @@ const db = require("../models");
 
 // This file empties the Posts collection and inserts the inventory below
 
-// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/warehouse");
+//mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/warehouse");
 mongoose.connect(process.env.MONGODB_URI || "mongodb+srv://sa:Password@cluster0.5q2ni.mongodb.net/warehouse");
 
 const items = [
@@ -613,43 +613,50 @@ const binQuantities = [
 db.Item.remove({})
   .then(() => db.Item.collection.insertMany(items))
   .then(data => {
-    console.log(data.result.n + " records inserted!");
-    process.exit(0);
+    console.log(data.result.n + " items inserted!");
+
+    db.Warehouse.remove({})
+      .then(() => db.Warehouse.collection.insertMany(warehouses))
+      .then(data => {
+        console.log(data.result.n + " warehouses inserted!");
+        
+        db.Layout.remove({})
+        .then(() => db.Layout.collection.insertMany(layouts))
+          .then(data => {
+            console.log(data.result.n + " layouts inserted!");
+
+            
+            db.BinQty.remove({})
+            .then(() => db.BinQty.collection.insertMany(binQuantities))
+            .then(data => {
+              console.log(data.result.n + " records inserted!");
+            process.exit(0);
+
+            })
+            .catch(err => {
+              console.error(err);
+              process.exit(1);
+            });
+
+          })
+          .catch(err => {
+            console.error(err);
+            process.exit(1);
+          });
+      })
+      .catch(err => {
+        console.error(err);
+        process.exit(1);
+      });
+
+
   })
   .catch(err => {
     console.error(err);
     process.exit(1);
   });
 
-db.Warehouse.remove({})
-  .then(() => db.Warehouse.collection.insertMany(warehouses))
-  .then(data => {
-    console.log(data.result.n + " records inserted!");
-    process.exit(0);
-  })
-  .catch(err => {
-    console.error(err);
-    process.exit(1);
-  });
 
-db.Layout.remove({})
-  .then(() => db.Layout.collection.insertMany(layouts))
-  .then(data => {
-    console.log(data.result.n + " records inserted!");
-    process.exit(0);
-  })
-  .catch(err => {
-    console.error(err);
-    process.exit(1);
-  });
 
-db.BinQty.remove({})
-  .then(() => db.BinQty.collection.insertMany(binQuantities))
-  .then(data => {
-    console.log(data.result.n + " records inserted!");
-    process.exit(0);
-  })
-  .catch(err => {
-    console.error(err);
-    process.exit(1);
-  });
+
+
