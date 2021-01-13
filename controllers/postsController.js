@@ -109,7 +109,7 @@ module.exports = {
       .then(dbModel => dbModel.remove())
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
-  }
+  },
   findAllBinQty: function(req, res) {
     db.BinQty.find(req.query)
       .sort({ date: -1 })

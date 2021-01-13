@@ -80,7 +80,7 @@ export default {
   // Saves a item to the database
   saveInventory: function (postData) {
     return axios.post("/api/inventory", postData);
-  }
+  },
   // Gets all items
   getBinQuantities: function () {
   return axios.get("/api/inventory");
