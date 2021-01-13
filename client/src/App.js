@@ -1,19 +1,25 @@
 import React from 'react';
-import { BrowserRouter as Router } from "react-router-dom";
-import Sidebar from "./components/Sidebar/index";
-import Dashboard from "./pages/Dashboard/index";
-
 // import { StoreProvider } from "./utils/GlobalState";
-// import FloorPlanLayout from "./components/FloorPlanLayout";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import NavTabs from "./components/NavTabs";
+import Sidebar from "./components/Sidebar";
+import Dashboard from "./pages/Dashboard";
+import FloorPlanLayout from "./pages/FloorPlanLayout";
+
 
 function App() {
   return (
-    <div>
-      <Router>
+    <Router>
+      <div>
         <Sidebar />
-      </Router>
-      <Dashboard />
-    </div>
+        <NavTabs />
+        <Switch>
+          <Route path="/" exact component={Dashboard} />
+          <Route path="/dashboard" exact component={Dashboard} />
+          <Route path="/floorplan" exact component={FloorPlanLayout} />
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
