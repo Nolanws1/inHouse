@@ -3,7 +3,8 @@ const db = require("../models");
 
 // This file empties the Posts collection and inserts the inventory below
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/warehouse");
+// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/warehouse");
+mongoose.connect(process.env.MONGODB_URI || "mongodb+srv://sa:Password@cluster0.5q2ni.mongodb.net/warehouse");
 
 const items = [
     {

@@ -110,4 +110,31 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   }
+  findAllBinQty: function(req, res) {
+    db.BinQty.find(req.query)
+      .sort({ date: -1 })
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+  findBinQtyById: function(req, res) {
+    db.BinQty.findById(req.params.id)
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+  createBinQty: function(req, res) {
+    db.BinQty.create(req.body)
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+  updateBinQty: function(req, res) {
+    db.BinQty.findOneAndUpdate({ _id: req.params.id }, req.body)
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+  removeBinQty: function(req, res) {
+    db.BinQty.findById({ _id: req.params.id })
+      .then(dbModel => dbModel.remove())
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  }
 };
