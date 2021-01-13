@@ -23,7 +23,11 @@ import {
   SET_CURRENT_INVENTORY,
   REMOVE_INVENTORY,
   UPDATE_INVENTORY,
-  ADD_INVENTORY
+  ADD_INVENTORY,
+  SET_CURRENT_BINQTY,
+  REMOVE_BINQTY,
+  UPDATE_BINQTY,
+  ADD_BINQTY,
 } from "./actions";
 
 const StoreContext = createContext();
@@ -203,6 +207,35 @@ const reducer = (state, action) => {
             })
           };
 
+          case SET_CURRENT_BINQTY:
+            return {
+              ...state,
+              currentBinQuantity: action.binQuantity,
+              loading: false
+            };
+        
+          case UPDATE_BINQTY:
+            return {
+              ...state,
+              binQuantities: [...action.binQuantities],
+              loading: false
+            };
+        
+          case ADD_BINQTY:
+            return {
+              ...state,
+              binQuantities: [action.binQuantity, ...state.binQuantities],
+              loading: false
+            };
+        
+          case REMOVE_BINQTY:
+            return {
+              ...state,
+              binQuantities: state.binQuantities.filter((binQuantity) => {
+                return binQuantity._id !== action._id; 
+              })
+            };
+  
   default:
     return state;
   }
@@ -220,40 +253,48 @@ const StoreProvider = ({ value = [], ...props }) => {
     items: [],
     currentItem: {
       _id: 0,
-      ID: 0,
-      ItemNumber: "",
-      ItemName: "",
-      Category: "",
-      Qty: 0
+      itemNumber: "",
+      itemName: "",
+      category: "",
+      qty: 0
     },
     layouts: [],
     currentlayout: {
       _id: 0,
-      ID: 0,
-      WarehouseCode: "",
-      Isle: "",
-      Shelf: "",
-      ShelfNo: 0,
-      ShelfLocation: "",
+      warehouseCode: "",
+      bin: "",
+      shelfNo: 0,
+      binLocation: "",
     },
     warehouses: [],
     currentWarehouse: {
       _id: 0,
-      ID: 0,
-      WarehouseCode: "",
+      warehouseCode: "",
     },
     inventories: [],
     currentInventory: {
       _id: 0,
       ID: 0,
-      WarehouseCode: "",
-      Isle: "",
-      Shelf: "",
-      ShelfNo: 0,
-      ShelfLocation: "",
+      warehouseCode: "",
+      bin: "",
+      shelfNo: 0,
+      binLocation: "",
+      itemNumber: "",
+      qty: 0,
+      trxType: "",
+      modifiedDate: "",
+    },
+    binQuantities: [],
+    currentBinQuantity: {
+      _id: 0,
+      warehouseCode: "",
+      binLocation: "",
+      itemNumber: "",
+      binQty: 0,
+      modifiedDate: "",
     },
     favorites: [],
-    loading: false
+    loading: false,
   });
 
   return <Provider value={[state, dispatch]} {...props} />;
