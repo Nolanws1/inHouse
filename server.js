@@ -16,8 +16,9 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 
 // Connect to the Mongo DB
-// Please do not delete this is for testing DB with mine (choyo) mongoose.connect(process.env.MONGODB_URI || "mongodb+srv://sa:Password@cluster0.5q2ni.mongodb.net/warehouse");
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/warehouse");
+// Please do not delete this is for testing DB with mine (choyo) 
+mongoose.connect(process.env.MONGODB_URI || "mongodb+srv://sa:Password@cluster0.5q2ni.mongodb.net/warehouse");
+//mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/warehouse");
 
 // Start the API server
 app.listen(PORT, function() {
