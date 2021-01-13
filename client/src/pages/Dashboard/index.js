@@ -9,9 +9,6 @@ const Dashboard = () => {
     return (
         // <Container className="-fluid">
         <div>
-            <Router>
-                <Navbar />
-            </Router>
             <FloorPlanLayout />
         </div>
         // </Container>
