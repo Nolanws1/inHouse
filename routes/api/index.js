@@ -4,7 +4,7 @@ const itemRoutes = require("./items");
 const layoutRoutes = require("./layout");
 const warehouseRoutes = require("./warehouse");
 const inventoryRoutes = require("./inventory");
-const inventoryRoutes = require("./binQty");
+const binQtyRoutes = require("./binQty");
 
 // Post routes
 router.use("/posts", postRoutes);
