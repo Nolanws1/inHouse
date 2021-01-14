@@ -34,18 +34,18 @@ function Sidebar() {
                 </Link>
                 </li>
                 <li className="navbar-toggle">
-                <Link to="#" className="nav-text">
-                <p>Test <FaIcons.FaCog /></p>
-                </Link>
-                </li>
-                <li className="navbar-toggle">
                 <Link to="/dashboard" className="nav-text">
-                <p> Dashboard <FaIcons.FaPaste /></p>
+                <p>Dashboard <FaIcons.FaCog /></p>
                 </Link>
                 </li>
                 <li className="navbar-toggle">
                 <Link to="/floorplan" className="nav-text">
-                <p>Floorplan <FaIcons.FaChalkboardTeacher /></p>
+                <p>Floorplan <FaIcons.FaPaste /></p>
+                </Link>
+                </li>
+                <li className="navbar-toggle">
+                <Link to="/forms" className="nav-text">
+                <p>Forms <FaIcons.FaChalkboardTeacher /></p>
                 </Link>
                 </li>
                 
