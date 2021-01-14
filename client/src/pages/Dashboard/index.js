@@ -3,6 +3,7 @@ import "./style.css";
 import FloorPlanImg from '../../images/floorplans/floorplan.png';
 import Clock from '../../components/Clock';
 import TodaysDate from '../../components/Date';
+import Table from '../../components/Table';
 
 const Dashboard = () => {
     return (
@@ -16,7 +17,10 @@ const Dashboard = () => {
                 </section>
                 <img src={FloorPlanImg} alt="floorplan button" className="floorplan" />
             </div>
-            <div className="table">Table</div>
+            <div className="table"><Table /></div>
+            <footer className="main-footer">
+                The footer
+            </footer>
     </div>
     )
 }

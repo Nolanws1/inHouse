@@ -5,7 +5,7 @@ import "./style.css";
 
 const NavTabs = () => {
     return (
-        <div className="center">
+        <div className="center nav-tabs">
             <Nav fill variant="tabs" defaultActiveKey="/home">
                 <Nav.Item>
                     <Nav.Link href="/dashboard" className="text">Dashboard</Nav.Link>

@@ -5,7 +5,8 @@
     justify-content: center;
     grid-template-areas:
     "header header"
-     "content sidebar";
+     "content sidebar"
+     "footer footer";
 }
 
 .header{
@@ -29,8 +30,20 @@
 }
 
 .table{
+grid-area: sidebar;
 border: solid;
+overflow: scroll;
+height: 520px;
 }
+
+.main-footer {
+  grid-area: footer;
+  background-color: #007BFF;
+  border: solid white;
+  color: white;
+}
+
+
 
 @media only screen and (max-width: 500px) {
     .grid-container {
@@ -38,7 +51,8 @@ border: solid;
       grid-template-areas:
         "header  header"
         "content content"
-        "sidebar sidebar";
+        "sidebar sidebar"
+        "footer footer";
     }
    
   }
@@ -50,5 +64,6 @@ border: solid;
         "header header  header"
         "content content content"
         "sidebar sidebar sidebar"
+        "footer footer footer"
      }
     }
