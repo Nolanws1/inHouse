@@ -1,6 +1,5 @@
 import React from "react";
 
-
 function TableHeading({ handleClick }) {
     return (
         <thead>

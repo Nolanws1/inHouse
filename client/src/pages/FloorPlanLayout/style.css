@@ -17,22 +17,8 @@ a {
     color: white;
   }
 
-  /* .main-nav {
-    grid-area: nav;
-    background-color: blue;
-    border: solid white;
-    color: white;
-  } */
-
   .side {
     grid-area: sidebar;
-    background-color: #007BFF;
-    border: solid white;
-    color: white;
-  }
-
-  .ad {
-    grid-area: ad;
     background-color: #007BFF;
     border: solid white;
     color: white;
@@ -52,34 +38,16 @@ a {
       "header"
       "content"
       "sidebar"
-      "ad"
       "footer";
-  }
-
-  @media only screen and (min-width: 500px) {
-    .wrapper {
-      grid-template-columns: 1fr 3fr;
-      grid-template-areas:
-        "header  header"
-        "sidebar content"
-        "ad      footer";
-    }
-    /* nav ul {
-      display: flex;
-      justify-content: space-between;
-    } */
   }
 
   @media only screen and (min-width: 700px) {
     .wrapper {
       grid-template-columns: 1fr 4fr 1fr;
       grid-template-areas:
-        "header header  header"
-        "content    content sidebar"
-        "content    content ad"
-        "footer footer  footer"
+        "header   header  header"
+        "content  content sidebar"
+        "content  content sidebar"
+        "footer   footer  footer"
      }
-     /* nav ul {
-       flex-direction: column;
-     } */
   }
