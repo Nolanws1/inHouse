@@ -5,6 +5,7 @@ import NavTabs from "./components/NavTabs";
 import Sidebar from "./components/Sidebar";
 import Dashboard from "./pages/Dashboard";
 import FloorPlanLayout from "./pages/FloorPlanLayout";
+import Forms from "./pages/Forms";
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" exact component={Dashboard} />
           <Route path="/dashboard" exact component={Dashboard} />
           <Route path="/floorplan" exact component={FloorPlanLayout} />
+          <Route path="/forms" exact component={Forms} />
         </Switch>
       </div>
     </Router>

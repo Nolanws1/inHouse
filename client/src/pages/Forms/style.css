@@ -1,0 +1,61 @@
+.form-container{
+    display: grid;
+    grid-template-columns: 45% 45%;
+    grid-gap: 20px;
+    justify-content: center;
+    grid-template-areas:
+    "header header"
+     "col1 col2"
+     "footer footer";
+}
+
+.header{
+    grid-area: header;
+    background-color: aqua;
+}
+
+
+.form{
+    grid-area: col1;
+    text-align: center;
+    border: solid;
+    height: 500px;
+}
+
+.items{
+    grid-area: col2;
+    text-align: center;
+    border: solid;
+    height: 500px;
+}
+
+.main-footer {
+    grid-area: footer;
+    background-color: #007BFF;
+    border: solid white;
+    color: white;
+  }
+
+
+@media only screen and (max-width: 500px) {
+    .form-container {
+      grid-template-columns: 1fr 3fr;
+      grid-template-areas:
+        "header  header"
+        "col1 col1"
+        "col2 col2"
+        "footer footer";
+    }
+   
+  }
+
+  @media only screen and (max-width: 700px) {
+    .form-container {
+      grid-template-columns: 1fr 4fr 1fr;
+      grid-template-areas:
+        "header header  header"
+        "col1 col1 col1"
+        "col2 col2 col2"
+        "footer footer footer"
+     }
+    }

@@ -13,10 +13,8 @@
     background-color: aqua;
 }
 
-
 .dash-col-1{
     grid-area: content;
-    text-align: center;
 }
 
 .welcome{
@@ -33,7 +31,6 @@
 .table{
 border: solid;
 }
-
 
 @media only screen and (max-width: 500px) {
     .grid-container {
