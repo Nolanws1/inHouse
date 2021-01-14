@@ -3,7 +3,7 @@ import "./style.css";
 import FloorPlanImg from '../../images/floorplans/floorplan.png';
 import Clock from '../../components/Clock';
 import TodaysDate from '../../components/Date';
-import Table from '../../components/Table';
+import Table from '../../components/DashTable';
 import { useAuth0 } from '@auth0/auth0-react';
 
 const Dashboard = () => {

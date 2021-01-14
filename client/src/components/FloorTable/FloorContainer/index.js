@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import { useStoreContext } from "../../../utils/GlobalState";
 import { UPDATE_ITEM, LOADING } from "../../../utils/actions";
-import DashRow from "../DashRow";
+import FloorRow from "../FloorRow";
 import API from "../../../utils/API";
 
-function DashContainer() {
+function FloorContainer() {
     const [state, dispatch] = useStoreContext();
 
     const getItems = () => {
@@ -26,7 +26,7 @@ function DashContainer() {
     return (
         <tbody>
             {state.items.length > 0 && state.items.map((item, index) => (
-                <DashRow
+                <FloorRow
                     item={item}
                     key={index}
                 />
@@ -35,4 +35,4 @@ function DashContainer() {
     );
 }
 
-export default DashContainer;
+export default FloorContainer;

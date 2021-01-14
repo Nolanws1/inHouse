@@ -1,7 +1,6 @@
 import React from 'react';
-import './style.css';
-import DashHeading from "./DashHeading";
-import DashContainer from "./DashContainer";
+import FloorHeading from "./FloorHeading";
+import FloorContainer from "./FloorContainer";
 import { useAuth0 } from '@auth0/auth0-react';
 
 const Table = () => {
@@ -10,8 +9,8 @@ const Table = () => {
   return (
     isAuthenticated && (
       <table className="table table-dark m-3">
-        <DashHeading />
-        <DashContainer />
+       <FloorHeading />
+       <FloorContainer />
       </table>
     )
   );
