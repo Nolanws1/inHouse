@@ -1,6 +1,9 @@
 import React from 'react';
 import { StoreProvider } from "./utils/GlobalState";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import LoginButton from './components/LoginButton';
+import LogoutButton from './components/LogoutButton';
+import { useAuth0 } from '@auth0/auth0-react';
 import NavTabs from "./components/NavTabs";
 import Sidebar from "./components/Sidebar";
 import Dashboard from "./pages/Dashboard";
@@ -9,10 +12,15 @@ import Forms from "./pages/Forms";
 
 
 function App() {
+  const { isLoading } = useAuth0();
+  if (isLoading) return <div> Loading... </div>
+
   return (
     < StoreProvider>
     <Router>
       <div>
+        <LoginButton />
+        <LogoutButton />
         <Sidebar />
         <NavTabs />
         <Switch>

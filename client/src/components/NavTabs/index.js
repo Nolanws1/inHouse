@@ -1,10 +1,14 @@
 import React from 'react'
 import { Nav } from 'react-bootstrap';
 import "./style.css";
+import { useAuth0 } from '@auth0/auth0-react';
 
 
 const NavTabs = () => {
+  const { isAuthenticated } = useAuth0();
+
     return (
+      isAuthenticated && (
         <div className="center nav-tabs">
             <Nav fill variant="tabs" defaultActiveKey="/home">
                 <Nav.Item>
@@ -18,6 +22,7 @@ const NavTabs = () => {
                 </Nav.Item>
             </Nav>
         </div>
+      )
     )
 }
 
