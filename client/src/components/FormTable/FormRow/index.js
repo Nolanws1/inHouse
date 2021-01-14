@@ -1,14 +1,15 @@
 import React from 'react';
+import DeleteBtn from '../../DeleteBtn';
 
-function Row({ item, index }) {
+function FormRow({ item, index, removeItem }) {
     return (
         <tr key={index}>
             <td>{item != undefined && item.itemNumber}</td>
             <td>{item != undefined && item.itemName}</td>
-            <td></td>
             <td>{item != undefined && item.qty}</td>
+            <td><DeleteBtn onClick={() => removeItem(item!= undefined && item._id)} /></td>
         </tr>
     )
 }
 
-export default Row;
+export default FormRow;
