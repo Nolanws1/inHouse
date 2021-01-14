@@ -46,7 +46,7 @@ function ItemsList() {
             <ListItem key={item!= undefined && item._id}>
               <Link to={"/items/" + (item!= undefined && item._id)}>
                 <strong>
-                  {item!= undefined && item.itemNumber} by {item!= undefined && item.ItemName}
+                  {item!= undefined && item.itemNumber} by {item!= undefined && item.itemName}
                 </strong>
               </Link>
               <DeleteBtn onClick={() => removeItem(item!= undefined && item._id)} />
