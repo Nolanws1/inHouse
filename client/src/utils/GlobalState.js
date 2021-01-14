@@ -288,7 +288,7 @@ const StoreProvider = ({ value = [], ...props }) => {
     currentBinQuantity: {
       _id: 0,
       warehouseCode: "",
-      binLocation: "",
+      bin: "",
       itemNumber: "",
       binQty: 0,
       modifiedDate: "",
