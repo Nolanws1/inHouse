@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./style.css";
 import FloorplanDiagram from "../../components/FloorplanDiagram";
+import { useAuth0 } from '@auth0/auth0-react';
 
 // This array is for testing sending props down to diagram
 const seedQuantities = {
@@ -68,8 +69,10 @@ const seedQuantities = {
 
 function FloorPlanLayout() {
     const [quantities, setQuantities] = useState(seedQuantities);
+    const { isAuthenticated } = useAuth0();
 
     return (
+      isAuthenticated && (
         <div className="wrapper">
 
             <header className="main-head">
@@ -88,6 +91,7 @@ function FloorPlanLayout() {
                 The footer
             </footer>
         </div>
+      )
     );
 }
 
