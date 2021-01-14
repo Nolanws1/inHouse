@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
-import { useStoreContext } from "../../utils/GlobalState";
-import { UPDATE_ITEM, LOADING } from "../../utils/actions";
+import { useStoreContext } from "../../../utils/GlobalState";
+import { UPDATE_ITEM, LOADING } from "../../../utils/actions";
 import Row from "../Row";
-import API from "../../utils/API";
+import API from "../../../utils/API";
 
 function RowContainer() {
     const [state, dispatch] = useStoreContext();
