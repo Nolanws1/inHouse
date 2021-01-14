@@ -511,100 +511,184 @@ const layouts = [
 const binQuantities = [
   {
     "warehouseCode": "CA",
-    "binLocation": "A1-1",
-    "itemNumber": "Chain Assy",
-    "binQty": 50,
+    "bin": "A1",
+    "itemNumber": "1896-S",
+    "binQty": 5,
     "modifiedDate": "2021-01-12"
   },
   {
     "warehouseCode": "CA",
-    "binLocation": "A1-1",
-    "itemNumber": "Chain Assy",
-    "binQty": 50,
+    "bin": "A1",
+    "itemNumber": "1920-S",
+    "binQty": 5,
     "modifiedDate": "2021-01-12"
   },
   {
     "warehouseCode": "CA",
-    "binLocation": "A1-3",
-    "itemNumber": "Brake",
-    "binQty": 200,
+    "bin": "A2",
+    "itemNumber": "1920-S",
+    "binQty": 5,
     "modifiedDate": "2021-01-12"
   },
   {
     "warehouseCode": "CA",
-    "binLocation": "A2-2",
-    "itemNumber": "Chain",
-    "binQty": 120,
+    "bin": "A1",
+    "itemNumber": "1928-S",
+    "binQty": 17,
     "modifiedDate": "2021-01-12"
   },
   {
     "warehouseCode": "CA",
-    "binLocation": "A2-3",
-    "itemNumber": "Brake",
-    "binQty": 100,
+    "bin": "A1",
+    "itemNumber": "1936-S",
+    "binQty": 5,
     "modifiedDate": "2021-01-11"
   },
   {
     "warehouseCode": "CA",
-    "binLocation": "B1-1",
-    "itemNumber": "Hand rear wheel Brake",
-    "binQty": 200,
+    "bin": "A1",
+    "itemNumber": "1960-S",
+    "binQty": 3,
     "modifiedDate": "2021-01-12"
   },
   {
     "warehouseCode": "CA",
-    "binLocation": "C1-1",
-    "itemNumber": "Front Wheel",
-    "binQty": 20,
+    "bin": "B2",
+    "itemNumber": "1964-S",
+    "binQty": 4,
     "modifiedDate": "2021-01-12"
   },
   {
     "warehouseCode": "CA",
-    "binLocation": "C1-1",
-    "itemNumber": "Rim",
-    "binQty": 12,
+    "bin": "B2",
+    "itemNumber": "1968-S",
+    "binQty": 4,
     "modifiedDate": "2021-01-12"
   },
   {
     "warehouseCode": "CA",
-    "binLocation": "C2-1",
-    "itemNumber": "Back Wheel",
-    "binQty": 50,
+    "bin": "C4",
+    "itemNumber": 80001,
+    "binQty": 3,
     "modifiedDate": "2021-01-12"
   },
   {
     "warehouseCode": "CA",
-    "binLocation": "C2-2",
-    "itemNumber": "Back Wheel",
-    "binQty": 10,
+    "bin": "C4",
+    "itemNumber": 80002,
+    "binQty": 3,
     "modifiedDate": "2021-01-12"
   },
   {
     "warehouseCode": "CA",
-    "binLocation": "C3-1",
-    "itemNumber": "Front Hub",
-    "binQty": 50,
+    "bin": "B3",
+    "itemNumber": 80002,
+    "binQty": 1,
     "modifiedDate": "2021-01-12"
   },
   {
     "warehouseCode": "CA",
-    "binLocation": "C3-2",
-    "itemNumber": "Back Hub",
-    "binQty": 45,
+    "bin": "B4",
+    "itemNumber": "8904-W",
+    "binQty": 5,
     "modifiedDate": "2021-01-12"
   },
   {
     "warehouseCode": "CA",
-    "binLocation": "D1-1",
+    "bin": "B4",
+    "itemNumber": "LS-100",
+    "binQty": 2,
+    "modifiedDate": "2021-01-12"
+  },
+  {
+    "warehouseCode": "CA",
+    "bin": "A2",
+    "itemNumber": "LS-10PC",
+    "binQty": 8,
+    "modifiedDate": "2021-01-12"
+  },
+  {
+    "warehouseCode": "CA",
+    "bin": "D1",
     "itemNumber": 1000,
     "binQty": 5,
     "modifiedDate": "2021-01-12"
   },
   {
     "warehouseCode": "CA",
-    "binLocation": "D2-1",
+    "bin": "D1",
     "itemNumber": 1001,
     "binQty": 8,
+    "modifiedDate": "2021-01-12"
+  },
+  {
+    "warehouseCode": "CA",
+    "bin": "D1",
+    "itemNumber": 1100,
+    "binQty": 20,
+    "modifiedDate": "2021-01-12"
+  },
+  {
+    "warehouseCode": "CA",
+    "bin": "D1",
+    "itemNumber": 1110,
+    "binQty": 12,
+    "modifiedDate": "2021-01-12"
+  },
+  {
+    "warehouseCode": "CA",
+    "bin": "D1",
+    "itemNumber": 1150,
+    "binQty": 50,
+    "modifiedDate": "2021-01-12"
+  },
+  {
+    "warehouseCode": "CA",
+    "bin": "D1",
+    "itemNumber": 1200,
+    "binQty": 60,
+    "modifiedDate": "2021-01-12"
+  },
+  {
+    "warehouseCode": "CA",
+    "bin": "D1",
+    "itemNumber": 1250,
+    "binQty": 45,
+    "modifiedDate": "2021-01-12"
+  },
+  {
+    "warehouseCode": "CA",
+    "bin": "D1",
+    "itemNumber": 1300,
+    "binQty": 100,
+    "modifiedDate": "2021-01-12"
+  },
+  {
+    "warehouseCode": "CA",
+    "bin": "D2",
+    "itemNumber": 1310,
+    "binQty": 120,
+    "modifiedDate": "2021-01-12"
+  },
+  {
+    "warehouseCode": "CA",
+    "bin": "D2",
+    "itemNumber": 1700,
+    "binQty": 300,
+    "modifiedDate": "2021-01-12"
+  },
+  {
+    "warehouseCode": "CA",
+    "bin": "D2",
+    "itemNumber": 1710,
+    "binQty": 180,
+    "modifiedDate": "2021-01-12"
+  },
+  {
+    "warehouseCode": "CA",
+    "bin": "D1",
+    "itemNumber": 1710,
+    "binQty": 20,
     "modifiedDate": "2021-01-12"
   }
 ];
