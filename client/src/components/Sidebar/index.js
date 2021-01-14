@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import * as FaIcons from "react-icons/fa";
 import './style.css';
+import Clock from '../Clock/index';
 
 import { Link }  from 'react-router-dom';
 
@@ -15,6 +16,7 @@ function Sidebar() {
                 <Link to="#" className='menu-bars'>
                     <FaIcons.FaBars onClick={showSidebar}/>
                 </Link>
+                <Clock />
             </div>
         </div>
         <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>

@@ -13,6 +13,9 @@ const NavTabs = () => {
                 <Nav.Item>
                     <Nav.Link href="/floorplan" className="text">Floorplan</Nav.Link>
                 </Nav.Item>
+                <Nav.Item>
+                    <Nav.Link href="/forms" className="text">Forms</Nav.Link>
+                </Nav.Item>
             </Nav>
         </div>
     )
