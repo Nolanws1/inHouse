@@ -4,4 +4,5 @@ module.exports = {
   Item:  require("./item"),
   Layout:  require("./layout"),
   Inventory:  require("./inventory"),
+  BinQty:  require("./binQty"),
 };
