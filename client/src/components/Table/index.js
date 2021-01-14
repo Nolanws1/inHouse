@@ -1,25 +1,16 @@
-import React from 'react'
-import './style.css'
+import React from 'react';
+import './style.css';
+import TableHeading from "./TableHeading";
+import RowContainer from "./RowContainer";
+
 
 const Table = () => {
-    return (
-  <table className="table table-dark color">
-  <thead className="color">
-    <tr>
-      <th scope="col">Item #</th>
-      <th scope="col">Item</th>
-      <th scope="col">Category</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1908-S</td>
-      <td>LONDON Swivel Chair blue</td>
-      <td>Chair</td>
-    </tr>
-  </tbody>
-</table>
-    )
+  return (
+    <table className="table table-dark m-3">
+      <TableHeading />
+      <RowContainer />
+    </table>
+  )
 }
 
 export default Table;
