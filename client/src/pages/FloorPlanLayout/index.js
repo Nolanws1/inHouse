@@ -84,10 +84,6 @@ function FloorPlanLayout() {
                 Sidebar Search
             </aside>
 
-            <div className="ad">
-                Sidebar Bin
-            </div>
-
             <footer className="main-footer">
                 The footer
             </footer>
