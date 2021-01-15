@@ -1,8 +1,8 @@
 import React from 'react'
-import "./style.css";
 import CreateItemForm from "../../components/CreateItemForm"
-import ItemList from "../../components/ItemList";
+import FormTable from '../../components/FormTable';
 import { useAuth0 } from '@auth0/auth0-react';
+import './style.css';
 
 const Forms = () => {
   const { isAuthenticated } = useAuth0();
@@ -18,8 +18,7 @@ const Forms = () => {
             </div>
 
             <div className="items">
-              <h1>Items</h1>
-              <ItemList />
+              <FormTable />
             </div>
 
             <footer className="main-footer">

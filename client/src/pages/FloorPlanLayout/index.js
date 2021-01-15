@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./style.css";
 import FloorplanDiagram from "../../components/FloorplanDiagram";
 import { useAuth0 } from '@auth0/auth0-react';
+import FloorTable from '../../components/FloorTable';
 
 // This array is for testing sending props down to diagram
 const seedQuantities = {
@@ -84,12 +85,8 @@ function FloorPlanLayout() {
             </article>
 
             <aside className="side">
-                Sidebar Search
+                <FloorTable />
             </aside>
-
-            <div className="ad">
-                Sidebar Bin
-            </div>
 
             <footer className="main-footer">
                 The footer

@@ -27,6 +27,7 @@
     text-align: center;
     border: solid;
     height: 500px;
+    overflow: scroll;
 }
 
 .main-footer {
