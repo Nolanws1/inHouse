@@ -1,6 +1,5 @@
 import React from "react";
 import "./style.css";
-import { useAuth0 } from '@auth0/auth0-react';
 
 function handleLeave(e) {
     e.target.style.fill = "white";
@@ -12,10 +11,8 @@ function handleOver(e) {
 function FloorplanDiagram(props) {
 
     const { quantities } = props;
-    const { isAuthenticated } = useAuth0();
 
     return (
-      isAuthenticated && (  
         <div className="container-svg">
             <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -1866,7 +1863,6 @@ function FloorplanDiagram(props) {
                 </switch>
             </svg>
         </div>
-      )
     );
 }
 
