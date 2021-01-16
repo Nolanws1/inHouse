@@ -7,7 +7,7 @@ const Forms = () => {
 
   return (
     <div className="form-container">
-      <div className="header">Header</div>
+      <div className="header">|</div>
 
       <div className="form">
         <h1>Form</h1>
@@ -17,10 +17,6 @@ const Forms = () => {
       <div className="items">
         <FormTable />
       </div>
-
-      <footer className="main-footer">
-        The footer
-            </footer>
     </div>
   )
 }

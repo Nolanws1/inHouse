@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { Nav } from 'react-bootstrap';
 import "./style.css";
 
@@ -8,13 +9,13 @@ const NavTabs = () => {
     <div className="center nav-tabs">
       <Nav justify variant="tabs" defaultActiveKey="/home">
         <Nav.Item className="tab">
-          <Nav.Link href="/dashboard" className="text">Dashboard</Nav.Link>
+          <Link to="/dashboard" className="text">Dashboard</Link>
         </Nav.Item>
         <Nav.Item className="tab">
-          <Nav.Link href="/floorplan" className="text">Floorplan</Nav.Link>
+          <Link to="/floorplan" className="text">Floorplan</Link>
         </Nav.Item>
         <Nav.Item className="tab"> 
-          <Nav.Link href="/forms" className="text">Forms</Nav.Link>
+          <Link to="/forms" className="text">Forms</Link>
         </Nav.Item>
       </Nav>
     </div>

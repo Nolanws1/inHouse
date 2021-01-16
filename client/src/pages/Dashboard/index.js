@@ -11,7 +11,7 @@ const Dashboard = () => {
       <div className="dash-header">|</div>
       <div className="dash-col-1">
         <section class="welcome">
-          <h1>Welcome, _______!</h1>
+          <h1>Welcome!</h1>
           <TodaysDate />
         </section>
         <img src={FloorPlanImg} alt="floorplan button" className="floorplan" />
