@@ -16,7 +16,7 @@ function App() {
   if (isLoading) return <div> Loading... </div>
 
   return (
-    < StoreProvider>
+    <StoreProvider>
     <Router>
       <div>
         <LoginButton />

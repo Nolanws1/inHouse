@@ -81,7 +81,7 @@ const reducer = (state, action) => {
     case ADD_ITEM:
       return {
         ...state,
-        items: [action.item, ...state.items],
+        items: [action.post, ...state.items],
         loading: false
       };
   
