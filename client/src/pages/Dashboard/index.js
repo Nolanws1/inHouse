@@ -3,18 +3,23 @@ import "./style.css";
 import FloorPlanImg from '../../images/floorplans/floorplan.png';
 import TodaysDate from '../../components/Date';
 import Table from '../../components/DashTable';
+import { useAuth0 } from '@auth0/auth0-react';
+import { Link } from 'react-router-dom';
 
 const Dashboard = () => {
+  const { user, isAuthenticated } = useAuth0();
 
   return (
     <div className="grid-container">
       <div className="dash-header">|</div>
       <div className="dash-col-1">
         <section class="welcome">
-          <h1>Welcome!</h1>
+          <h1>Welcome, {user.name}!</h1>
           <TodaysDate />
         </section>
-        <img src={FloorPlanImg} alt="floorplan button" className="floorplan" />
+        <Link to='/floorplan'>
+          <img src={FloorPlanImg} alt="floorplan button" className="floorplan" />
+        </Link>
       </div>
       <div className="dashtable">
         <Table />

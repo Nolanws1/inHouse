@@ -58,14 +58,6 @@ justify-content: center;
 box-shadow: 1px 4px 2px 4px #888888;
 }
 
-.main-footer {
-  grid-area: footer;
-  background-color: #007BFF;
-  border: solid white;
-  color: white;
-}
-
-
 
 @media only screen and (max-width: 500px) {
     .grid-container {

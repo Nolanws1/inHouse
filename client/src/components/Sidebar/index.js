@@ -11,7 +11,7 @@ function Sidebar() {
     const { logout, isAuthenticated } = useAuth0();
     
     return (
-    //   isAuthenticated && (
+      isAuthenticated && (
         <div>
             <div>
                 <div className="navbar">
@@ -57,7 +57,7 @@ function Sidebar() {
                 </ul>
             </nav>
         </div>
-    //   )
+      )
     )
 }
 
