@@ -30,22 +30,26 @@ function Sidebar() {
                     </li>
                     <li className="navbar-toggle">
                         <Link to="/dashboard" className="nav-text">
-                            <p>Dashboard <FaIcons.FaCog /></p>
+                            <FaIcons.FaCog />
+                            <p>Dashboard </p>
                         </Link>
                     </li>
                     <li className="navbar-toggle">
                         <Link to="/floorplan" className="nav-text">
-                            <p>Floorplan <FaIcons.FaPaste /></p>
+                          <FaIcons.FaPaste />
+                            <p>Floorplan </p>
                         </Link>
                     </li>
                     <li className="navbar-toggle">
                         <Link to="/forms" className="nav-text">
-                            <p>Forms <FaIcons.FaChalkboardTeacher /></p>
+                          <FaIcons.FaChalkboardTeacher />
+                          <p>Forms</p> 
                         </Link>
                     </li>
                     <li className="navbar-toggle">
-                        <a onClick={() => logout()} className="nav-text">
-                            <p>Logout <FaIcons.FaSignOutAlt /></p>
+                        <a onClick={() => logout()} className="nav-text sideLogout">
+                            <FaIcons.FaSignOutAlt />
+                            <p>Logout</p>
                         </a>
                     </li>
 

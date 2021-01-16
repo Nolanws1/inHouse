@@ -37,12 +37,13 @@
     padding: 8px 0px 8px 16px;
     list-style: none;
     height: 60px;
+    font-size: 30px;
 }
 
 .nav-text p {
     text-decoration: none;
     color: #f5f5f5;
-    font-size: xx-large;
+    font-size: x-large;
     width: 95%;
     height: 100%;
     display: flex;
@@ -68,6 +69,10 @@
  align-items: center;
 }
 
-.span {
+p {
     margin-left: 16px;
+}
+
+.sideLogout :hover{
+  cursor: pointer;
 }
