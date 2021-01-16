@@ -8,7 +8,6 @@ function FloorContainer() {
     const [state, dispatch] = useStoreContext();
 
     const getItems = () => {
-        dispatch({ type: LOADING });
         API.getItems()
             .then(results => {
                 dispatch({
@@ -21,10 +20,10 @@ function FloorContainer() {
 
     function handleClick(e) {
         e.preventDefault();
-        //Needs to get itemNumber and itemName
-        console.log("you clicked me!");
         const itemNumber = e.target.getAttribute("data-number");
         const itemName = e.target.getAttribute("data-name");
+        console.log(itemNumber);
+        console.log(itemName);
     }
 
     useEffect(() => {
