@@ -1,7 +1,6 @@
 import React from 'react'
 import "./style.css";
 import FloorPlanImg from '../../images/floorplans/floorplan.png';
-import Clock from '../../components/Clock';
 import TodaysDate from '../../components/Date';
 import Table from '../../components/DashTable';
 import { useAuth0 } from '@auth0/auth0-react';
@@ -11,29 +10,19 @@ const Dashboard = () => {
   const { user, isAuthenticated } = useAuth0();
 
   return (
-    isAuthenticated && (
-      <div className="grid-container">
-        <div className="header">Header</div>
-        <div className="dash-col-1">
-          <section class="welcome">
-            <h1>Welcome, {user.name}!</h1>
-            <Clock className="float-left" />
-            <TodaysDate className="float-left" />
-          </section>
-          <Link to='/floorplan'>
-            <img 
-              src={FloorPlanImg} 
-              alt="floorplan button" 
-              className="floorplan"
-            />
-          </Link>
-        </div>
-        <div className="table"><Table /></div>
-        <footer className="main-footer">
-          The footer
-            </footer>
+    <div className="grid-container">
+      <div className="dash-header">|</div>
+      <div className="dash-col-1">
+        <section class="welcome">
+          <h1>Welcome, {user.name}!</h1>
+          <TodaysDate />
+        </section>
+        <img src={FloorPlanImg} alt="floorplan button" className="floorplan" />
       </div>
-    )
+      <div className="dashtable">
+        <Table />
+      </div>
+    </div>
   )
 }
 

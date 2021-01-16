@@ -13,7 +13,7 @@ export class TodaysDate extends React.Component {
     render() {
         return (
             <div className='date'>
-                <h4 name='calendar' />{this.state.date}
+                <h4 name='calendar'>{this.state.date}</h4>
             </div>
         );
     }

@@ -20,10 +20,6 @@ const Forms = () => {
         <div className="items">
           <FormTable />
         </div>
-
-        <footer className="main-footer">
-          The footer
-              </footer>
       </div>
     )
   )

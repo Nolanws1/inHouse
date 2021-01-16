@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { Nav } from 'react-bootstrap';
 import "./style.css";
 import { useAuth0 } from '@auth0/auth0-react';
-import { Link } from 'react-router-dom';
 
 const NavTabs = () => {
   const { isAuthenticated } = useAuth0();
@@ -10,14 +10,14 @@ const NavTabs = () => {
   return (
     isAuthenticated && (
       <div className="center nav-tabs">
-        <Nav fill variant="tabs" defaultActiveKey="/home">
-          <Nav.Item>
+        <Nav justify variant="tabs" defaultActiveKey="/home">
+          <Nav.Item className="tab">
             <Link to="/dashboard" className="text">Dashboard</Link>
           </Nav.Item>
-          <Nav.Item>
+          <Nav.Item className="tab">
             <Link to="/floorplan" className="text">Floorplan</Link>
           </Nav.Item>
-          <Nav.Item>
+          <Nav.Item className="tab">
             <Link to="/forms" className="text">Forms</Link>
           </Nav.Item>
         </Nav>

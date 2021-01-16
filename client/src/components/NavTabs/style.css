@@ -4,7 +4,23 @@
 
 .text {
     font-size: x-large;
-    
+    color: black
+  }
+  
+  .nav-tabs {
+    background-color: #4f6b5f;
+  }
+  
+  .tab{
+    padding: 20px;
+    text-align: center;
+    border: solid;
+    border-width: .1px;
+    border-bottom: none;
+    border-top-left-radius: 30%;
+    border-top-right-radius: 30%;
+    color: black;
+    background-color: #EAF4F4;
 }
 
 @media only screen and (max-width: 500px) {
