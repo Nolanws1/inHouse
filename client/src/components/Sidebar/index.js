@@ -3,11 +3,13 @@ import * as FaIcons from "react-icons/fa";
 import './style.css';
 import Clock from '../Clock/index';
 import { Link } from 'react-router-dom';
+import { useAuth0 } from '@auth0/auth0-react';
 
 function Sidebar() {
     const [sidebar, setSidebar] = useState(false)
     const showSidebar = () => setSidebar(!sidebar)
-
+    const { logout, isAuthenticated } = useAuth0();
+    
     return (
         <div>
             <div>
@@ -39,6 +41,11 @@ function Sidebar() {
                         <Link to="/forms" className="nav-text">
                             <p>Forms <FaIcons.FaChalkboardTeacher /></p>
                         </Link>
+                    </li>
+                    <li className="navbar-toggle">
+                        <a onClick={() => logout()} className="nav-text">
+                            <p>Logout <FaIcons.FaSignOutAlt /></p>
+                        </a>
                     </li>
 
                 </ul>

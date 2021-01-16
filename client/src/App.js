@@ -9,11 +9,12 @@ import Sidebar from "./components/Sidebar";
 import Dashboard from "./pages/Dashboard";
 import FloorPlanLayout from "./pages/FloorPlanLayout";
 import Forms from "./pages/Forms";
+import Loading from "./components/Loading";
 
 
 function App() {
   const { isLoading } = useAuth0();
-  if (isLoading) return <div> Loading... </div>
+  if (isLoading) return <Loading />
 
   return (
     < StoreProvider>
