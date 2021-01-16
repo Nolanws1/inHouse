@@ -1,6 +1,7 @@
 import React from 'react'
 import CreateItemForm from "../../components/CreateItemForm"
 import UpdateInventoryForm from "../../components/UpdateInventoryForm"
+import InventoryList from '../../components/InventoryList';
 import FormTable from '../../components/FormTable';
 import './style.css';
 

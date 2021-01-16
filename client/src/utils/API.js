@@ -21,6 +21,10 @@ export default {
   getLayouts: function () {
     return axios.get("/api/layout");
   },
+  // Gets all bin
+  getBins: function () {
+    return axios.get("/api/bin");
+  },
   // Gets the layout with the given id
   getLayout: function (id) {
     return axios.get("/api/layout/" + id);
@@ -68,6 +72,9 @@ export default {
   // Gets all items
   getInventories: function () {
     return axios.get("/api/inventory");
+  },
+  getInventoryId: function () {
+    return axios.get("/api/inventoryid");
   },
   // Gets the item with the given id
   getInventory: function (id) {

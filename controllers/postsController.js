@@ -29,6 +29,12 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
+  findBins: function(req, res) {
+    db.Layout.collection.distinct("bin")
+      .sort({ date: -1 })
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
   findAllLayouts: function(req, res) {
     db.Layout.find(req.query)
       .sort({ date: -1 })
@@ -86,6 +92,12 @@ module.exports = {
   findAllInventory: function(req, res) {
     db.Inventory.find(req.query)
       .sort({ date: -1 })
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+  getInventoryID: function(req, res) {
+    db.Inventory.findOne(req.query)
+      .sort({ ID: 1 })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },

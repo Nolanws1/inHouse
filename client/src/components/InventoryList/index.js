@@ -8,63 +8,63 @@ import API from "../../utils/API";
 import { useAuth0 } from '@auth0/auth0-react';
 
 function InventoryList() {
-  const [state, dispatch] = useStoreContext();
-  const { isAuthenticated } = useAuth0();
+const [state, dispatch] = useStoreContext();
+const { isAuthenticated } = useAuth0();
 
-  const removeInventory = id => {
+const removeInventory = id => {
     API.deleteInventory(id)
-      .then(() => {
+    .then(() => {
         dispatch({
-          type: REMOVE_INVENTORY,
-          _id: id
+        type: REMOVE_INVENTORY,
+        _id: id
         });
-      })
-      .catch(err => console.log(err));
-  };
+    })
+    .catch(err => console.log(err));
+};
 
-  const getInventories = () => {
+const getInventories = () => {
     dispatch({ type: LOADING });
     API.getInventories()
-      .then(results => {
+    .then(results => {
         dispatch({
-          type: UPDATE_INVENTORY,
-          inventories: results.data
+        type: UPDATE_INVENTORY,
+        inventories: results.data
         });
-      })
-      .catch(err => console.log(err));
-  };
+    })
+    .catch(err => console.log(err));
+};
 
-  useEffect(() => {
+useEffect(() => {
     getInventories();
-  }, []);
+}, []);
 
-  return (
+return (
     // isAuthenticated && (
-      <div>
+    <div>
         <h1>All Items</h1>
         <h3 className="mb-5 mt-5">Click on a item to view</h3>
         {state.inventories.length ? (
-          <List>
+        <List>
             {state.inventories.length > 0 && state.inventories.map(item => (
-              <ListItem key={item!= undefined && item._id}>
+            <ListItem key={item!= undefined && item._id}>
                 <Link to={"/items/" + (item!= undefined && item._id)}>
-                  <strong>
+                <strong>
                     {item!= undefined && item.binLocation} Item: {item!= undefined && item.itemNumber} Qty: {item!= undefined && item.qty} ({item!= undefined && item.trxType})
-                  </strong>
+                </strong>
                 </Link>
                 <DeleteBtn onClick={() => removeInventory(item!= undefined && item._id)} />
-              </ListItem>
+            </ListItem>
             ))}
-          </List>
-         ) : (
-          <h3>You haven't added any inventories yet!</h3>
+        </List>
+        ) : (
+        <h3>You haven't added any inventories yet!</h3>
         )} 
         {/* <div className="mt-5">
-          <Link to="favorites">View favorites</Link>
+        <Link to="favorites">View favorites</Link>
         </div> */}
-      </div>
+    </div>
     //)
-  );
+);
 }
 
 export default InventoryList;

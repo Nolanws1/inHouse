@@ -106,9 +106,6 @@ function UpdateInventoryForm() {
         })
         .catch(err => console.log(err));
     
-
-    
-
     //idInvRef.current.value = "";
     warehouseRef.current.value = "";
     binRef.current.value = "";
