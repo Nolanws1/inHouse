@@ -84,28 +84,28 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   findAllInventory: function(req, res) {
-    db.Layout.find(req.query)
+    db.Inventory.find(req.query)
       .sort({ date: -1 })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
   findInventoryById: function(req, res) {
-    db.Layout.findById(req.params.id)
+    db.Inventory.findById(req.params.id)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
   createInventory: function(req, res) {
-    db.Layout.create(req.body)
+    db.Inventory.create(req.body)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
   updateInventory: function(req, res) {
-    db.Layout.findOneAndUpdate({ _id: req.params.id }, req.body)
+    db.Inventory.findOneAndUpdate({ _id: req.params.id }, req.body)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
   removeInventory: function(req, res) {
-    db.Layout.findById({ _id: req.params.id })
+    db.Inventory.findById({ _id: req.params.id })
       .then(dbModel => dbModel.remove())
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));

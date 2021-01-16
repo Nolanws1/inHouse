@@ -1,5 +1,6 @@
 import React from 'react'
 import CreateItemForm from "../../components/CreateItemForm"
+import UpdateInventoryForm from "../../components/UpdateInventoryForm"
 import FormTable from '../../components/FormTable';
 import './style.css';
 
@@ -12,6 +13,7 @@ const Forms = () => {
       <div className="form">
         <h1>Form</h1>
         <CreateItemForm />
+        <UpdateInventoryForm />
       </div>
 
       <div className="items">
