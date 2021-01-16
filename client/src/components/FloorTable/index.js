@@ -2,7 +2,7 @@ import React from 'react';
 import FloorHeading from "./FloorHeading";
 import FloorContainer from "./FloorContainer";
 
-const Table = () => {
+const FloorTable = () => {
 
   return (
     <table className="table table-dark m-3">
@@ -12,4 +12,4 @@ const Table = () => {
   );
 }
 
-export default Table;
+export default FloorTable;

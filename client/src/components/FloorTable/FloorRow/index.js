@@ -1,8 +1,8 @@
 import React from 'react';
 
-function FloorRow({ item, index }) {
+function FloorRow({ item, handleClick, index }) {
     return (
-        <tr key={index}>
+        <tr key={index} onClick={handleClick}>
             <td>{item != undefined && item.itemNumber}</td>
             <td>{item != undefined && item.itemName}</td>
         </tr>

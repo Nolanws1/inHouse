@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useStoreContext } from "../../utils/GlobalState";
-import { UPDATE_ITEM, UPDATE_BINQTY, LOADING } from "../../utils/actions";
+import { UPDATE_BINQTY } from "../../utils/actions";
 import API from "../../utils/API";
 import "./style.css";
 import FloorplanDiagram from "../../components/FloorplanDiagram";
@@ -16,7 +16,7 @@ function FloorPlanLayout() {
     const [state, dispatch] = useStoreContext();
 
     const getBinQuantities = () => {
-        dispatch({ type: LOADING });
+        //dispatch({ type: LOADING });
         API.getBinQuantities()
             .then(results => {
                 dispatch({
@@ -34,36 +34,6 @@ function FloorPlanLayout() {
     const quantities = state.binQuantities;
     console.log(quantities);
 
-    function itemQty(itemNumber, items) {
-        let binQuantities = [
-            { A1: 0 },
-            { A2: 0 },
-            { B1: 0 },
-            { B2: 0 },
-            { B3: 0 },
-            { B4: 0 },
-            { C1: 0 },
-            { C2: 0 },
-            { C3: 0 },
-            { C4: 0 },
-            { D1: 0 },
-            { D2: 0 },
-        ];
-        for (var i = 0; i < items.length; i++) {
-            if (items[i].itemNumber === itemNumber) {
-                for (var j = 0; i < items.length; i++) {
-                    switch (items[j].bin) {
-                        case "A1":
-                            binQuantities.A1 = items[j].binQty;
-                            break;
-                        default:
-                        //some default
-                    }
-                }
-            }
-        }
-    }
-
     return (
         <div className="wrapper">
 
@@ -73,10 +43,12 @@ function FloorPlanLayout() {
 
             <article className="content">
                 <FloorplanDiagram />
+                {/* Needs to receive props grabbed from down in FloorRow */}
             </article>
 
             <aside className="side">
                 <FloorTable />
+                {/* Children are FloorHeading, FloorContainer/FloorRow */}
             </aside>
 
             <footer className="main-footer">

@@ -19,6 +19,14 @@ function FloorContainer() {
             .catch(err => console.log(err));
     };
 
+    function handleClick(e) {
+        e.preventDefault();
+        //Needs to get itemNumber and itemName
+        console.log("you clicked me!");
+        const itemNumber = e.target.getAttribute("data-number");
+        const itemName = e.target.getAttribute("data-name");
+    }
+
     useEffect(() => {
         getItems();
     }, []);
@@ -28,6 +36,7 @@ function FloorContainer() {
             {state.items.length > 0 && state.items.map((item, index) => (
                 <FloorRow
                     item={item}
+                    handleClick={handleClick}
                     key={index}
                 />
             ))}
