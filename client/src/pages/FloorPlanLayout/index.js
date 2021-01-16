@@ -6,17 +6,10 @@ import "./style.css";
 import FloorplanDiagram from "../../components/FloorplanDiagram";
 import FloorTable from '../../components/FloorTable';
 
-
-//FloorTable, would have a function sent down as props, that triggers down there (selecting an item) 
-//but state is managed up here, so I can then send the response down into FloorplanDiagram to render the binQtities1
-
-
 function FloorPlanLayout() {
-    // const [quantities, setQuantities] = useState();
     const [state, dispatch] = useStoreContext();
 
     const getBinQuantities = () => {
-        //dispatch({ type: LOADING });
         API.getBinQuantities()
             .then(results => {
                 dispatch({

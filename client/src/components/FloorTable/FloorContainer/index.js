@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useStoreContext } from "../../../utils/GlobalState";
-import { UPDATE_ITEM, LOADING } from "../../../utils/actions";
+import { UPDATE_ITEM } from "../../../utils/actions";
 import FloorRow from "../FloorRow";
 import API from "../../../utils/API";
 
