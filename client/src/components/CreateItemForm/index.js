@@ -7,7 +7,7 @@ function CreateItemForm() {
   const itemNumRef = useRef();
   const itemNameRef = useRef();
   const catRef = useRef();
-  const qtyRef = useRef();
+  // const qtyRef = useRef();
   const [state, dispatch] = useStoreContext();
 
   const handleSubmit = e => {
@@ -17,7 +17,7 @@ function CreateItemForm() {
       itemNumber: itemNumRef.current.value,
       itemName: itemNameRef.current.value,
       category: catRef.current.value,
-      qty: qtyRef.current.value
+      qty: 0
     })
       .then(result => {
         dispatch({
@@ -30,7 +30,7 @@ function CreateItemForm() {
     itemNumRef.current.value = "";
     itemNameRef.current.value = "";
     catRef.current.value = "";
-    qtyRef.current.value = "";
+    // qtyRef.current.value = "";
   };
 
   return (
@@ -46,11 +46,17 @@ function CreateItemForm() {
         <input className="form-control mb-5" ref={itemNumRef} placeholder="Item Number" />
         <input className="form-control mb-5" ref={itemNameRef} placeholder="Item Name" />
         <select className="form-control mb-5" ref={catRef} placeholder="Category">
-          <option>DESK</option>
+          <option>BICYCLE</option>
           <option>CHAIR</option>
+          <option>COMPUTER</option>
+          <option>DESK</option>
+          <option>LAMP</option>
+          <option>SPEAKER</option>
           <option>TABLE</option>
+          <option>WHITEBOARD</option>
+          <option>OTHER</option>
         </select>
-        <input type="number" className="form-control mb-5" ref={qtyRef} placeholder="Quantity" />
+        {/* <input type="number" className="form-control mb-5" ref={qtyRef} placeholder="Quantity" /> */}
         <button className="btn btn-success mt-3 mb-5" type="submit">
           Save Item
           </button>

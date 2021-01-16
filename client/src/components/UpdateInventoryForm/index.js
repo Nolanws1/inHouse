@@ -71,7 +71,7 @@ function UpdateInventoryForm() {
     {
       quantity = parseInt(trxQtyRef.current.value) * -1;
     }
-    else
+    if(trxTypeRef.current.value=='IN')
     {
       quantity = parseInt(trxQtyRef.current.value);
     }
