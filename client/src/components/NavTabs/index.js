@@ -2,6 +2,7 @@ import React from 'react'
 import { Nav } from 'react-bootstrap';
 import "./style.css";
 import { useAuth0 } from '@auth0/auth0-react';
+import { Link } from 'react-router-dom';
 
 const NavTabs = () => {
   const { isAuthenticated } = useAuth0();
@@ -11,13 +12,13 @@ const NavTabs = () => {
       <div className="center nav-tabs">
         <Nav fill variant="tabs" defaultActiveKey="/home">
           <Nav.Item>
-            <Nav.Link href="/dashboard" className="text">Dashboard</Nav.Link>
+            <Link to="/dashboard" className="text">Dashboard</Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link href="/floorplan" className="text">Floorplan</Nav.Link>
+            <Link to="/floorplan" className="text">Floorplan</Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link href="/forms" className="text">Forms</Nav.Link>
+            <Link to="/forms" className="text">Forms</Link>
           </Nav.Item>
         </Nav>
       </div>

@@ -5,9 +5,10 @@ import Clock from '../../components/Clock';
 import TodaysDate from '../../components/Date';
 import Table from '../../components/DashTable';
 import { useAuth0 } from '@auth0/auth0-react';
+import { Link } from 'react-router-dom';
 
 const Dashboard = () => {
-  const { isAuthenticated } = useAuth0();
+  const { user, isAuthenticated } = useAuth0();
 
   return (
     isAuthenticated && (
@@ -15,11 +16,17 @@ const Dashboard = () => {
         <div className="header">Header</div>
         <div className="dash-col-1">
           <section class="welcome">
-            <h1>Welcome, _______!</h1>
+            <h1>Welcome, {user.name}!</h1>
             <Clock className="float-left" />
             <TodaysDate className="float-left" />
           </section>
-          <img src={FloorPlanImg} alt="floorplan button" className="floorplan" />
+          <Link to='/floorplan'>
+            <img 
+              src={FloorPlanImg} 
+              alt="floorplan button" 
+              className="floorplan"
+            />
+          </Link>
         </div>
         <div className="table"><Table /></div>
         <footer className="main-footer">

@@ -36,7 +36,7 @@ function Sidebar() {
                     </li>
                     <li className="navbar-toggle">
                         <Link to="/floorplan" className="nav-text">
-                          <FaIcons.FaPaste />
+                            <FaIcons.FaPaste />
                             <p>Floorplan </p>
                         </Link>
                     </li>
