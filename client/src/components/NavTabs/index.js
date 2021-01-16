@@ -6,14 +6,14 @@ const NavTabs = () => {
 
   return (
     <div className="center nav-tabs">
-      <Nav fill variant="tabs" defaultActiveKey="/home">
-        <Nav.Item>
+      <Nav justify variant="tabs" defaultActiveKey="/home">
+        <Nav.Item className="tab">
           <Nav.Link href="/dashboard" className="text">Dashboard</Nav.Link>
         </Nav.Item>
-        <Nav.Item>
+        <Nav.Item className="tab">
           <Nav.Link href="/floorplan" className="text">Floorplan</Nav.Link>
         </Nav.Item>
-        <Nav.Item>
+        <Nav.Item className="tab"> 
           <Nav.Link href="/forms" className="text">Forms</Nav.Link>
         </Nav.Item>
       </Nav>

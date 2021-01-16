@@ -2,14 +2,15 @@ import React from 'react';
 import { StoreProvider } from "./utils/GlobalState";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import LoginButton from './components/LoginButton';
-import LogoutButton from './components/LogoutButton';
+// import LogoutButton from './components/LogoutButton';
 import { useAuth0 } from '@auth0/auth0-react';
 import NavTabs from "./components/NavTabs";
 import Sidebar from "./components/Sidebar";
 import Dashboard from "./pages/Dashboard";
 import FloorPlanLayout from "./pages/FloorPlanLayout";
 import Forms from "./pages/Forms";
-
+import Footer from "./components/Footer";
+import './App.css';
 
 function App() {
   const { isLoading } = useAuth0();
@@ -18,9 +19,9 @@ function App() {
   return (
     < StoreProvider>
     <Router>
-      <div>
-        <LoginButton />
-        <LogoutButton />
+      <div className="background">
+        {/* <LoginButton /> */}
+        {/* <LogoutButton /> */}
         <Sidebar />
         <NavTabs />
         <Switch>
@@ -29,6 +30,7 @@ function App() {
           <Route path="/floorplan" exact component={FloorPlanLayout} />
           <Route path="/forms" exact component={Forms} />
         </Switch>
+        <Footer />
       </div>
     </Router>
     </StoreProvider>

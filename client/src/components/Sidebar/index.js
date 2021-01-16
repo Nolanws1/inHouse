@@ -3,6 +3,8 @@ import * as FaIcons from "react-icons/fa";
 import './style.css';
 import Clock from '../Clock/index';
 import { Link } from 'react-router-dom';
+import LogoutButton from '../LogoutButton';
+
 
 function Sidebar() {
     const [sidebar, setSidebar] = useState(false)
@@ -15,6 +17,7 @@ function Sidebar() {
                     <Link to="#" className='menu-bars'>
                         <FaIcons.FaBars onClick={showSidebar} />
                     </Link>
+                    <h1>inHouse</h1>
                     <Clock />
                 </div>
             </div>
@@ -40,7 +43,9 @@ function Sidebar() {
                             <p>Forms <FaIcons.FaChalkboardTeacher /></p>
                         </Link>
                     </li>
-
+                    <li>
+                        <LogoutButton />
+                    </li>
                 </ul>
             </nav>
         </div>

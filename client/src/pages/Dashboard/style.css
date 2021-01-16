@@ -1,39 +1,58 @@
 .grid-container{
+    background-color: rgb(227, 228, 230);
     display: grid;
+    margin-top: 30px;
     grid-template-columns: 50% 35%;
     grid-gap: 20px;
     justify-content: center;
     grid-template-areas:
     "header header"
      "content sidebar"
-     "footer footer";
 }
 
-.header{
+.dash-header{
     grid-area: header;
-    background-color: aqua;
+    background-color:rgb(227, 228, 230);
+    color: rgb(227, 228, 230);
 }
 
 .dash-col-1{
     grid-area: content;
+    max-height: 650px;
 }
 
 .welcome{
-    border:solid
+    border:solid;
+    border-width: 1px;
+    font-size: xx-large;
+    text-align:center;
+    background-color: #f1a494;
+    color:black;
+    box-shadow: 1px 4px 2px 4px #888888;
+  
 }
 
 .floorplan{
   height: auto;
   width: 100%;
   border: solid;
+  border-width: 7px;
+  border-color: #D66853;
   margin-top: 20px;
+  box-shadow: 1px 4px 2px 4px #888888;
 }
 
-.table{
+.dashtable{
 grid-area: sidebar;
 border: solid;
-overflow: scroll;
-height: 520px;
+border-width: 1px;
+max-height: 560px;
+overflow-y: scroll;
+overflow-x: hidden;
+padding-top: none;
+display: flex;
+justify-content: center;
+box-shadow: 1px 4px 2px 4px #888888;
 }
 
 .main-footer {
