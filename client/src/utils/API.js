@@ -83,7 +83,7 @@ export default {
   },
   // Gets all items
   getBinQuantities: function () {
-  return axios.get("/api/inventory");
+    return axios.get("/api/binQty");
   },
   // Gets the item with the given id
   getBinQuantity: function (id) {
