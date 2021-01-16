@@ -9,7 +9,7 @@ const Table = () => {
 
   return (
     isAuthenticated && (
-      <table className="table table-dark m-3">
+      <table className="table table-dark m-3 width">
         <DashHeading />
         <DashContainer />
       </table>

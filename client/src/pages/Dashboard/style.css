@@ -1,21 +1,23 @@
 .grid-container{
+  background-color: rgb(227, 228, 230);
     display: grid;
     grid-template-columns: 50% 35%;
     grid-gap: 20px;
     justify-content: center;
     grid-template-areas:
     "header header"
-     "content sidebar"
-     "footer footer";
+     "content sidebar";
 }
 
-.header{
+.dash-header{
     grid-area: header;
-    background-color: aqua;
+    background-color:rgb(227, 228, 230);
+    color: rgb(227, 228, 230);
 }
 
 .dash-col-1{
     grid-area: content;
+    max-height: 560px;
 }
 
 .welcome{
@@ -29,19 +31,18 @@
   margin-top: 20px;
 }
 
-.table{
+.dashtable{
 grid-area: sidebar;
 border: solid;
-overflow: scroll;
-height: 520px;
+max-height: 560px;
+overflow-y: scroll;
+overflow-x: hidden;
+padding-top: none;
+display: flex;
+justify-content: center;
 }
 
-.main-footer {
-  grid-area: footer;
-  background-color: #007BFF;
-  border: solid white;
-  color: white;
-}
+
 
 
 

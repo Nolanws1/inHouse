@@ -4,6 +4,7 @@ import './style.css';
 import Clock from '../Clock/index';
 import { Link }  from 'react-router-dom';
 import { useAuth0 } from '@auth0/auth0-react';
+import LogoutButton from '../LogoutButton';
 
 function Sidebar() {
     const [sidebar, setSidebar] = useState(false)
@@ -43,7 +44,9 @@ function Sidebar() {
                 <p>Forms <FaIcons.FaChalkboardTeacher /></p>
                 </Link>
                 </li>
-                
+                <li>
+                <LogoutButton />
+                </li>
             </ul>
         </nav>
         </div>

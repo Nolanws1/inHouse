@@ -9,7 +9,6 @@ function DashRow({ item, index }) {
             <tr key={index}>
                 <td>{item != undefined && item.itemNumber}</td>
                 <td>{item != undefined && item.itemName}</td>
-                <td></td>
                 <td>{item != undefined && item.qty}</td>
             </tr>
         )

@@ -13,7 +13,7 @@ const Dashboard = () => {
     return (
       isAuthenticated && ( 
         <div className="grid-container">
-          <div className="header">Header</div>
+          <div className="dash-header">|</div>
           <div className="dash-col-1">
             <section class="welcome">
               <h1>Welcome, _______!</h1>
@@ -22,10 +22,9 @@ const Dashboard = () => {
             </section>
             <img src={FloorPlanImg} alt="floorplan button" className="floorplan" />
           </div>
-          <div className="table"><Table /></div>
-          <footer className="main-footer">
-            The footer
-          </footer>
+          <div className="dashtable">
+          <Table />
+          </div>
         </div>
       )
     )
