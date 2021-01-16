@@ -1,12 +1,12 @@
 import React from 'react';
-import './style.css';
 import DashHeading from "./DashHeading";
 import DashContainer from "./DashContainer";
+import './style.css'
 
 const Table = () => {
 
   return (
-    <table className="table table-dark m-3">
+    <table className="table table-striped color2">
       <DashHeading />
       <DashContainer />
     </table>

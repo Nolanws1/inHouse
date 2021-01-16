@@ -78,8 +78,11 @@ function UpdateInventoryForm() {
 
     
       console.log(state.inventories);
+      // var trxId = parseInt(idInvRef.current.value)+1;
+      // console.log(trxId);
 
       API.saveInventory({
+        // ID: trxId,
         ID: parseInt(idInvRef.current.value)+1,
         warehouseCode: warehouseRef.current.value,
         bin: binRef.current.value,
@@ -106,7 +109,7 @@ function UpdateInventoryForm() {
         })
         .catch(err => console.log(err));
     
-    //idInvRef.current.value = "";
+    // idInvRef.current.value = "";
     warehouseRef.current.value = "";
     binRef.current.value = "";
     shelfRef.current.value = "";
@@ -127,6 +130,7 @@ function UpdateInventoryForm() {
       <h1>Update Inventory</h1>
       <form className="form-group mt-5 mb-5" onSubmit={handleSubmit}>
         {/* <input type="hidden" ref={idInvRef} value={state.currentInventory.ID} /> */}
+        {/* <input className="form-control mb-5" ref={idInvRef} placeholder="ID" /> */}
         {state.inventories.length > 0 && state.inventories.map(inventory => 
                 <input type="hidden" ref={idInvRef} value={inventory.ID} />
                 )}

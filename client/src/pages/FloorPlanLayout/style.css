@@ -26,13 +26,6 @@ a {
     height: 520px;
   }
 
-  .main-footer {
-    grid-area: footer;
-    background-color: #007BFF;
-    border: solid white;
-    color: white;
-  }
-
   .wrapper {
     display: grid;
     /* gap: 20px; */
