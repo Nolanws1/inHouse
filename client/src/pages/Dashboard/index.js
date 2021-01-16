@@ -17,7 +17,9 @@ const Dashboard = () => {
           <h1>Welcome, {user.name}!</h1>
           <TodaysDate />
         </section>
-        <img src={FloorPlanImg} alt="floorplan button" className="floorplan" />
+        <Link to='/floorplan'>
+          <img src={FloorPlanImg} alt="floorplan button" className="floorplan" />
+        </Link>
       </div>
       <div className="dashtable">
         <Table />
