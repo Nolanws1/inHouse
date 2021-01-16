@@ -5,9 +5,11 @@ import API from "../../utils/API";
 import "./style.css";
 import FloorplanDiagram from "../../components/FloorplanDiagram";
 import FloorTable from '../../components/FloorTable';
+import { useAuth0 } from '@auth0/auth0-react';
 
 function FloorPlanLayout() {
     const [state, dispatch] = useStoreContext();
+    const { isAuthenticated } = useAuth0();
 
     const getBinQuantities = () => {
         API.getBinQuantities()
@@ -28,26 +30,25 @@ function FloorPlanLayout() {
     console.log(quantities);
 
     return (
-        <div className="wrapper">
+        isAuthenticated && (
+            <div className="wrapper">
 
-            <header className="main-head">
-                The header component goes here
+                <header className="main-head">
+                    The header component goes here
             </header>
 
-            <article className="content">
-                <FloorplanDiagram />
-                {/* Needs to receive props grabbed from down in FloorRow */}
-            </article>
+                <article className="content">
+                    <FloorplanDiagram />
+                    {/* Needs to receive props grabbed from down in FloorRow */}
+                </article>
 
-            <aside className="side">
-                <FloorTable />
-                {/* Children are FloorHeading, FloorContainer/FloorRow */}
-            </aside>
+                <aside className="side">
+                    <FloorTable />
+                    {/* Children are FloorHeading, FloorContainer/FloorRow */}
+                </aside>
 
-            <footer className="main-footer">
-                The footer
-            </footer>
-        </div>
+            </div>
+        )
     );
 }
 
