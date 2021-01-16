@@ -83,18 +83,18 @@ export default {
   },
   // Gets all items
   getBinQuantities: function () {
-  return axios.get("/api/inventory");
+  return axios.get("/api/binQty");
   },
   // Gets the item with the given id
   getBinQuantity: function (id) {
-    return axios.get("/api/inventory/" + id);
+    return axios.get("/api/binQty/" + id);
   },
   // Deletes the item with the given id
   deleteBinQuantity: function (id) {
-    return axios.delete("/api/inventory/" + id);
+    return axios.delete("/api/binQty/" + id);
   },
   // Saves a item to the database
   saveBinQuantity: function (postData) {
-    return axios.post("/api/inventory", postData);
+    return axios.post("/api/binQty", postData);
   }
 };
