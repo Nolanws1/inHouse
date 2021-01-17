@@ -19,21 +19,20 @@ function App() {
 
   return (
     < StoreProvider>
-      <Router>
-        <div className="background">
-          <LoginButton />
-          <LogoutButton />
-          <Sidebar />
-          <NavTabs />
-          <Switch>
-            <Route path="/" exact component={Dashboard} />
-            <Route path="/dashboard" exact component={Dashboard} />
-            <Route path="/floorplan" exact component={FloorPlanLayout} />
-            <Route path="/forms" exact component={Forms} />
-          </Switch>
-          <Footer />
-        </div>
-      </Router>
+    <Router>
+      <div className="background">
+        <LoginButton />
+        <Sidebar />
+        <NavTabs />
+        <Switch>
+          <Route path="/" exact component={Dashboard} />
+          <Route path="/dashboard" exact component={Dashboard} />
+          <Route path="/floorplan" exact component={FloorPlanLayout} />
+          <Route path="/forms" exact component={Forms} />
+        </Switch>
+        <Footer />
+      </div>
+    </Router>
     </StoreProvider>
   );
 }
