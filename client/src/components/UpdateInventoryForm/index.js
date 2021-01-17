@@ -4,7 +4,7 @@ import { ADD_INVENTORY,UPDATE_WAREHOUSE, LOADING, UPDATE_LAYOUT,UPDATE_ITEM,UPDA
 import API from "../../utils/API";
 
 function UpdateInventoryForm() {
-  const idInvRef = useRef();
+  // const idInvRef = useRef();
   const warehouseRef = useRef();
   const binRef = useRef();
   const shelfRef = useRef();
@@ -43,13 +43,13 @@ function UpdateInventoryForm() {
       const getItems = () => {
     
         dispatch({ type: LOADING });
-        API.getInventoryId().then(result=>{
-          console.log(result);
-          dispatch({
-            type: UPDATE_INVENTORY,
-            inventories: result.data
-          });
-        }).catch(err => console.log(err));
+        // API.getInventoryId().then(result=>{
+        //   console.log(result);
+        //   dispatch({
+        //     type: UPDATE_INVENTORY,
+        //     inventories: result.data
+        //   });
+        // }).catch(err => console.log(err));
           API.getItems()
             .then(results => {
               dispatch({
@@ -83,7 +83,8 @@ function UpdateInventoryForm() {
 
       API.saveInventory({
         // ID: trxId,
-        ID: parseInt(idInvRef.current.value)+1,
+        // ID: parseInt(idInvRef.current.value)+1,
+        ID: 1,
         // warehouseCode: warehouseRef.current.value,
         warehouseCode: "CA",
         bin: binRef.current.value,
@@ -132,9 +133,9 @@ function UpdateInventoryForm() {
       <form className="form-group mt-5 mb-5" onSubmit={handleSubmit}>
         {/* <input type="hidden" ref={idInvRef} value={state.currentInventory.ID} /> */}
         {/* <input className="form-control mb-5" ref={idInvRef} placeholder="ID" /> */}
-        {state.inventories.length > 0 && state.inventories.map(inventory => 
+        {/* {state.inventories.length > 0 && state.inventories.map(inventory => 
                 <input type="hidden" ref={idInvRef} value={inventory.ID} />
-                )}
+                )} */}
         {/* <WarehouseList  ref={warehouseRef} /> */}
         <label>Warehouse</label>
         <select className="form-control mb-5" ref={warehouseRef} placeholder="Warehouse">
