@@ -84,7 +84,8 @@ function UpdateInventoryForm() {
       API.saveInventory({
         // ID: trxId,
         ID: parseInt(idInvRef.current.value)+1,
-        warehouseCode: warehouseRef.current.value,
+        // warehouseCode: warehouseRef.current.value,
+        warehouseCode: "CA",
         bin: binRef.current.value,
         shelfNo: shelfRef.current.value,
         binLocation: binRef.current.value + '-' + shelfRef.current.value,
