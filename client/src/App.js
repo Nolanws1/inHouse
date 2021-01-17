@@ -14,21 +14,23 @@ import Footer from "./components/Footer";
 import './App.css';
 
 function App() {
-  const { isLoading } = useAuth0();
+  const { isLoading, isAuthenticated, loginWithRedirect } = useAuth0();
+  const loginURL = 'https://codymullen.us.auth0.com/u/login?state=g6Fo2SBJdndRV0NrRWNyOHdXdHcwYk5LUm9YTGkwc2tkVDhVTKN0aWTZIExucC1RNzJMUTIwVUEwMktpM2NUT0xjUGhWNkZYdWNuo2NpZNkgSDZIYVRvbTBFRVZpSkVwZDV6M1dPMWJKTUdwdTE1RGU';
   if (isLoading) return <Loading />
 
   return (
     < StoreProvider>
     <Router>
       <div className="background">
-        <LoginButton />
         <Sidebar />
         <NavTabs />
         <Switch>
-          <Route path="/" exact component={Dashboard} />
-          <Route path="/dashboard" exact component={Dashboard} />
-          <Route path="/floorplan" exact component={FloorPlanLayout} />
-          <Route path="/forms" exact component={Forms} />
+        <Route exact path="/">
+          {!isAuthenticated ? loginWithRedirect() : <Dashboard />}
+        </Route>
+        <Route path="/dashboard" exact component={Dashboard} />
+        <Route path="/floorplan" exact component={FloorPlanLayout} />
+        <Route path="/forms" exact component={Forms} />
         </Switch>
         <Footer />
       </div>
@@ -38,4 +40,6 @@ function App() {
 }
 
 export default App;
+
+
 

@@ -14,7 +14,7 @@ const Dashboard = () => {
       <div className="grid-container">
         <div className="dash-header">|</div>
         <div className="dash-col-1">
-          <section class="welcome">
+          <section className="welcome">
             <h1>Welcome, {user.name}!</h1>
             <TodaysDate />
           </section>
