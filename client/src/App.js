@@ -21,8 +21,7 @@ function App() {
     < StoreProvider>
     <Router>
       <div className="background">
-        {/* <LoginButton /> */}
-        {/* <LogoutButton /> */}
+        <LoginButton />
         <Sidebar />
         <NavTabs />
         <Switch>
