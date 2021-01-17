@@ -10,21 +10,23 @@ const Dashboard = () => {
   const { user, isAuthenticated } = useAuth0();
 
   return (
-    <div className="grid-container">
-      <div className="dash-header">|</div>
-      <div className="dash-col-1">
-        <section class="welcome">
-          <h1>Welcome, {user.name}!</h1>
-          <TodaysDate />
-        </section>
-        <Link to='/floorplan'>
-          <img src={FloorPlanImg} alt="floorplan button" className="floorplan" />
-        </Link>
+    isAuthenticated && (
+      <div className="grid-container">
+        <div className="dash-header">|</div>
+        <div className="dash-col-1">
+          <section class="welcome">
+            <h1>Welcome, {user.name}!</h1>
+            <TodaysDate />
+          </section>
+          <Link to='/floorplan'>
+            <img src={FloorPlanImg} alt="floorplan button" className="floorplan" />
+          </Link>
+        </div>
+        <div className="dashtable">
+          <Table />
+        </div>
       </div>
-      <div className="dashtable">
-        <Table />
-      </div>
-    </div>
+    )
   )
 }
 
