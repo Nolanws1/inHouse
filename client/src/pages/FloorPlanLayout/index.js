@@ -22,6 +22,14 @@ function FloorPlanLayout() {
             .catch(err => console.log(err));
     };
 
+    function handleClick(e) {
+        e.preventDefault();
+        const itemNumber = e.target.getAttribute("data-number");
+        const itemName = e.target.getAttribute("data-name");
+        console.log(itemNumber);
+        console.log(itemName);
+    }
+
     useEffect(() => {
         getBinQuantities();
     }, []);
@@ -43,7 +51,7 @@ function FloorPlanLayout() {
                 </article>
 
                 <aside className="side">
-                    <FloorTable />
+                    <FloorTable handleClick={handleClick} />
                     {/* Children are FloorHeading, FloorContainer/FloorRow */}
                 </aside>
 

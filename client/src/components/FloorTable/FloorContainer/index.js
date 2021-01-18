@@ -4,7 +4,7 @@ import { UPDATE_ITEM } from "../../../utils/actions";
 import FloorRow from "../FloorRow";
 import API from "../../../utils/API";
 
-function FloorContainer() {
+function FloorContainer({ handleClick }) {
     const [state, dispatch] = useStoreContext();
 
     const getItems = () => {
@@ -17,14 +17,6 @@ function FloorContainer() {
             })
             .catch(err => console.log(err));
     };
-
-    function handleClick(e) {
-        e.preventDefault();
-        const itemNumber = e.target.getAttribute("data-number");
-        const itemName = e.target.getAttribute("data-name");
-        console.log(itemNumber);
-        console.log(itemName);
-    }
 
     useEffect(() => {
         getItems();
