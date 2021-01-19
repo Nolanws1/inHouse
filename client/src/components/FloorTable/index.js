@@ -9,7 +9,13 @@ const FloorTable = ({ handleClick }) => {
   const [state, dispatch] = useStoreContext();
   const [sortedItems, setSortedItems] = useState(state.items);
 
-  //Right now, it works when you go to the Diagram from another page, but not on reload
+  //Right now, it works when you go to the Floorplan view after visiting another page first, but not on intial render
+  //Next effort will be to move the API fetch higher up, but leave the sort down here. 
+
+  useEffect(() => {
+    getItems();
+    setSortedItems(state.items);
+  }, []);
 
   const getItems = () => {
     API.getItems()
@@ -21,11 +27,6 @@ const FloorTable = ({ handleClick }) => {
       })
       .catch(err => console.log(err));
   };
-
-  useEffect(() => {
-    getItems();
-    setSortedItems(state.items);
-  }, []);
 
   function sortItems(array, criteria) {
     const sorted = [].concat(array)
@@ -53,7 +54,9 @@ const FloorTable = ({ handleClick }) => {
   return (
     <table className="table table-dark m-3">
       <FloorHeading handleSort={handleSort} />
-      <FloorContainer items={sortedItems} handleClick={handleClick} />
+
+      {/* Fixes the no initial data problem, but breaks the sort */}
+      <FloorContainer items={sortedItems.length > 0 ? sortedItems : state.items} handleClick={handleClick} />
     </table>
   );
 }
