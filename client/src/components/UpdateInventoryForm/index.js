@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import { useStoreContext } from "../../utils/GlobalState";
-import { ADD_INVENTORY,UPDATE_WAREHOUSE, LOADING, UPDATE_LAYOUT,UPDATE_ITEM,UPDATE_INVENTORY, SET_CURRENT_INVENTORY } from "../../utils/actions";
+import { ADD_INVENTORY,UPDATE_WAREHOUSE, LOADING, UPDATE_LAYOUT,UPDATE_ITEM,UPDATE_INVENTORY, UPDATE_BINQTY, DD_WAREHOUSE, DD_BIN,DD_SHELF } from "../../utils/actions";
 import API from "../../utils/API";
 
 function UpdateInventoryForm() {
@@ -19,9 +19,25 @@ function UpdateInventoryForm() {
     dispatch({ type: LOADING });
       API.getWarehouses()
         .then(results => {
+          var i;
+          var uniqueArray = [];
+          var uniqueArrayShelf = [];
+          for(i=0; i < results.data.length; i++){
+              if(uniqueArray.indexOf(results.data[i].warehouseCode) === -1) {
+                  uniqueArray.push(results.data[i].warehouseCode);
+              }
+              if(uniqueArrayShelf.indexOf(results.data[i].shelfNo) === -1) {
+                uniqueArrayShelf.push(results.data[i].shelfNo);
+            }
+          }
           dispatch({
-            type: UPDATE_WAREHOUSE,
-            warehouses: results.data
+            type: DD_WAREHOUSE,
+            ddWarehouse: uniqueArray
+          });
+
+          dispatch({
+            type: DD_SHELF,
+            ddShelf: uniqueArrayShelf
           });
         })
         .catch(err => console.log(err));
@@ -30,15 +46,22 @@ function UpdateInventoryForm() {
     const getBins = () => {
     
       dispatch({ type: LOADING });
-        API.getBins()
-          .then(results => {
-            dispatch({
-              type: UPDATE_LAYOUT,
-              layouts: results.data
-            });
-          })
-          .catch(err => console.log(err));
-      };
+      API.getBins()
+      .then(results => {
+        var i;
+        var uniqueArray = [];
+        for(i=0; i < results.data.length; i++){
+            if(uniqueArray.indexOf(results.data[i].bin) === -1) {
+                uniqueArray.push(results.data[i].bin);
+            }
+        }
+        dispatch({
+          type: DD_BIN,
+          ddBin: uniqueArray
+        });
+      })
+      .catch(err => console.log(err));
+    };
       
       const getItems = () => {
     
@@ -67,6 +90,8 @@ function UpdateInventoryForm() {
     e.preventDefault();
     dispatch({ type: LOADING });
     var quantity =0;
+    var binNum = binRef.current.value;
+    var itemNum = itemNumRef.current.value;
     if(trxTypeRef.current.value=='OUT')
     {
       quantity = parseInt(trxQtyRef.current.value) * -1;
@@ -76,11 +101,55 @@ function UpdateInventoryForm() {
       quantity = parseInt(trxQtyRef.current.value);
     }
 
-    
-      console.log(state.inventories);
-      // var trxId = parseInt(idInvRef.current.value)+1;
-      // console.log(trxId);
+      // check if there is any existing binQty record 
+      API.getBinQuantities()
+      .then(results => {
+        var bins = results.data;
+        var i;
+        var inserted=false;
+        for (i = 0; i < bins.length; i++) {
+         // if exists, run update
+          if(bins[i].bin==binNum && bins[i].itemNumber==itemNum)
+          {
+            API.updateBinQuantity(bins[i]._id,{
+              warehouseCode: "CA",
+              bin: binNum,
+              itemNumber: itemNum,
+              binQty: parseInt(bins[i].binQty) + quantity,
+              modifiedDate: Date.now
+            }).then(results => {
+              console.log(results);
+              
+            })
+            .catch(err => console.log(err));
+            inserted=true;
+          }
+        }
 
+        // if record not found, create binQty record
+        if(!inserted)
+        {
+          console.log(binNum);
+          console.log(itemNum);
+          console.log(quantity);
+
+          API.saveBinQuantity({
+            warehouseCode: "CA",
+              bin: binNum,
+              itemNumber: itemNum,
+              binQty: quantity,
+              modifiedDate: Date.now
+          }).then(results => {
+            console.log(results);
+            
+          })
+          .catch(err => console.log(err));
+        }
+
+      })
+      .catch(err => console.log(err));
+
+      //Add inventory transaction history to inventory table
       API.saveInventory({
         // ID: trxId,
         // ID: parseInt(idInvRef.current.value)+1,
@@ -139,8 +208,8 @@ function UpdateInventoryForm() {
         {/* <WarehouseList  ref={warehouseRef} /> */}
         <label>Warehouse</label>
         <select className="form-control mb-5" ref={warehouseRef} placeholder="Warehouse">
-        {state.warehouses.length > 0 && state.warehouses.map(wh => 
-                <option>{wh.warehouseCode}</option>
+        {state.ddWarehouse.length > 0 && state.ddWarehouse.map(wh => 
+                <option>{wh}</option>
                 )};
             </select>
         {/* <input className="form-control mb-5" ref={warehouseRef} placeholder="Warehouse Code" /> */}
@@ -154,8 +223,8 @@ function UpdateInventoryForm() {
         {/* <input className="form-control mb-5" ref={itemNameRef} placeholder="Item Name" /> */}
         <label>Bin</label>
         <select className="form-control mb-5" ref={binRef}>
-        {state.layouts.length > 0 && state.layouts.map(l => 
-                <option>{l.bin}</option>
+        {state.ddBin.length > 0 && state.ddBin.map(bin => 
+                <option>{bin}</option>
                 )};
             </select>
         {/* <select className="form-control mb-5" ref={binRef} placeholder="Bin">
@@ -165,8 +234,8 @@ function UpdateInventoryForm() {
         </select> */}
         <label>Shelf</label>
         <select className="form-control mb-5" ref={shelfRef}>
-        {state.layouts.length > 0 && state.layouts.map(l => 
-                <option>{l.shelfNo}</option>
+        {state.ddShelf.length > 0 && state.ddShelf.map(l => 
+                <option>{shelfNo}</option>
                 )};
             </select>
         {/* <select className="form-control mb-5" ref={shelfRef} placeholder="Shelf">
