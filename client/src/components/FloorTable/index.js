@@ -2,7 +2,7 @@ import React from 'react';
 import FloorHeading from "./FloorHeading";
 import FloorContainer from "./FloorContainer";
 
-const FloorTable = ({handleClick}) => {
+const FloorTable = ({ handleClick }) => {
 
   return (
     <table className="table table-dark m-3">

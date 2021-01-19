@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./style.css";
 
 function handleLeave(e) {
@@ -9,8 +9,13 @@ function handleOver(e) {
 }
 
 function FloorplanDiagram(props) {
+    const { bins } = props;
 
-    // const { quantities } = props;
+    //Comment out "Pointer events" - but use them to locate coloring bins
+
+    //Add itemName to component up top
+    //Colorize the bins that have a qty > 0;
+    //If there is 0 qty of an item in every bin, make the itemName display "No quantities of that item are in stock."
 
     return (
         <div className="container-svg">
@@ -350,10 +355,10 @@ function FloorplanDiagram(props) {
                     stroke="#000"
                     pointerEvents="all"
                     d="M120 80h180v30H120z"
-                    // Pointer Events for A1
-                    onMouseOver={handleOver}
-                    onMouseLeave={handleLeave}
-                    onClick={() => console.log("Click event!")}
+                // Pointer Events for A1
+                // onMouseOver={handleOver}
+                // onMouseLeave={handleLeave}
+                // onClick={() => console.log("Click event!")}
                 />
                 <switch transform="translate(-.5 -.5)">
                     <foreignObject
@@ -1022,10 +1027,10 @@ function FloorplanDiagram(props) {
                     stroke="#000"
                     pointerEvents="all"
                     d="M300 260h180v30H300z"
-                    // Pointer Events for C4
-                    onMouseOver={handleOver}
-                    onMouseLeave={handleLeave}
-                    onClick={() => console.log("Click event!")}
+                // Pointer Events for C4
+                // onMouseOver={handleOver}
+                // onMouseLeave={handleLeave}
+                // onClick={() => console.log("Click event!")}
                 />
                 <switch transform="translate(-.5 -.5)">
                     <foreignObject
@@ -1200,7 +1205,7 @@ function FloorplanDiagram(props) {
                                     pointerEvents="all"
                                 >
                                     {/* Bin A2 */}
-                                    {/* {quantities.A2.qty} */}
+                                    {bins ? bins.A2 : ""}
                                 </div>
                             </div>
                         </div>
@@ -1212,7 +1217,7 @@ function FloorplanDiagram(props) {
                         fontSize={16}
                         textAnchor="middle"
                     >
-                        {/* {quantities.A2.qty} */}
+                        {bins ? bins.A2 : ""}
                     </text>
                 </switch>
                 <path fill="none" pointerEvents="all" d="M130 120h20v20h-20z" />
@@ -1257,8 +1262,8 @@ function FloorplanDiagram(props) {
                                     color="#000"
                                     pointerEvents="all"
                                 >
-                                    {/* Bin B-1 */}
-                                    {/* {quantities.B1.qty} */}
+                                    {/* Bin B1 */}
+                                    {bins ? bins.B1 : ""}
                                 </div>
                             </div>
                         </div>
@@ -1270,7 +1275,7 @@ function FloorplanDiagram(props) {
                         fontSize={16}
                         textAnchor="middle"
                     >
-                        {/* {quantities.B1.qty} */}
+                        {bins ? bins.B1 : ""}
                     </text>
                 </switch>
                 <path fill="none" pointerEvents="all" d="M305 120h20v20h-20z" />
@@ -1316,7 +1321,7 @@ function FloorplanDiagram(props) {
                                     pointerEvents="all"
                                 >
                                     {/* Bin B2 */}
-                                    {/* {quantities.B2.qty} */}
+                                    {bins ? bins.B2 : ""}
                                 </div>
                             </div>
                         </div>
@@ -1328,7 +1333,7 @@ function FloorplanDiagram(props) {
                         fontSize={16}
                         textAnchor="middle"
                     >
-                        {/* {quantities.B2.qty} */}
+                        {bins ? bins.B2 : ""}
                     </text>
                 </switch>
                 <path fill="none" pointerEvents="all" d="M305 180h20v20h-20z" />
@@ -1374,7 +1379,7 @@ function FloorplanDiagram(props) {
                                     pointerEvents="all"
                                 >
                                     {/* Bin B4 */}
-                                    {/* {quantities.B4.qty} */}
+                                    {bins ? bins.B4 : ""}
                                 </div>
                             </div>
                         </div>
@@ -1387,7 +1392,7 @@ function FloorplanDiagram(props) {
                         textAnchor="middle"
                     >
                         {/* Bin B4 */}
-                        {/* {quantities.B4.qty} */}
+                        {bins ? bins.B4 : ""}
                     </text>
                 </switch>
                 <path fill="none" pointerEvents="all" d="M125 180h20v20h-20z" />
@@ -1433,7 +1438,7 @@ function FloorplanDiagram(props) {
                                     pointerEvents="all"
                                 >
                                     {/* Bin B3 */}
-                                    {/* {quantities.B3.qty} */}
+                                    {bins ? bins.B3 : ""}
                                 </div>
                             </div>
                         </div>
@@ -1446,7 +1451,7 @@ function FloorplanDiagram(props) {
                         textAnchor="middle"
                     >
                         {/* Bin B3 */}
-                        {/* {quantities.B3.qty} */}
+                        {bins ? bins.B3 : ""}
                     </text>
                 </switch>
                 <path fill="none" pointerEvents="all" d="M125 210h20v20h-20z" />
@@ -1492,7 +1497,7 @@ function FloorplanDiagram(props) {
                                     pointerEvents="all"
                                 >
                                     {/* Bin C1 */}
-                                    {/* {quantities.C1.qty} */}
+                                    {bins ? bins.C1 : ""}
                                 </div>
                             </div>
                         </div>
@@ -1504,8 +1509,8 @@ function FloorplanDiagram(props) {
                         fontSize={16}
                         textAnchor="middle"
                     >
-                        {/* Bin C1
-                        {quantities.C1.qty} */}
+                        {/* Bin C1 */}
+                        {bins ? bins.C1 : ""}
                     </text>
                 </switch>
                 <path fill="none" pointerEvents="all" d="M305 210h20v20h-20z" />
@@ -1551,7 +1556,7 @@ function FloorplanDiagram(props) {
                                     pointerEvents="all"
                                 >
                                     {/* Bin C2 */}
-                                    {/* {quantities.C2.qty} */}
+                                    {bins ? bins.C2 : ""}
                                 </div>
                             </div>
                         </div>
@@ -1564,7 +1569,7 @@ function FloorplanDiagram(props) {
                         textAnchor="middle"
                     >
                         {/* Bin C2 */}
-                        {/* {quantities.C2.qty} */}
+                        {bins ? bins.C2 : ""}
                     </text>
                 </switch>
                 <path fill="none" pointerEvents="all" d="M125 270h20v20h-20z" />
@@ -1610,7 +1615,7 @@ function FloorplanDiagram(props) {
                                     pointerEvents="all"
                                 >
                                     {/* Bin C3 */}
-                                    {/* {quantities.C3.qty} */}
+                                    {bins ? bins.C3 : ""}
                                 </div>
                             </div>
                         </div>
@@ -1623,7 +1628,7 @@ function FloorplanDiagram(props) {
                         textAnchor="middle"
                     >
                         {/* Bin C3 */}
-                        {/* {quantities.C3.qty} */}
+                        {bins ? bins.C3 : ""}
                     </text>
                 </switch>
                 <path fill="none" pointerEvents="all" d="M300 270h30v20h-30z" />
@@ -1669,7 +1674,7 @@ function FloorplanDiagram(props) {
                                     pointerEvents="all"
                                 >
                                     {/* Bin C4 */}
-                                    {/* {quantities.C4.qty} */}
+                                    {bins ? bins.C4 : ""}
                                 </div>
                             </div>
                         </div>
@@ -1682,7 +1687,7 @@ function FloorplanDiagram(props) {
                         textAnchor="middle"
                     >
                         {/* Bin C4 */}
-                        {/* {quantities.C4.qty} */}
+                        {bins ? bins.C4 : ""}
                     </text>
                 </switch>
                 <path fill="none" pointerEvents="all" d="M120 300h30v20h-30z" />
@@ -1728,7 +1733,7 @@ function FloorplanDiagram(props) {
                                     pointerEvents="all"
                                 >
                                     {/* Bin D1 */}
-                                    {/* {quantities.D1.qty} */}
+                                    {bins ? bins.D1 : ""}
                                 </div>
                             </div>
                         </div>
@@ -1741,7 +1746,7 @@ function FloorplanDiagram(props) {
                         textAnchor="middle"
                     >
                         {/* Bin D1 */}
-                        {/* {quantities.D1.qty} */}
+                        {bins ? bins.D1 : ""}
                     </text>
                 </switch>
                 <path fill="none" pointerEvents="all" d="M300 300h30v20h-30z" />
@@ -1787,7 +1792,7 @@ function FloorplanDiagram(props) {
                                     pointerEvents="all"
                                 >
                                     {/* Bin D2 */}
-                                    {/* {quantities.D2.qty} */}
+                                    {bins ? bins.D2 : ""}
                                 </div>
                             </div>
                         </div>
@@ -1800,7 +1805,7 @@ function FloorplanDiagram(props) {
                         textAnchor="middle"
                     >
                         {/* Bin D2 */}
-                        {/* {quantities.D2.qty} */}
+                        {bins ? bins.D2 : ""}
                     </text>
                 </switch>
                 <path fill="none" pointerEvents="all" d="M130 90h20v20h-20z" />
@@ -1846,7 +1851,7 @@ function FloorplanDiagram(props) {
                                     pointerEvents="all"
                                 >
                                     {/* Bin A1 */}
-                                    {/* {quantities.A1.qty} */}
+                                    {bins ? bins.A1 : ""}
                                 </div>
                             </div>
                         </div>
@@ -1858,7 +1863,7 @@ function FloorplanDiagram(props) {
                         fontSize={16}
                         textAnchor="middle"
                     >
-                        {/* {quantities.A1.qty} */}
+                        {bins ? bins.A1 : ""}
                     </text>
                 </switch>
             </svg>
