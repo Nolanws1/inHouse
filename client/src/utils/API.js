@@ -103,5 +103,8 @@ export default {
   // Saves a item to the database
   saveBinQuantity: function (postData) {
     return axios.post("/api/binQty", postData);
+  },
+  updateBinQuantity: function (id,postData) {
+    return axios.put("/api/binQty/" + id, postData);
   }
 };
