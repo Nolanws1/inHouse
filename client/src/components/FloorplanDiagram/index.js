@@ -1,21 +1,51 @@
 import React, { useState, useEffect } from "react";
 import "./style.css";
 
-function handleLeave(e) {
-    e.target.style.fill = "white";
-}
-function handleOver(e) {
-    e.target.style.fill = "#007BFF";
-}
-
 function FloorplanDiagram(props) {
     const { bins } = props;
+    const binA1 = document.getElementById("A1");
+    const binA2 = document.getElementById("A2");
+
+    useEffect(() => {
+        updateBinColors();
+    });
+
+    //This won't work this way. It will only update one bin color.
+    //I'll have to loop through all of them. 
+    //I need to find some way of associating a value > 0 with a specific bin.
+    //the forEach index parameter may create a way to do this better than a regular for loop 
+    //But it is not a simple ascending order, because the bins are A1/2, B1/2/3/4 etc.
+    function updateBinColors() {
+        if (bins) {
+            const quantValues = Object.values(bins);
+            console.log(quantValues);
+            for (var i = 0; i < quantValues.length; i++) {
+                if (quantValues[i] > 0) {
+                    console.log(`value at A${i + 1} is greater than 0`);
+                } else {
+                    binA1.style.fill = "white";
+                }
+            }
+        }
+        // if (bins) {
+        //     if (bins.A1 > 0) {
+        //         binA1.style.fill = "red";
+        //     } else if (bins.A2 > 0) {
+        //         binA2.style.fill = "red";
+        //     }
+
+        //     else {
+        //         binA1.style.fill = "white";
+        //         binA2.style.fill = "white";
+        //     }
+        // } else {
+        //     console.log('Nope!');
+        // }
+    }
 
     //Comment out "Pointer events" - but use them to locate coloring bins
-
-    //Add itemName to component up top
     //Colorize the bins that have a qty > 0;
-    //If there is 0 qty of an item in every bin, make the itemName display "No quantities of that item are in stock."
+    //One fallback plan would be to style to qty text instead of the whole bin
 
     return (
         <div className="container-svg">
@@ -355,10 +385,8 @@ function FloorplanDiagram(props) {
                     stroke="#000"
                     pointerEvents="all"
                     d="M120 80h180v30H120z"
-                // Pointer Events for A1
-                // onMouseOver={handleOver}
-                // onMouseLeave={handleLeave}
-                // onClick={() => console.log("Click event!")}
+                    // Target A1 bin
+                    id="A1"
                 />
                 <switch transform="translate(-.5 -.5)">
                     <foreignObject
@@ -422,10 +450,7 @@ function FloorplanDiagram(props) {
                     stroke="#000"
                     pointerEvents="all"
                     d="M120 110h180v30H120z"
-                    // Pointer Events for B1
-                    onMouseOver={handleOver}
-                    onMouseLeave={handleLeave}
-                    onClick={() => console.log("Click event!")}
+                // Target B1
                 />
                 <switch transform="translate(-.5 -.5)">
                     <foreignObject
@@ -489,10 +514,8 @@ function FloorplanDiagram(props) {
                     stroke="#000"
                     pointerEvents="all"
                     d="M300 80h180v30H300z"
-                    // Pointer Events for A-2
-                    onMouseOver={handleOver}
-                    onMouseLeave={handleLeave}
-                    onClick={() => console.log("Click event!")}
+                    // Target A2
+                    id="A2"
                 />
                 <switch transform="translate(-.5 -.5)">
                     <foreignObject
@@ -556,10 +579,7 @@ function FloorplanDiagram(props) {
                     stroke="#000"
                     pointerEvents="all"
                     d="M300 110h180v30H300z"
-                    // Pointer Events for B2
-                    onMouseOver={handleOver}
-                    onMouseLeave={handleLeave}
-                    onClick={() => console.log("Click event!")}
+                // Target B2
                 />
                 <switch transform="translate(-.5 -.5)">
                     <foreignObject
@@ -623,10 +643,7 @@ function FloorplanDiagram(props) {
                     stroke="#000"
                     pointerEvents="all"
                     d="M120 170h180v30H120z"
-                    // Pointer Events for B3
-                    onMouseOver={handleOver}
-                    onMouseLeave={handleLeave}
-                    onClick={() => console.log("Click event!")}
+                // Target B3
                 />
                 <switch transform="translate(-.5 -.5)">
                     <foreignObject
@@ -690,10 +707,7 @@ function FloorplanDiagram(props) {
                     stroke="#000"
                     pointerEvents="all"
                     d="M120 200h180v30H120z"
-                    // Pointer Events for C1
-                    onMouseOver={handleOver}
-                    onMouseLeave={handleLeave}
-                    onClick={() => console.log("Click event!")}
+                // Target C1
                 />
                 <switch transform="translate(-.5 -.5)">
                     <foreignObject
@@ -757,10 +771,7 @@ function FloorplanDiagram(props) {
                     stroke="#000"
                     pointerEvents="all"
                     d="M300 170h180v30H300z"
-                    // Pointer Events for B4
-                    onMouseOver={handleOver}
-                    onMouseLeave={handleLeave}
-                    onClick={() => console.log("Click event!")}
+                // Target B4
                 />
                 <switch transform="translate(-.5 -.5)">
                     <foreignObject
@@ -825,10 +836,7 @@ function FloorplanDiagram(props) {
                     stroke="#000"
                     pointerEvents="all"
                     d="M300 200h180v30H300z"
-                    // Pointer Events for C2
-                    onMouseOver={handleOver}
-                    onMouseLeave={handleLeave}
-                    onClick={() => console.log("Click event!")}
+                // Target C2
                 />
                 <switch transform="translate(-.5 -.5)">
                     <foreignObject
@@ -893,10 +901,7 @@ function FloorplanDiagram(props) {
                     stroke="#000"
                     pointerEvents="all"
                     d="M120 260h180v30H120z"
-                    // Pointer Events for C3
-                    onMouseOver={handleOver}
-                    onMouseLeave={handleLeave}
-                    onClick={() => console.log("Click event!")}
+                // Target C3
                 />
                 <switch transform="translate(-.5 -.5)">
                     <foreignObject
@@ -960,10 +965,7 @@ function FloorplanDiagram(props) {
                     stroke="#000"
                     pointerEvents="all"
                     d="M120 290h180v30H120z"
-                    // Pointer Events for D1
-                    onMouseOver={handleOver}
-                    onMouseLeave={handleLeave}
-                    onClick={() => console.log("Click event!")}
+                // Target D1
                 />
                 <switch transform="translate(-.5 -.5)">
                     <foreignObject
@@ -1027,10 +1029,7 @@ function FloorplanDiagram(props) {
                     stroke="#000"
                     pointerEvents="all"
                     d="M300 260h180v30H300z"
-                // Pointer Events for C4
-                // onMouseOver={handleOver}
-                // onMouseLeave={handleLeave}
-                // onClick={() => console.log("Click event!")}
+                // Target C4
                 />
                 <switch transform="translate(-.5 -.5)">
                     <foreignObject
@@ -1094,10 +1093,7 @@ function FloorplanDiagram(props) {
                     stroke="#000"
                     pointerEvents="all"
                     d="M300 290h180v30H300z"
-                    // Pointer Events for D2
-                    onMouseOver={handleOver}
-                    onMouseLeave={handleLeave}
-                    onClick={() => console.log("Click event!")}
+                // Target D2
                 />
                 <switch transform="translate(-.5 -.5)">
                     <foreignObject

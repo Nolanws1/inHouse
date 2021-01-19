@@ -71,8 +71,6 @@ function FloorPlanLayout() {
         }
     }
 
-
-
     //Updates bin quantities for a single, targeted item
     function updateBins(arr) {
         var binQtys = {
