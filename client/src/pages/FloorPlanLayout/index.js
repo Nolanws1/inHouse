@@ -10,12 +10,19 @@ import { useAuth0 } from '@auth0/auth0-react';
 function FloorPlanLayout() {
     const [state, dispatch] = useStoreContext();
     const [bins, setBins] = useState();
+    const [currentItem, setCurrentItem] = useState({
+        currentItemName: "",
+        currentItemNumber: "",
+        //currentMessage: `Click an item in the list to display quantities.`
+    });
+    const [currentMsg, setCurrentMsg] = useState(`Click an item in the list to display quantities.`);
     const { isAuthenticated } = useAuth0();
     var quantities = state.binQuantities;
 
     useEffect(() => {
         getBinQuantities();
-    }, []);
+        hasQty(bins, currentItem);
+    }, [currentItem]);
 
     const getBinQuantities = () => {
         API.getBinQuantities()
@@ -32,10 +39,35 @@ function FloorPlanLayout() {
         e.preventDefault();
         const itemNumber = e.target.getAttribute("data-number");
         const itemName = e.target.getAttribute("data-name");
-        console.log(itemNumber);
-        console.log(itemName);
+        setCurrentItem({
+            currentItemName: itemName,
+            currentItemNumber: itemNumber,
+            //currentMessage: `Click an item in the list to display quantities.`
+        });
+        //const message = hasQty(bins, currentItem);
+        //setCurrentMsg(message);
+        hasQty(bins, currentItem);
+
+
         var result = findQty(itemNumber, quantities);
         updateBins(result);
+    }
+
+    function hasQty(allBins, targetItem) {
+        if (allBins) {
+            //Should return true if allBins has no qtys
+            const isEmpty = !Object.values(allBins).some(
+                (x) => x !== null && x !== "" && x !== undefined
+            );
+            if (isEmpty) {
+                //Should briefly recolor text to indicate that it has changed user input when they click multiple 'out of stock' items in a row
+                return setCurrentMsg(`That item is out of stock.`);
+            } else {
+                return setCurrentMsg(`${targetItem.currentItemName} (${targetItem.currentItemNumber})`);
+            }
+        } else {
+            return setCurrentMsg(`Click an item in the list to display quantities.`);
+        }
     }
 
     function updateBins(arr) {
@@ -74,8 +106,12 @@ function FloorPlanLayout() {
             <div className="wrapper">
 
                 <header className="main-head">
-                    The header component goes here
-            </header>
+                    {/* <h2>{currentItem ? `${currentItem.currentItemName} (${currentItem.currentItemNumber})` : "No quantities for that item found."}</h2> */}
+
+                    {/* Only works on double click */}
+                    <h2>{currentMsg} </h2>
+                    {/* <h2>{currentItem ? currentItem.currentMessage : `Click an item in the list to display the quantities.`}</h2> */}
+                </header>
 
                 <article className="content">
                     <FloorplanDiagram bins={bins} />
