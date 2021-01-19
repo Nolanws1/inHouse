@@ -3,6 +3,10 @@ a {
     color: white;
 }
 
+#message {
+  color: white;
+}
+
 .main-head {
     grid-area: header;
     background-color: #007BFF;

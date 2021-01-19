@@ -42,25 +42,26 @@ function FloorPlanLayout() {
         setCurrentItem({
             currentItemName: itemName,
             currentItemNumber: itemNumber,
-            //currentMessage: `Click an item in the list to display quantities.`
+            //currentMessage: integrate currentMsg state here instead of as separate state. 
         });
-        //const message = hasQty(bins, currentItem);
-        //setCurrentMsg(message);
         hasQty(bins, currentItem);
-
 
         var result = findQty(itemNumber, quantities);
         updateBins(result);
     }
 
+    //Could relocate this inside of currentItem state as a custom validator
     function hasQty(allBins, targetItem) {
+        const msgId = document.getElementById("message");
+        msgId.style.color = "white";
         if (allBins) {
-            //Should return true if allBins has no qtys
+            //Returns true if allBins has no qtys
             const isEmpty = !Object.values(allBins).some(
                 (x) => x !== null && x !== "" && x !== undefined
             );
             if (isEmpty) {
-                //Should briefly recolor text to indicate that it has changed user input when they click multiple 'out of stock' items in a row
+                msgId.style.color = "lightgray";
+                setTimeout(() => { msgId.style.color = "white" }, 400);
                 return setCurrentMsg(`That item is out of stock.`);
             } else {
                 return setCurrentMsg(`${targetItem.currentItemName} (${targetItem.currentItemNumber})`);
@@ -70,6 +71,9 @@ function FloorPlanLayout() {
         }
     }
 
+
+
+    //Updates bin quantities for a single, targeted item
     function updateBins(arr) {
         var binQtys = {
             A1: "",
@@ -106,11 +110,7 @@ function FloorPlanLayout() {
             <div className="wrapper">
 
                 <header className="main-head">
-                    {/* <h2>{currentItem ? `${currentItem.currentItemName} (${currentItem.currentItemNumber})` : "No quantities for that item found."}</h2> */}
-
-                    {/* Only works on double click */}
-                    <h2>{currentMsg} </h2>
-                    {/* <h2>{currentItem ? currentItem.currentMessage : `Click an item in the list to display the quantities.`}</h2> */}
+                    <h2 id="message">{currentMsg}</h2>
                 </header>
 
                 <article className="content">
