@@ -234,7 +234,7 @@ function UpdateInventoryForm() {
         </select> */}
         <label>Shelf</label>
         <select className="form-control mb-5" ref={shelfRef}>
-        {state.ddShelf.length > 0 && state.ddShelf.map(l => 
+        {state.ddShelf.length > 0 && state.ddShelf.map(shelfNo => 
                 <option>{shelfNo}</option>
                 )};
             </select>

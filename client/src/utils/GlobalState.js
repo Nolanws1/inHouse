@@ -28,6 +28,9 @@ import {
   REMOVE_BINQTY,
   UPDATE_BINQTY,
   ADD_BINQTY,
+  DD_BIN,
+  DD_WAREHOUSE,
+  DD_SHELF,
 } from "./actions";
 
 const StoreContext = createContext();
@@ -235,7 +238,25 @@ const reducer = (state, action) => {
                 return binQuantity._id !== action._id; 
               })
             };
-  
+          case DD_WAREHOUSE:
+            return {
+              ...state,
+              ddWarehouse: [...action.ddWarehouse],
+              loading: false
+            };
+          case DD_BIN:
+            return {
+              ...state,
+              ddBin: [...action.ddBin],
+              loading: false
+            };
+          case DD_SHELF:
+            return {
+              ...state,
+              ddShelf: [...action.ddShelf],
+              loading: false
+            };
+
   default:
     return state;
   }
@@ -294,6 +315,9 @@ const StoreProvider = ({ value = [], ...props }) => {
       modifiedDate: "",
     },
     favorites: [],
+    ddWarehouse:[],
+    ddBin:[],
+    ddShelf:[],
     loading: false,
   });
 
