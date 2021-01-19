@@ -10,8 +10,6 @@ function FloorplanDiagram(props) {
         updateBinColors();
     });
 
-    //This won't work this way. It will only update one bin color.
-    //I'll have to loop through all of them. 
     //I need to find some way of associating a value > 0 with a specific bin.
     //the forEach index parameter may create a way to do this better than a regular for loop 
     //But it is not a simple ascending order, because the bins are A1/2, B1/2/3/4 etc.
@@ -22,11 +20,15 @@ function FloorplanDiagram(props) {
             for (var i = 0; i < quantValues.length; i++) {
                 if (quantValues[i] > 0) {
                     console.log(`value at A${i + 1} is greater than 0`);
+                    binA1.style.fill = "red";
                 } else {
                     binA1.style.fill = "white";
                 }
             }
         }
+
+        //This won't work this way. It will only update one bin color.
+        //I'll have to loop through all of them. 
         // if (bins) {
         //     if (bins.A1 > 0) {
         //         binA1.style.fill = "red";
