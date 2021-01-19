@@ -20,24 +20,23 @@
     grid-area: col1;
     text-align: center;
     border: solid;
+    border-width: 1px;
+    border-color: #4f6b5f;
     height: 500px;
+    box-shadow: 1px 4px 2px 4px #888888;
 }
 
 .items{
     grid-area: col2;
     text-align: center;
     border: solid;
+    border-width: 1px;
+    border-color: #4f6b5f;
     height: 500px;
     overflow-y: scroll;
     overflow-x: hidden;
+    box-shadow: 1px 4px 2px 4px #888888;
 }
-
-.main-footer {
-    grid-area: footer;
-    background-color: #007BFF;
-    border: solid white;
-    color: white;
-  }
 
 
 @media only screen and (max-width: 500px) {
@@ -50,9 +49,12 @@
         "footer footer";
     }
    
+    .header{
+      display: none;
+    }
   }
 
-  @media only screen and (max-width: 700px) {
+  @media only screen and (max-width: 1024px) {
     .form-container {
       grid-template-columns: 1fr 4fr 1fr;
       grid-template-areas:
@@ -61,4 +63,9 @@
         "col2 col2 col2"
         "footer footer footer"
      }
+
+    .header{
+      display: none;
+    }
+
     }
