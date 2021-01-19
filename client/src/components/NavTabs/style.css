@@ -13,6 +13,7 @@
   
   .tab{
     padding: 20px;
+    width: 33.3%;
     text-align: center;
     border: solid;
     border-width: .1px;
@@ -20,6 +21,14 @@
     border-top-left-radius: 30%;
     border-top-right-radius: 30%;
     color: black;
+    background-color: #A4C3B2;
+}
+
+.tab :hover{
+  text-decoration: none;
+}
+
+.active {
     background-color: #EAF4F4;
 }
 
