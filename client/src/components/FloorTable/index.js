@@ -53,8 +53,6 @@ const FloorTable = ({ handleClick }) => {
   return (
     <table className="table table-dark m-3">
       <FloorHeading handleSort={handleSort} />
-
-      {/* Send down the list */}
       <FloorContainer items={sortedItems} handleClick={handleClick} />
     </table>
   );

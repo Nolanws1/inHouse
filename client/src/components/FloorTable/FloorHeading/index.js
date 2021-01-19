@@ -13,11 +13,15 @@ function FloorHeading({ handleSort }) {
             <tr>
                 <th scope="col"
                     data-value="itemNumber"
-                    onClick={handleSort}>
+                    onClick={handleSort}
+                    onMouseOver={handleOver}
+                    onMouseLeave={handleLeave}>
                     #</th>
                 <th scope="col"
                     data-value="itemName"
-                    onClick={handleSort}>
+                    onClick={handleSort}
+                    onMouseOver={handleOver}
+                    onMouseLeave={handleLeave}>
                     Item
                 </th>
             </tr>
