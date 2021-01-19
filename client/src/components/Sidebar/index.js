@@ -18,7 +18,7 @@ function Sidebar() {
                     <Link to="#" className='menu-bars'>
                         <FaIcons.FaBars  className="icon" onClick={showSidebar} />
                     </Link>
-                    <h1>inHouse<img className="head-logo" src="https://i.imgur.com/lGTwg2y.png?1" /></h1>
+                    <h1 className="title">inHouse<img className="head-logo" src="https://i.imgur.com/lGTwg2y.png?1" /></h1>
                     <Clock />
                 </div>
             </div>
@@ -37,13 +37,13 @@ function Sidebar() {
                     </li>
                     <li className="navbar-toggle">
                         <Link to="/floorplan" className="nav-text">
-                            <FaIcons.FaBox className="icon" />
+                            <FaIcons.FaTh className="icon" />
                             <p>Floorplan </p>
                         </Link>
                     </li>
                     <li className="navbar-toggle">
                         <Link to="/forms" className="nav-text">
-                          <FaIcons.FaChalkboardTeacher className="icon" />
+                          <FaIcons.FaRegListAlt className="icon" />
                           <p>Forms</p> 
                         </Link>
                     </li>
