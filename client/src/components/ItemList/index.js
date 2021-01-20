@@ -36,7 +36,7 @@ function ItemsList() {
 
   useEffect(() => {
     getItems();
-  }, []);
+  }, [state]);
 
   return (
     isAuthenticated && (

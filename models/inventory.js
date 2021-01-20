@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const inventory = new Schema({
-  ID: { type: Number, required: true, unique: true },
+  ID: { type: Number },
   warehouseCode: { type: String, required: true },
   bin: { type: String, required: true },
   shelfNo: { type: Number, required: true },
