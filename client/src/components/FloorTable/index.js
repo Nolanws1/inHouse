@@ -53,10 +53,10 @@ const FloorTable = ({ handleClick }) => {
     <table className="table table-dark m-3">
       <FloorHeading handleSort={handleSort} />
       {/* Without Sort but with initial table render */}
-      <FloorContainer items={state.items} handleClick={handleClick} />
+      {/* <FloorContainer items={state.items} handleClick={handleClick} /> */}
 
       {/* With Sort but no initial render */}
-      {/* <FloorContainer items={sortedItems.length != null && sortedItems.length > 0 ? sortedItems : state.items} handleClick={handleClick} /> */}
+      <FloorContainer items={sortedItems.length != null && sortedItems.length > 0 ? sortedItems : state.items} handleClick={handleClick} />
     </table>
   );
 }
