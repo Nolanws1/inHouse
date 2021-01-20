@@ -7,6 +7,8 @@ import FloorplanDiagram from "../../components/FloorplanDiagram";
 import FloorTable from '../../components/FloorTable';
 import { useAuth0 } from '@auth0/auth0-react';
 
+//TODO Clean and organize this!
+
 function FloorPlanLayout() {
     const [state, dispatch] = useStoreContext();
     const [bins, setBins] = useState();

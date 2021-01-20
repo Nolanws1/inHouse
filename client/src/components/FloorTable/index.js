@@ -9,7 +9,7 @@ const FloorTable = ({ handleClick }) => {
   const [state, dispatch] = useStoreContext();
   const [sortedItems, setSortedItems] = useState(state.items);
 
-  //Right now, it works when you go to the Floorplan view after visiting another page first, but not on intial render
+  //it works properly when you go to the Floorplan view AFTER visiting another page first but not on initial render
 
   useEffect(() => {
     getItems();
@@ -50,12 +50,8 @@ const FloorTable = ({ handleClick }) => {
   }
 
   return (
-    <table className="table table-dark m-3">
+    <table className="table table-dark m-3 table-hover">
       <FloorHeading handleSort={handleSort} />
-      {/* Without Sort but with initial table render */}
-      {/* <FloorContainer items={state.items} handleClick={handleClick} /> */}
-
-      {/* With Sort but no initial render */}
       <FloorContainer items={sortedItems.length != null && sortedItems.length > 0 ? sortedItems : state.items} handleClick={handleClick} />
     </table>
   );
