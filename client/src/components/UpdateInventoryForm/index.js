@@ -81,9 +81,6 @@ function UpdateInventoryForm() {
               });
             })
             .catch(err => console.log(err));
-
-            
-
         };
 
   const handleSubmit = e => {
@@ -179,7 +176,27 @@ function UpdateInventoryForm() {
           console.log(result)
         })
         .catch(err => console.log(err));
-    
+
+    //Find item id and update item Qty on item table
+    let currentItem = state.items.find(item => item.itemNumber === itemNum);
+    let updatedQty = currentItem.qty + quantity;
+
+    API.updateItem(currentItem._id,{
+      qty: updatedQty
+    }).then(results => {
+      let updatedItemList = state.items.map(item => {
+        if (item.itemNumber === itemNum){
+          item.qty = updatedQty;
+        }
+        return item;
+      });
+
+      dispatch({
+        type: UPDATE_ITEM,
+        items: updatedItemList
+      });
+    })
+
     // idInvRef.current.value = "";
     warehouseRef.current.value = "";
     binRef.current.value = "";

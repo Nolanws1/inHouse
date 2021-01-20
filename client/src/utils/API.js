@@ -53,6 +53,10 @@ export default {
   saveItem: function (postData) {
     return axios.post("/api/items", postData);
   },
+  // Update item
+  updateItem: function (id, postData) {
+    return axios.put("/api/items/" + id, postData);
+  },
   // Gets all items
   getWarehouses: function () {
     return axios.get("/api/warehouse");
