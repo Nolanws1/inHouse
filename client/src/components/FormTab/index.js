@@ -1,6 +1,7 @@
 import React from 'react';
 import { Tab, Tabs } from 'react-bootstrap';
 import CreateItemForm from '../CreateItemForm';
+import UpdateInventoryForm from '../UpdateInventoryForm';
 import './style.css';
 
 const FormTab = () => {
@@ -10,6 +11,7 @@ const FormTab = () => {
           <CreateItemForm />
         </Tab>
         <Tab eventKey="Update" title="Update">
+          <UpdateInventoryForm />
         </Tab>
       </Tabs> 
     ) 
