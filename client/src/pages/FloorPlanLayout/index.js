@@ -88,9 +88,6 @@ function FloorPlanLayout() {
                 <FloorTable />
             </aside>
 
-            <footer className="main-footer">
-                The footer
-            </footer>
         </div>
       )
     );

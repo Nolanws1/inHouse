@@ -5,7 +5,7 @@ import './index.css'
 const Loading = () => {
   return (
     <div className='spinner'>
-      <BeatLoader size={48} color='blue'/>
+      <BeatLoader size={48} color='#4f6b5f'/>
     </div>
   )
 }

@@ -11,7 +11,11 @@ import FloorPlanLayout from "./pages/FloorPlanLayout";
 import Forms from "./pages/Forms";
 import Loading from "./components/Loading";
 import Footer from "./components/Footer";
+<<<<<<< HEAD
 
+=======
+import './App.css';
+>>>>>>> 30e5af81b777b40275d6c6f1c94d015d9f420d2a
 
 function App() {
   const { isLoading } = useAuth0();
@@ -20,9 +24,8 @@ function App() {
   return (
     < StoreProvider>
     <Router>
-      <div>
+      <div className="background">
         <LoginButton />
-        <LogoutButton />
         <Sidebar />
         <NavTabs />
         <Switch>
@@ -31,7 +34,11 @@ function App() {
           <Route path="/floorplan" exact component={FloorPlanLayout} />
           <Route path="/forms" exact component={Forms} />
         </Switch>
+<<<<<<< HEAD
         <Footer/>
+=======
+        <Footer />
+>>>>>>> 30e5af81b777b40275d6c6f1c94d015d9f420d2a
       </div>
     </Router>
     </StoreProvider>

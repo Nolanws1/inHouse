@@ -5,6 +5,7 @@ const postsController = require("../../controllers/postsController");
 router
   .route("/")
   .get(postsController.findAllLayouts)
+  .get(postsController.findBins)
   .post(postsController.createLayout);
 
 // Matches with "/api/posts/:id"

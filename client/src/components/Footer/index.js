@@ -1,8 +1,19 @@
 import React from 'react';
+<<<<<<< HEAD
 import './index.css';
 
 const Footer = () => {
   return (
+=======
+import './style.css';
+import { useAuth0 } from '@auth0/auth0-react';
+
+const Footer = () => {
+  const { isAuthenticated } = useAuth0();
+
+  return (
+    isAuthenticated && (
+>>>>>>> 30e5af81b777b40275d6c6f1c94d015d9f420d2a
     <div className='main-footer'>
       <div className='container'>
         <div className='row'>
@@ -43,6 +54,13 @@ const Footer = () => {
       </div>
     </div>
   )
+<<<<<<< HEAD
 }
 
 export default Footer
+=======
+  )
+}
+
+export default Footer
+>>>>>>> 30e5af81b777b40275d6c6f1c94d015d9f420d2a

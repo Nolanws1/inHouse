@@ -4,7 +4,32 @@
 
 .text {
     font-size: x-large;
-    
+    color: black
+  }
+  
+  .nav-tabs {
+    background-color: #4f6b5f;
+  }
+  
+  .tab{
+    padding: 20px;
+    width: 33.3%;
+    text-align: center;
+    border: solid;
+    border-width: .1px;
+    border-bottom: none;
+    border-top-left-radius: 30%;
+    border-top-right-radius: 30%;
+    color: black;
+    background-color: #A4C3B2;
+}
+
+.tab :hover{
+  text-decoration: none;
+}
+
+.active {
+    background-color: #EAF4F4;
 }
 
 @media only screen and (max-width: 500px) {

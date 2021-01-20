@@ -1,11 +1,11 @@
 import React from 'react';
+import './style.css';
 
 function DashRow({ item, index }) {
     return (
-        <tr key={index}>
+        <tr className="colorone" key={index}>
             <td>{item != undefined && item.itemNumber}</td>
             <td>{item != undefined && item.itemName}</td>
-            <td></td>
             <td>{item != undefined && item.qty}</td>
             
         </tr>

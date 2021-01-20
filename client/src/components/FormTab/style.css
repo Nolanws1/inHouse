@@ -1,0 +1,39 @@
+.tabs-background{
+    background-color: #4f6b5f;
+}
+
+.tabs-background a{
+    color: white;
+}
+
+.tabs-background a:hover{
+   color: white
+}
+
+.single-tab{
+    border-top: solid;
+    border-width: 10px;
+    border-color: white;
+
+}
+
+
+.single-tab input{
+    width: 50%;
+    text-align: center;
+    height: 40px;
+    margin: auto;
+    display: block;
+    border: solid;
+    border-color:black;
+    border-width: 1px;
+}
+
+.single-tab button{
+    background-color: #4f6b5f;
+    border-color: black;
+    border-width: 1px;
+    width: 20%;
+    height: 50px;
+    margin-bottom: -15px;
+}

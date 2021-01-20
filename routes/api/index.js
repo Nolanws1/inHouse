@@ -10,6 +10,8 @@ const binQtyRoutes = require("./binQty");
 router.use("/posts", postRoutes);
 router.use("/items", itemRoutes);
 router.use("/layout", layoutRoutes);
+router.use("/bin", layoutRoutes);
+router.use("/inventoryid", inventoryRoutes);
 router.use("/warehouse", warehouseRoutes);
 router.use("/inventory", inventoryRoutes);
 router.use("/binQty", binQtyRoutes);
