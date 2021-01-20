@@ -1,10 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import './index.css';
-
-const Footer = () => {
-  return (
-=======
 import './style.css';
 import { useAuth0 } from '@auth0/auth0-react';
 
@@ -13,12 +7,11 @@ const Footer = () => {
 
   return (
     isAuthenticated && (
->>>>>>> 30e5af81b777b40275d6c6f1c94d015d9f420d2a
     <div className='main-footer'>
       <div className='container'>
         <div className='row'>
           <div className='col'>
-            <img className='logoTransparent' alt='inHouse Logo' src='https://i.imgur.com/ww8Eece.png?1'/>
+            <img className='logoTransparent' src='https://i.imgur.com/ww8Eece.png?1'/>
           </div>
           <div className='col'>
             <h4>inHouse</h4>
@@ -54,13 +47,7 @@ const Footer = () => {
       </div>
     </div>
   )
-<<<<<<< HEAD
-}
-
-export default Footer
-=======
   )
 }
 
 export default Footer
->>>>>>> 30e5af81b777b40275d6c6f1c94d015d9f420d2a
