@@ -53,6 +53,10 @@ export default {
   saveItem: function (postData) {
     return axios.post("/api/items", postData);
   },
+  // Update item
+  updateItem: function (id, postData) {
+    return axios.put("/api/items/" + id, postData);
+  },
   // Gets all items
   getWarehouses: function () {
     return axios.get("/api/warehouse");
@@ -90,7 +94,6 @@ export default {
   },
   // Gets all items
   getBinQuantities: function () {
-
     return axios.get("/api/binQty");
   },
   // Gets the item with the given id
@@ -105,7 +108,7 @@ export default {
   saveBinQuantity: function (postData) {
     return axios.post("/api/binQty", postData);
   },
-  updateBinQuantity: function (id,postData) {
+  updateBinQuantity: function (id, postData) {
     return axios.put("/api/binQty/" + id, postData);
   }
 };

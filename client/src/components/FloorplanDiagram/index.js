@@ -1,53 +1,100 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import "./style.css";
 
 function FloorplanDiagram(props) {
     const { bins } = props;
     const binA1 = document.getElementById("A1");
     const binA2 = document.getElementById("A2");
+    const binB1 = document.getElementById("B1");
+    const binB2 = document.getElementById("B2");
+    const binB3 = document.getElementById("B3");
+    const binB4 = document.getElementById("B4");
+    const binC1 = document.getElementById("C1");
+    const binC2 = document.getElementById("C2");
+    const binC3 = document.getElementById("C3");
+    const binC4 = document.getElementById("C4");
+    const binD1 = document.getElementById("D1");
+    const binD2 = document.getElementById("D2");
 
     useEffect(() => {
         updateBinColors();
     });
 
-    //I need to find some way of associating a value > 0 with a specific bin.
-    //the forEach index parameter may create a way to do this better than a regular for loop 
-    //But it is not a simple ascending order, because the bins are A1/2, B1/2/3/4 etc.
     function updateBinColors() {
-        if (bins) {
-            const quantValues = Object.values(bins);
-            console.log(quantValues);
-            for (var i = 0; i < quantValues.length; i++) {
-                if (quantValues[i] > 0) {
-                    console.log(`value at A${i + 1} is greater than 0`);
-                    binA1.style.fill = "red";
-                } else {
-                    binA1.style.fill = "white";
-                }
-            }
+        if (bins && bins.A1 != "") {
+            binA1.style.fill = "#A4C3B2";
         }
-
-        //This won't work this way. It will only update one bin color.
-        //I'll have to loop through all of them. 
-        // if (bins) {
-        //     if (bins.A1 > 0) {
-        //         binA1.style.fill = "red";
-        //     } else if (bins.A2 > 0) {
-        //         binA2.style.fill = "red";
-        //     }
-
-        //     else {
-        //         binA1.style.fill = "white";
-        //         binA2.style.fill = "white";
-        //     }
-        // } else {
-        //     console.log('Nope!');
-        // }
+        if (bins && bins.A1 === "") {
+            binA1.style.fill = "white";
+        }
+        if (bins && bins.A2 != "") {
+            binA2.style.fill = "#A4C3B2";
+        }
+        if (bins && bins.A2 === "") {
+            binA2.style.fill = "white";
+        }
+        if (bins && bins.B1 != "") {
+            binB1.style.fill = "#A4C3B2";
+        }
+        if (bins && bins.B1 === "") {
+            binB1.style.fill = "white";
+        }
+        if (bins && bins.B2 != "") {
+            binB2.style.fill = "#A4C3B2";
+        }
+        if (bins && bins.B2 === "") {
+            binB2.style.fill = "white";
+        }
+        if (bins && bins.B3 != "") {
+            binB3.style.fill = "#A4C3B2";
+        }
+        if (bins && bins.B3 === "") {
+            binB3.style.fill = "white";
+        }
+        if (bins && bins.B4 != "") {
+            binB4.style.fill = "#A4C3B2";
+        }
+        if (bins && bins.B4 === "") {
+            binB4.style.fill = "white";
+        }
+        if (bins && bins.C1 != "") {
+            binC1.style.fill = "#A4C3B2";
+        }
+        if (bins && bins.C1 === "") {
+            binC1.style.fill = "white";
+        }
+        if (bins && bins.C2 != "") {
+            binC2.style.fill = "#A4C3B2";
+        }
+        if (bins && bins.C2 === "") {
+            binC2.style.fill = "white";
+        }
+        if (bins && bins.C3 != "") {
+            binC3.style.fill = "#A4C3B2";
+        }
+        if (bins && bins.C3 === "") {
+            binC3.style.fill = "white";
+        }
+        if (bins && bins.C4 != "") {
+            binC4.style.fill = "#A4C3B2";
+        }
+        if (bins && bins.C4 === "") {
+            binC4.style.fill = "white";
+        }
+        if (bins && bins.D1 != "") {
+            binD1.style.fill = "#A4C3B2";
+        }
+        if (bins && bins.D1 === "") {
+            binD1.style.fill = "white";
+        }
+        if (bins && bins.D2 != "") {
+            binD2.style.fill = "#A4C3B2";
+        }
+        if (bins && bins.D2 === "") {
+            binD2.style.fill = "white";
+        }
     }
 
-    //Comment out "Pointer events" - but use them to locate coloring bins
-    //Colorize the bins that have a qty > 0;
-    //One fallback plan would be to style to qty text instead of the whole bin
 
     return (
         <div className="container-svg">
@@ -452,7 +499,8 @@ function FloorplanDiagram(props) {
                     stroke="#000"
                     pointerEvents="all"
                     d="M120 110h180v30H120z"
-                // Target B1
+                    // Target B1
+                    id="B1"
                 />
                 <switch transform="translate(-.5 -.5)">
                     <foreignObject
@@ -581,7 +629,8 @@ function FloorplanDiagram(props) {
                     stroke="#000"
                     pointerEvents="all"
                     d="M300 110h180v30H300z"
-                // Target B2
+                    // Target B2
+                    id="B2"
                 />
                 <switch transform="translate(-.5 -.5)">
                     <foreignObject
@@ -645,7 +694,8 @@ function FloorplanDiagram(props) {
                     stroke="#000"
                     pointerEvents="all"
                     d="M120 170h180v30H120z"
-                // Target B3
+                    // Target B3
+                    id="B3"
                 />
                 <switch transform="translate(-.5 -.5)">
                     <foreignObject
@@ -709,7 +759,8 @@ function FloorplanDiagram(props) {
                     stroke="#000"
                     pointerEvents="all"
                     d="M120 200h180v30H120z"
-                // Target C1
+                    // Target C1
+                    id="C1"
                 />
                 <switch transform="translate(-.5 -.5)">
                     <foreignObject
@@ -773,7 +824,8 @@ function FloorplanDiagram(props) {
                     stroke="#000"
                     pointerEvents="all"
                     d="M300 170h180v30H300z"
-                // Target B4
+                    // Target B4
+                    id="B4"
                 />
                 <switch transform="translate(-.5 -.5)">
                     <foreignObject
@@ -838,7 +890,8 @@ function FloorplanDiagram(props) {
                     stroke="#000"
                     pointerEvents="all"
                     d="M300 200h180v30H300z"
-                // Target C2
+                    // Target C2
+                    id="C2"
                 />
                 <switch transform="translate(-.5 -.5)">
                     <foreignObject
@@ -903,7 +956,8 @@ function FloorplanDiagram(props) {
                     stroke="#000"
                     pointerEvents="all"
                     d="M120 260h180v30H120z"
-                // Target C3
+                    // Target C3
+                    id="C3"
                 />
                 <switch transform="translate(-.5 -.5)">
                     <foreignObject
@@ -967,7 +1021,8 @@ function FloorplanDiagram(props) {
                     stroke="#000"
                     pointerEvents="all"
                     d="M120 290h180v30H120z"
-                // Target D1
+                    // Target D1
+                    id="D1"
                 />
                 <switch transform="translate(-.5 -.5)">
                     <foreignObject
@@ -1031,7 +1086,8 @@ function FloorplanDiagram(props) {
                     stroke="#000"
                     pointerEvents="all"
                     d="M300 260h180v30H300z"
-                // Target C4
+                    // Target C4
+                    id="C4"
                 />
                 <switch transform="translate(-.5 -.5)">
                     <foreignObject
@@ -1095,7 +1151,8 @@ function FloorplanDiagram(props) {
                     stroke="#000"
                     pointerEvents="all"
                     d="M300 290h180v30H300z"
-                // Target D2
+                    // Target D2
+                    id="D2"
                 />
                 <switch transform="translate(-.5 -.5)">
                     <foreignObject
