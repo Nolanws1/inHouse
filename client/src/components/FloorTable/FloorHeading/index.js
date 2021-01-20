@@ -1,5 +1,6 @@
 import React from "react";
 
+//These colors should change
 function handleOver(e) {
     e.target.style.background = "#6C757D";
 }
@@ -11,7 +12,6 @@ function FloorHeading({ handleSort }) {
     return (
         <thead>
             <tr className="color">
-                <th scope="col">#</th>
                 <th scope="col"
                     data-value="itemNumber"
                     onClick={handleSort}
