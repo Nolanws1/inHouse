@@ -10,12 +10,10 @@ const FloorTable = ({ handleClick }) => {
   const [sortedItems, setSortedItems] = useState(state.items);
 
   //Right now, it works when you go to the Floorplan view after visiting another page first, but not on intial render
-  //Next effort will be to move the API fetch higher up, but leave the sort down here. 
 
   useEffect(() => {
     getItems();
-    setSortedItems(state.items);
-  }, []);
+  }, [sortedItems]);
 
   const getItems = () => {
     API.getItems()
@@ -54,9 +52,11 @@ const FloorTable = ({ handleClick }) => {
   return (
     <table className="table table-dark m-3">
       <FloorHeading handleSort={handleSort} />
+      {/* Without Sort but with initial table render */}
+      <FloorContainer items={state.items} handleClick={handleClick} />
 
-      {/* Fixes the no initial data problem, but breaks the sort */}
-      <FloorContainer items={sortedItems.length > 0 ? sortedItems : state.items} handleClick={handleClick} />
+      {/* With Sort but no initial render */}
+      {/* <FloorContainer items={sortedItems.length != null && sortedItems.length > 0 ? sortedItems : state.items} handleClick={handleClick} /> */}
     </table>
   );
 }
