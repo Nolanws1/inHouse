@@ -10,7 +10,8 @@ function handleLeave(e) {
 function FloorHeading({ handleSort }) {
     return (
         <thead>
-            <tr>
+            <tr className="color">
+                <th scope="col">#</th>
                 <th scope="col"
                     data-value="itemNumber"
                     onClick={handleSort}

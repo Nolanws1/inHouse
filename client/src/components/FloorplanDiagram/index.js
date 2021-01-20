@@ -101,9 +101,9 @@ function FloorplanDiagram(props) {
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 xmlnsXlink="http://www.w3.org/1999/xlink"
-                width="100%"
-                height="100%"
-                viewBox="0 0 950 450"
+                width="115%"
+                height="90%"
+                viewBox="-5 0 970 460"
                 {...props}
             >
                 <path fill="#eee" pointerEvents="all" d="M0 0h830v470H0z" />

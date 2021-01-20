@@ -50,7 +50,7 @@ const FloorTable = ({ handleClick }) => {
   }
 
   return (
-    <table className="table table-dark m-3 table-hover">
+    <table className="table color2 table-hover">
       <FloorHeading handleSort={handleSort} />
       <FloorContainer items={sortedItems.length != null && sortedItems.length > 0 ? sortedItems : state.items} handleClick={handleClick} />
     </table>

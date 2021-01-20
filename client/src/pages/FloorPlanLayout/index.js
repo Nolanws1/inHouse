@@ -55,15 +55,15 @@ function FloorPlanLayout() {
     //Could relocate this inside of currentItem state as a custom validator
     function hasQty(allBins, targetItem) {
         const msgId = document.getElementById("message");
-        msgId.style.color = "white";
+        msgId.style.color = "black";
         if (allBins) {
             //Returns true if allBins has no qtys
             const isEmpty = !Object.values(allBins).some(
                 (x) => x !== null && x !== "" && x !== undefined
             );
             if (isEmpty) {
-                msgId.style.color = "lightgray";
-                setTimeout(() => { msgId.style.color = "white" }, 400);
+                msgId.style.color = "white";
+                setTimeout(() => { msgId.style.color = "black" }, 400);
                 return setCurrentMsg(`That item is out of stock.`);
             } else {
                 return setCurrentMsg(`${targetItem.currentItemName} (${targetItem.currentItemNumber})`);
@@ -107,19 +107,19 @@ function FloorPlanLayout() {
 
     return (
         isAuthenticated && (
-            <div className="wrapper">
+            <div className="floorplan-container">
 
                 <header className="main-head">
                     <h2 id="message">{currentMsg}</h2>
                 </header>
 
-                <article className="content">
+                <div className="content">
                     <FloorplanDiagram bins={bins} />
-                </article>
+                </div>
 
-                <aside className="side">
+                <div className="side">
                     <FloorTable handleClick={handleClick} />
-                </aside>
+                </div>
 
             </div>
         )

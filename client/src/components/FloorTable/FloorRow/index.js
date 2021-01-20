@@ -2,7 +2,7 @@ import React from 'react';
 
 function FloorRow({ item, handleClick, index }) {
     return (
-        <tr key={index}>
+        <tr className="colorone" key={index}>
             <td onClick={handleClick}
                 data-number={item.itemNumber}
                 data-name={item.itemName}>
