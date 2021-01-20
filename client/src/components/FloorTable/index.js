@@ -2,14 +2,14 @@ import React from 'react';
 import FloorHeading from "./FloorHeading";
 import FloorContainer from "./FloorContainer";
 
-const Table = () => {
+const FloorTable = ({ handleClick }) => {
 
   return (
-    <table className="table table-dark m-3">
+    <table className="table color2">
       <FloorHeading />
-      <FloorContainer />
+      <FloorContainer handleClick={handleClick} />
     </table>
   );
 }
 
-export default Table;
+export default FloorTable;

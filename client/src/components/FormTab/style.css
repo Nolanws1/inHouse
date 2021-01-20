@@ -12,9 +12,8 @@
 
 .single-tab{
     border-top: solid;
-    border-width: 10px;
+    border-width: 20px;
     border-color: white;
-
 }
 
 
@@ -36,4 +35,8 @@
     width: 20%;
     height: 50px;
     margin-bottom: -15px;
+}
+
+.single-tab h2{
+    padding-top: 30px;
 }

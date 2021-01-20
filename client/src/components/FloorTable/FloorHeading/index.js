@@ -4,7 +4,7 @@ import React from "react";
 function FloorHeading({ handleClick }) {
     return (
         <thead>
-            <tr>
+            <tr className="color">
                 <th scope="col">#</th>
                 <th scope="col"
                     // onClick={handleClick}
