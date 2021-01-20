@@ -5,7 +5,7 @@ import FloorContainer from "./FloorContainer";
 const FloorTable = ({ handleClick }) => {
 
   return (
-    <table className="table table-dark m-3">
+    <table className="table color2">
       <FloorHeading />
       <FloorContainer handleClick={handleClick} />
     </table>

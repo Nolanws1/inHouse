@@ -1,15 +1,15 @@
 import React from 'react';
 
 function handleOver(e) {
-    e.target.style.background = "#6C757D";
+    e.target.style.background = "#A4C3B2";
 }
 function handleLeave(e) {
-    e.target.style.background = "#343A40";
+    e.target.style.background = "#CCE3DE";
 }
 
 function FloorRow({ item, handleClick, index }) {
     return (
-        <tr key={index}>
+        <tr className="colorone" key={index}>
             <td onClick={handleClick}
                 onMouseOver={handleOver}
                 onMouseLeave={handleLeave}
