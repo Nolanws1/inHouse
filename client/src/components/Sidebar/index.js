@@ -18,11 +18,7 @@ function Sidebar() {
                     <Link to="#" className='menu-bars'>
                         <FaIcons.FaBars  className="icon" onClick={showSidebar} />
                     </Link>
-<<<<<<< HEAD
-                    <h1>inHouse<img className="head-logo" alt='inHouse Logo' src="https://i.imgur.com/lGTwg2y.png?1" /></h1>
-=======
                     <h1 className="title">inHouse<img className="head-logo" src="https://i.imgur.com/lGTwg2y.png?1" /></h1>
->>>>>>> 30e5af81b777b40275d6c6f1c94d015d9f420d2a
                     <Clock />
                 </div>
             </div>
