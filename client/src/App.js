@@ -15,7 +15,6 @@ import './App.css';
 
 function App() {
   const { isLoading, isAuthenticated, loginWithRedirect } = useAuth0();
-  const loginURL = 'https://codymullen.us.auth0.com/u/login?state=g6Fo2SBJdndRV0NrRWNyOHdXdHcwYk5LUm9YTGkwc2tkVDhVTKN0aWTZIExucC1RNzJMUTIwVUEwMktpM2NUT0xjUGhWNkZYdWNuo2NpZNkgSDZIYVRvbTBFRVZpSkVwZDV6M1dPMWJKTUdwdTE1RGU';
   if (isLoading) return <Loading />
 
   return (
