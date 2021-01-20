@@ -40,7 +40,17 @@ function CreateItemForm() {
       <form className="form-group mt-5 mb-5" onSubmit={handleSubmit}>
         <input className="form-control mb-5" ref={itemNumRef} placeholder="Item #" />
         <input className="form-control mb-5" ref={itemNameRef} placeholder="Name" />
-        <input className="form-control mb-5" ref={catRef} placeholder="Category" />
+        <select className="form-control mb-5" ref={catRef} placeholder="Category">
+          <option>BICYCLE</option>
+          <option>CHAIR</option>
+          <option>COMPUTER</option>
+          <option>DESK</option>
+          <option>LAMP</option>
+          <option>SPEAKER</option>
+          <option>TABLE</option>
+          <option>WHITEBOARD</option>
+          <option>OTHER</option>
+        </select>
         {/* <input type="number" className="form-control mb-5" ref={qtyRef} placeholder="Quantity" /> */}
         <button className="btn btn-success mt-3 mb-5" type="submit">
           Insert

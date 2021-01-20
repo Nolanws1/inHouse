@@ -32,3 +32,7 @@ export const UPDATE_BINQTY = "UPDATE_BINQTY";
 export const REMOVE_BINQTY = "REMOVE_BINQTY";
 export const SET_CURRENT_BINQTY = "SET_CURRENT_BINQTY";
 export const ADD_BINQTY = "ADD_BINQTY";
+
+export const DD_WAREHOUSE = "DD_WAREHOUSE";
+export const DD_BIN = "DD_BIN";
+export const DD_SHELF = "DD_SHELF";

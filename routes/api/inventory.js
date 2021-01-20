@@ -5,6 +5,7 @@ const postsController = require("../../controllers/postsController");
 router
   .route("/")
   .get(postsController.findAllInventory)
+  .get(postsController.getInventoryID)
   .post(postsController.createInventory);
 
 // Matches with "/api/posts/:id"

@@ -21,6 +21,10 @@ export default {
   getLayouts: function () {
     return axios.get("/api/layout");
   },
+  // Gets all bin
+  getBins: function () {
+    return axios.get("/api/bin");
+  },
   // Gets the layout with the given id
   getLayout: function (id) {
     return axios.get("/api/layout/" + id);
@@ -69,6 +73,9 @@ export default {
   getInventories: function () {
     return axios.get("/api/inventory");
   },
+  getInventoryId: function () {
+    return axios.get("/api/inventoryid");
+  },
   // Gets the item with the given id
   getInventory: function (id) {
     return axios.get("/api/inventory/" + id);
@@ -83,7 +90,7 @@ export default {
   },
   // Gets all items
   getBinQuantities: function () {
-    return axios.get("/api/binQty");
+  return axios.get("/api/binQty");
   },
   // Gets the item with the given id
   getBinQuantity: function (id) {
@@ -96,5 +103,8 @@ export default {
   // Saves a item to the database
   saveBinQuantity: function (postData) {
     return axios.post("/api/binQty", postData);
+  },
+  updateBinQuantity: function (id,postData) {
+    return axios.put("/api/binQty/" + id, postData);
   }
 };
