@@ -2,7 +2,7 @@ import React from 'react';
 import { StoreProvider } from "./utils/GlobalState";
 import { BrowserRouter as Router, Redirect, Route, Switch } from "react-router-dom";
 import LoginButton from './components/LoginButton';
-// import LogoutButton from './components/LogoutButton';
+import LogoutButton from './components/LogoutButton';
 import { useAuth0 } from '@auth0/auth0-react';
 import NavTabs from "./components/NavTabs";
 import Sidebar from "./components/Sidebar";
