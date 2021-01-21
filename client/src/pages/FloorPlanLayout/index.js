@@ -44,8 +44,10 @@ function FloorPlanLayout() {
             currentItemNumber: itemNumber,
             //currentMessage: integrate currentMsg state here instead of as separate state. 
         });
+        //Sets the message to show currently displaying item or "out of stock"
         hasQty(bins, currentItem);
 
+        //Handles bin qtys for targeted item
         var result = findQty(itemNumber, quantities);
         updateBins(result);
     }

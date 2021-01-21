@@ -2,7 +2,7 @@ import React from 'react';
 import FormHeading from "./FormHeading";
 import FormContainer from "./FormContainer";
 
-const Table = () => {
+const FormTable = () => {
   return (
     <table className="table table-striped color2">
       <FormHeading />
@@ -11,4 +11,4 @@ const Table = () => {
   );
 }
 
-export default Table;
+export default FormTable;

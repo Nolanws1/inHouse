@@ -3,7 +3,7 @@ import DashHeading from "./DashHeading";
 import DashContainer from "./DashContainer";
 import './style.css'
 
-const Table = () => {
+const DashTable = () => {
 
   return (
     <table className="table table-striped color2">
@@ -13,4 +13,4 @@ const Table = () => {
   );
 }
 
-export default Table;
+export default DashTable;
