@@ -1,12 +1,4 @@
 .container-svg {
-    margin-right: -4rem;
-    padding: 10px;
     color: black;
     font-weight: bold;
-      /* width: 100%; */
-    /* font-size: 1px; */
-}
-
-#A1, #A2 {
-  fill: white;
 }

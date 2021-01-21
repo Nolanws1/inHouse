@@ -22,73 +22,73 @@ function FloorplanDiagram(props) {
 
     function updateBinColors() {
         if (bins && bins.A1 != "") {
-            binA1.style.fill = "#A4C3B2";
+            binA1.style.fill = "#8AAABB";
         }
         if (bins && bins.A1 === "") {
             binA1.style.fill = "white";
         }
         if (bins && bins.A2 != "") {
-            binA2.style.fill = "#A4C3B2";
+            binA2.style.fill = "#8AAABB";
         }
         if (bins && bins.A2 === "") {
             binA2.style.fill = "white";
         }
         if (bins && bins.B1 != "") {
-            binB1.style.fill = "#A4C3B2";
+            binB1.style.fill = "#8AAABB";
         }
         if (bins && bins.B1 === "") {
             binB1.style.fill = "white";
         }
         if (bins && bins.B2 != "") {
-            binB2.style.fill = "#A4C3B2";
+            binB2.style.fill = "#8AAABB";
         }
         if (bins && bins.B2 === "") {
             binB2.style.fill = "white";
         }
         if (bins && bins.B3 != "") {
-            binB3.style.fill = "#A4C3B2";
+            binB3.style.fill = "#8AAABB";
         }
         if (bins && bins.B3 === "") {
             binB3.style.fill = "white";
         }
         if (bins && bins.B4 != "") {
-            binB4.style.fill = "#A4C3B2";
+            binB4.style.fill = "#8AAABB";
         }
         if (bins && bins.B4 === "") {
             binB4.style.fill = "white";
         }
         if (bins && bins.C1 != "") {
-            binC1.style.fill = "#A4C3B2";
+            binC1.style.fill = "#8AAABB";
         }
         if (bins && bins.C1 === "") {
             binC1.style.fill = "white";
         }
         if (bins && bins.C2 != "") {
-            binC2.style.fill = "#A4C3B2";
+            binC2.style.fill = "#8AAABB";
         }
         if (bins && bins.C2 === "") {
             binC2.style.fill = "white";
         }
         if (bins && bins.C3 != "") {
-            binC3.style.fill = "#A4C3B2";
+            binC3.style.fill = "#8AAABB";
         }
         if (bins && bins.C3 === "") {
             binC3.style.fill = "white";
         }
         if (bins && bins.C4 != "") {
-            binC4.style.fill = "#A4C3B2";
+            binC4.style.fill = "#8AAABB";
         }
         if (bins && bins.C4 === "") {
             binC4.style.fill = "white";
         }
         if (bins && bins.D1 != "") {
-            binD1.style.fill = "#A4C3B2";
+            binD1.style.fill = "#8AAABB";
         }
         if (bins && bins.D1 === "") {
             binD1.style.fill = "white";
         }
         if (bins && bins.D2 != "") {
-            binD2.style.fill = "#A4C3B2";
+            binD2.style.fill = "#8AAABB";
         }
         if (bins && bins.D2 === "") {
             binD2.style.fill = "white";
@@ -101,12 +101,12 @@ function FloorplanDiagram(props) {
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 xmlnsXlink="http://www.w3.org/1999/xlink"
-                width="100%"
-                height="100%"
-                viewBox="0 0 950 450"
+                width="115%"
+                height="90%"
+                viewBox="-5 0 970 460"
                 {...props}
             >
-                <path fill="#eee" pointerEvents="all" d="M0 0h830v470H0z" />
+                <path fill="#EAF4F4" pointerEvents="all" d="M0 0h830v470H0z" />
                 <path
                     stroke="#000"
                     pointerEvents="all"

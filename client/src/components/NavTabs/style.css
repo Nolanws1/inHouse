@@ -8,7 +8,7 @@
   }
   
   .nav-tabs {
-    background-color: #4f6b5f;
+    background-color: #010107;
   }
   
   .tab{
@@ -21,7 +21,7 @@
     border-top-left-radius: 30%;
     border-top-right-radius: 30%;
     color: black;
-    background-color: #A4C3B2;
+    background-color: #8aaabb;
 }
 
 .tab :hover{
