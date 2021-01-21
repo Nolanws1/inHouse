@@ -1,6 +1,5 @@
 import React from "react";
 
-//These colors should change
 function handleOver(e) {
     e.target.style.background = "#8AAABB";
     e.target.style.color = "black";
