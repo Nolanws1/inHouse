@@ -38,5 +38,5 @@ If you have suggestions, questions, or would like to contribute please reach one
 We have no specific guidelines for testing at this time. 
     
 ## Questions
-If you have any questions about the repo you can email me at rudikraeher@gmail.com, [other emails] .  
+If you have any questions about the repo you can email any of us at rudikraeher@gmail.com, choyo.matsuta@gmail.com, codymu45@gmail.com, and Nolanws@gmail.com.  
 Visit our GitHub pages: [Rudi](https://github.com/rkraeher), [Choyo](https://github.com/cmatsuta), [Cody](https://github.com/codymu45), and [Nolan](https://github.com/Nolanws1).
