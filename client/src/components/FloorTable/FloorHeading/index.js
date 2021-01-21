@@ -1,11 +1,12 @@
 import React from "react";
 
-//These colors should change
 function handleOver(e) {
-    e.target.style.background = "#6C757D";
+    e.target.style.background = "#8AAABB";
+    e.target.style.color = "black";
 }
 function handleLeave(e) {
-    e.target.style.background = "#343A40";
+    e.target.style.background = "#4B647C";
+    e.target.style.color = "white";
 }
 
 function FloorHeading({ handleSort }) {
