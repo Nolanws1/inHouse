@@ -1,6 +1,6 @@
 import React from 'react'
 import "./style.css";
-import FloorPlanImg from '../../images/floorplans/floorplan.png';
+import FloorPlanImg from '../../images/floorplans/floorplanCOLOR.png';
 import TodaysDate from '../../components/Date';
 import DashTable from '../../components/DashTable';
 import { useAuth0 } from '@auth0/auth0-react';

@@ -7,10 +7,10 @@ import './style.css';
 const FormTab = () => {
     return(
         <Tabs defaultActiveKey="Insert" transition={false} id="noanim-tab-example" className="tabs-background">
-        <Tab eventKey="Insert" title="Insert" className="single-tab">
+        <Tab eventKey="Insert" title="Insert" className=" single-tab single-tab-insert">
           <CreateItemForm />
         </Tab>
-        <Tab eventKey="Update" title="Update">
+        <Tab eventKey="Update" title="Update" className="single-tab single-tab-update">
           <UpdateInventoryForm />
         </Tab>
       </Tabs> 

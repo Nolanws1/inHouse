@@ -62,7 +62,7 @@ function FloorPlanLayout() {
                 (x) => x !== null && x !== "" && x !== undefined
             );
             if (isEmpty) {
-                msgId.style.color = "white";
+                msgId.style.color = "#d1231d";
                 setTimeout(() => { msgId.style.color = "black" }, 400);
                 return setCurrentMsg(`That item is out of stock.`);
             } else {

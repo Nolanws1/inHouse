@@ -215,22 +215,14 @@ function UpdateInventoryForm() {
 
   return (
     <div>
-      <h1>Update Inventory</h1>
+      <h2>Update Inventory</h2>
       <form className="form-group mt-5 mb-5" onSubmit={handleSubmit}>
-        {/* <input type="hidden" ref={idInvRef} value={state.currentInventory.ID} /> */}
-        {/* <input className="form-control mb-5" ref={idInvRef} placeholder="ID" /> */}
-        {/* {state.inventories.length > 0 && state.inventories.map(inventory => 
-                <input type="hidden" ref={idInvRef} value={inventory.ID} />
-                )} */}
-        {/* <WarehouseList  ref={warehouseRef} /> */}
         <label>Warehouse</label>
         <select className="form-control mb-5" ref={warehouseRef} placeholder="Warehouse">
         {state.ddWarehouse.length > 0 && state.ddWarehouse.map(wh => 
                 <option>{wh}</option>
                 )};
             </select>
-        {/* <input className="form-control mb-5" ref={warehouseRef} placeholder="Warehouse Code" /> */}
-        {/* <input className="form-control mb-5" ref={itemNumRef} placeholder="Item Number" /> */}
         <label>Item Number</label>
         <select className="form-control mb-5" ref={itemNumRef} placeholder="Item Number">
         {state.items.length > 0 && state.items.map(item => 
@@ -244,30 +236,19 @@ function UpdateInventoryForm() {
                 <option>{bin}</option>
                 )};
             </select>
-        {/* <select className="form-control mb-5" ref={binRef} placeholder="Bin">
-          <option>A1</option>
-          <option>B1</option>
-          <option>C1</option>
-        </select> */}
         <label>Shelf</label>
         <select className="form-control mb-5" ref={shelfRef}>
         {state.ddShelf.length > 0 && state.ddShelf.map(shelfNo => 
                 <option>{shelfNo}</option>
                 )};
             </select>
-        {/* <select className="form-control mb-5" ref={shelfRef} placeholder="Shelf">
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-        </select> */}
-        {/* <input className="form-control mb-5" ref={binLocRef} placeholder="Bin Location" /> */}
         <select className="form-control mb-5" ref={trxTypeRef} placeholder="Trx Type">
           <option>IN</option>
           <option>OUT</option>
         </select>
         <input type="number" className="form-control mb-5" ref={trxQtyRef} placeholder="Quantity" />
         <button className="btn btn-success mt-3 mb-5" type="submit">
-          Update Inventory
+          Update
           </button>
       </form>
     </div>

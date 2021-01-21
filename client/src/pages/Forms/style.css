@@ -25,6 +25,8 @@
     border-color: #4b647c;
     height: 600px;
     box-shadow: 1px 4px 2px 4px #888888;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .items{
@@ -50,7 +52,7 @@
         "footer footer";
     }
    
-    .header{
+    .dash-header{
       display: none;
     }
   }
@@ -58,6 +60,7 @@
   @media only screen and (max-width: 1024px) {
     .form-container {
       grid-template-columns: 1fr 4fr 1fr;
+      margin-top: 0px;
       grid-template-areas:
         "header header  header"
         "col1 col1 col1"
@@ -65,7 +68,10 @@
         "footer footer footer"
      }
 
-    .header{
+     
+
+
+    .dash-header{
       display: none;
     }
 

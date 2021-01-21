@@ -78,7 +78,8 @@ box-shadow: 1px 4px 2px 4px #888888;
       }
 
       .floorplan{
-        margin-top: 0px;
+        display: none;
+
       }
     }
 
