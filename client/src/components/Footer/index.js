@@ -41,7 +41,7 @@ const Footer = () => {
         <hr />
         <div className='row'>
           <p className='col-sm'>
-            &copy;{new Date().getFullYear()} inHouse Inventory Management System | All rights reserved
+            &copy;{new Date().getFullYear()} inHouse Inventory Tracking System | All rights reserved
           </p>
         </div>
       </div>

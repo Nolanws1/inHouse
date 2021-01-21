@@ -25,7 +25,7 @@
     border:solid;
     padding: 10px;
     border-width: 4px;
-    border-color: #4f6b5f;
+    border-color: #4b647c;
     font-size: xx-large;
     text-align:center;
     background-color: #EAF4F4;
@@ -38,7 +38,7 @@
   width: 100%;
   border: solid;
   border-width: 4px;
-  border-color: #4f6b5f;
+  border-color: #4b647c;
   margin-top: 20px;
   box-shadow: 1px 4px 2px 4px #888888;
 }
@@ -47,7 +47,7 @@
 grid-area: sidebar;
 border: solid;
 border-width: 4px;
-border-color: #4f6b5f;
+border-color: #4b647c;
 max-height: 650px;
 overflow-y: scroll;
 overflow-x: hidden;
@@ -78,7 +78,8 @@ box-shadow: 1px 4px 2px 4px #888888;
       }
 
       .floorplan{
-        margin-top: 0px;
+        display: none;
+
       }
     }
 

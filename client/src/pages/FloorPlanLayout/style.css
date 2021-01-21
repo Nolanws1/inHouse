@@ -2,7 +2,7 @@
   background-color: #EAF4F4;
     display: grid;
     grid-template-columns: 65% 20%;
-    grid-gap: 0px;
+    grid-gap: 10px;
     justify-content: center;
     grid-template-areas:
     "header header"
@@ -16,12 +16,13 @@
 
 .main-head {
     grid-area: header;
-    background-color: #A4C3B2;
-    border: solid 4px #4f6b5f;
+    background-color: #cadae9;
+    border: solid 4px #4b647c;
     text-align: center;
     margin-top: 20px;
     padding: 10px;
     color: black;
+    box-shadow: 1px 4px 2px 4px #888888;
   }
 
   .content {
@@ -30,6 +31,8 @@
     padding: 10px;
     border-width: 4px;
     border-color: #4f6b5f;
+    max-width: 100%;
+    box-shadow: 1px 4px 2px 4px #888888;
   }
 
   .side {
@@ -38,12 +41,43 @@
     color: white;
     overflow-y: scroll;
     overflow-x: hidden;
-    height: 620px;
+    height: 700px;
     justify-content: center;
-    display: flex;
+    box-shadow: 1px 4px 2px 4px #888888;
   }
 
 
-  @media only screen and (min-width: 700px) {
-    
-  }
+  @media only screen and (max-width: 500px) {
+    .floorplan-container {
+      grid-template-columns: 1fr 3fr;
+      margin-top: 0px;
+      grid-gap: 7px;
+      grid-template-areas:
+        "header  header"
+        "content content"
+        "sidebar sidebar"
+        "footer footer";
+      }
+
+      .main-header{
+        font-size: smaller;
+      }
+    }
+
+    @media only screen and (max-width: 1400px) {
+      .floorplan-container {
+        margin-top: 0px;
+        grid-gap: 7px;
+        grid-template-areas:
+          "header header"
+          "content content"
+          "sidebar sidebar"
+          "footer footer";
+       };
+  
+       .content {
+        max-width: 100%;
+        justify-content: center;
+      }
+  
+      }

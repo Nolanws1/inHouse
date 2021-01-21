@@ -1,5 +1,5 @@
 .tabs-background{
-    background-color: #4f6b5f;
+    background-color: #4b647c;
 }
 
 .tabs-background a{
@@ -10,14 +10,19 @@
    color: white
 }
 
-.single-tab{
+.single-tab {
     border-top: solid;
     border-width: 20px;
     border-color: white;
 }
 
+.single-tab button:hover {
+    background-color: rgb(40, 64, 83);
+    transition: 0.5s;
+}
 
-.single-tab input{
+
+.single-tab-insert input{
     width: 50%;
     text-align: center;
     height: 40px;
@@ -29,14 +34,48 @@
 }
 
 .single-tab button{
-    background-color: #4f6b5f;
+    background-color: #4b647c;
     border-color: black;
     border-width: 1px;
     width: 20%;
     height: 50px;
-    margin-bottom: -15px;
+    padding-bottom: 20px;
+    padding-top: 10px;
 }
 
 .single-tab h2{
     padding-top: 30px;
 }
+
+.single-tab-insert select{
+    width: 50%;
+    text-align: center;
+    height: 40px;
+    margin: auto;
+    display: block;
+    border: solid;
+    border-color:black;
+    border-width: 1px;
+}
+
+
+.single-tab-update select{
+    width: 50%;
+    height: 40px;
+    margin: auto;
+    display: block;
+    border: solid;
+    border-color:black;
+    border-width: 1px;
+}
+
+.single-tab-update input{
+    width: 50%;
+    height: 40px;
+    margin: auto;
+    display: block;
+    border: solid;
+    border-color:black;
+    border-width: 1px;
+}
+
