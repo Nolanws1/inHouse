@@ -1,4 +1,4 @@
-# inHouse Inventory Tracker
+# inHouse Inventory Tracking System
 
 ## Description
     Tracks warehouse inventory--shipped and received--update item quantities, add and delete items. Floorplan displays item quantities and bin locations for all inventory.
