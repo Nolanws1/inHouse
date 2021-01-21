@@ -59,7 +59,7 @@ function FloorplanDiagram(props) {
                 viewBox="-5 0 970 460"
                 {...props}
             >
-                <path fill="#eee" pointerEvents="all" d="M0 0h830v470H0z" />
+                <path fill="#EAF4F4" pointerEvents="all" d="M0 0h830v470H0z" />
                 <path
                     stroke="#000"
                     pointerEvents="all"

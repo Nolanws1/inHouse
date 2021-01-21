@@ -11,7 +11,7 @@ const Forms = () => {
   return (
     isAuthenticated && (
       <div className="form-container">
-        <div className="header">Header</div>
+        <div className="dash-header">Header</div>
 
         <div className="form">
           <FormTab />

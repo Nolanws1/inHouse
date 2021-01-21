@@ -4,7 +4,7 @@ import FormContainer from "./FormContainer";
 
 const Table = () => {
   return (
-    <table className="table table-striped colorone">
+    <table className="table table-striped color2">
       <FormHeading />
       <FormContainer />
     </table>
