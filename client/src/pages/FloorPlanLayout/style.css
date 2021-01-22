@@ -23,6 +23,7 @@
     padding: 10px;
     color: black;
     box-shadow: 1px 4px 2px 4px #888888;
+    width: 100%;
   }
 
   .content {
@@ -49,8 +50,8 @@
 
   @media only screen and (max-width: 500px) {
     .floorplan-container {
-      grid-template-columns: 1fr 3fr;
       margin-top: 0px;
+      display: grid;
       grid-gap: 7px;
       grid-template-areas:
         "header  header"
@@ -59,8 +60,10 @@
         "footer footer";
       }
 
-      .main-header{
+      .main-head{
         font-size: smaller;
+        width: 100%;
+        margin-top: 0px;
       }
     }
 
@@ -69,10 +72,10 @@
         margin-top: 0px;
         grid-gap: 7px;
         grid-template-areas:
-          "header header"
-          "content content"
-          "sidebar sidebar"
-          "footer footer";
+          "header header header"
+          "content content content"
+          "sidebar sidebar sidebar"
+          "footer footer footer";
        };
   
        .content {
@@ -80,4 +83,10 @@
         justify-content: center;
       }
   
+      .main-head{
+        font-size: smaller;
+        width: 100%;
+      }
+
+
       }
