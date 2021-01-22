@@ -36,7 +36,7 @@ function App() {
     </Router>
     </StoreProvider>
   );
-}
+} 
 
 export default App;
 
