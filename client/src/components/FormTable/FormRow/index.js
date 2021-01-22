@@ -3,14 +3,14 @@ import DeleteBtn from '../../DeleteBtn';
 import './index.css';
 
 function FormRow({ item, index, removeItem }) {
-    const deleteBtnClass = item.qty > 0 ? "display-none" : "";
+    const deleteBtnClass = item.qty > 0 ? "delete-btn" : "display-none";
 
     return (
         <tr className="colorone" key={index}>
-            <td>{item != undefined && item.itemNumber}</td>
-            <td>{item != undefined && item.itemName}</td>
-            <td>{item != undefined && item.qty}</td>
-            <td className={deleteBtnClass}><DeleteBtn onClick={() => removeItem(item!= undefined && item._id)} /></td>
+            <td>{item !== undefined && item.itemNumber}</td>
+            <td>{item !== undefined && item.itemName}</td>
+            <td>{item !== undefined && item.qty}</td>
+            <td><DeleteBtn onClick={() => removeItem(item!= undefined && item._id)} className={deleteBtnClass}/></td>
         </tr>
     )
 }

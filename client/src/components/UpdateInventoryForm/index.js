@@ -110,7 +110,7 @@ function UpdateInventoryForm() {
             let updatedBinQty = parseInt(bins[i].binQty) + quantity;
 
             // if binQty will be less than 1, skip update
-            if (updatedBinQty > 0) {
+            if (updatedBinQty >= 0) {
               API.updateBinQuantity(bins[i]._id, {
                 warehouseCode: "CA",
                 bin: binNum,
@@ -216,7 +216,7 @@ function UpdateInventoryForm() {
         trxTypeRef.current.value = "";
       }
       else {
-        alert("BinQty cannot be lower than 1")
+        alert("BinQty cannot be lower than 0")
       }
     })
     .catch(err => console.log(err));
@@ -263,7 +263,7 @@ function UpdateInventoryForm() {
           <option>IN</option>
           <option>OUT</option>
         </select>
-        <input type="number" className="form-control mb-5" ref={trxQtyRef} placeholder="Quantity" />
+        <input type="number" min="0" className="form-control mb-5" ref={trxQtyRef} placeholder="Quantity" />
         <button className="btn btn-success mt-3 mb-5" type="submit">
           Update
           </button>
