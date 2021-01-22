@@ -79,6 +79,7 @@ box-shadow: 1px 4px 2px 4px #888888;
 
       .floorplan{
         display: none;
+        width: 90%;
 
       }
     }

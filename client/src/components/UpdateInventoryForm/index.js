@@ -215,7 +215,7 @@ function UpdateInventoryForm() {
 
   return (
     <div>
-      <h2>Update Inventory</h2>
+      <h1>Update Inventory</h1>
       <form className="form-group mt-5 mb-5" onSubmit={handleSubmit}>
         <label>Warehouse</label>
         <select className="form-control mb-5" ref={warehouseRef} placeholder="Warehouse">
