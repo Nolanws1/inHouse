@@ -1,0 +1,5 @@
+.btn.btn-success:active, .btn-success:focus {
+    background-color: #4b647c !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
