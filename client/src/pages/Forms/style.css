@@ -44,6 +44,7 @@
 
 @media only screen and (max-width: 500px) {
     .form-container {
+      margin-top: 0px;
       grid-template-columns: 1fr 3fr;
       grid-template-areas:
         "header  header"
@@ -52,7 +53,7 @@
         "footer footer";
     }
    
-    .dash-header{
+    .header{
       display: none;
     }
   }
@@ -68,10 +69,7 @@
         "footer footer footer"
      }
 
-     
-
-
-    .dash-header{
+     .header{
       display: none;
     }
 

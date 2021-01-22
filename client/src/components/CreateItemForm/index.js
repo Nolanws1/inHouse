@@ -36,7 +36,7 @@ function CreateItemForm() {
 
   return (
     <div>
-      <h2>Insert Item</h2>
+      <h1>Insert Item</h1>
       <form className="form-group mt-5 mb-5" onSubmit={handleSubmit}>
         <input className="form-control mb-5" ref={itemNumRef} placeholder="Item #" />
         <input className="form-control mb-5" ref={itemNameRef} placeholder="Name" />
