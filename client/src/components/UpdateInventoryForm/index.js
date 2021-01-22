@@ -263,7 +263,7 @@ function UpdateInventoryForm() {
           <option>IN</option>
           <option>OUT</option>
         </select>
-        <input type="number" className="form-control mb-5" ref={trxQtyRef} placeholder="Quantity" />
+        <input type="number" min="0" className="form-control mb-5" ref={trxQtyRef} placeholder="Quantity" />
         <button className="btn btn-success mt-3 mb-5" type="submit">
           Update
           </button>
