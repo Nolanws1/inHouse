@@ -17,7 +17,7 @@
 Clone the repo, install dependencies, and connect to MongoDB. 
 
 ## Usage
-Visit the demo site here [insert deployed url]
+Visit the demo site [here](https://inhouse-tracker.herokuapp.com/). 
 
 ## Technologies
 React, Node/Express, MongoDB/Mongoose, Bootstrap, Auth0, React-Icons
