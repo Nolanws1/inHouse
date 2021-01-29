@@ -5,11 +5,9 @@ import { Link } from "react-router-dom";
 import { useStoreContext } from "../../utils/GlobalState";
 import { REMOVE_INVENTORY, UPDATE_INVENTORY, LOADING } from "../../utils/actions";
 import API from "../../utils/API";
-import { useAuth0 } from '@auth0/auth0-react';
 
 function InventoryList() {
 const [state, dispatch] = useStoreContext();
-const { isAuthenticated } = useAuth0();
 
 const removeInventory = id => {
     API.deleteInventory(id)
@@ -46,13 +44,13 @@ return (
         {state.inventories.length ? (
         <List>
             {state.inventories.length > 0 && state.inventories.map(item => (
-            <ListItem key={item!= undefined && item._id}>
-                <Link to={"/items/" + (item!= undefined && item._id)}>
+            <ListItem key={item!== undefined && item._id}>
+                <Link to={"/items/" + (item!== undefined && item._id)}>
                 <strong>
-                    {item!= undefined && item.binLocation} Item: {item!= undefined && item.itemNumber} Qty: {item!= undefined && item.qty} ({item!= undefined && item.trxType})
+                    {item!== undefined && item.binLocation} Item: {item!== undefined && item.itemNumber} Qty: {item!== undefined && item.qty} ({item!== undefined && item.trxType})
                 </strong>
                 </Link>
-                <DeleteBtn onClick={() => removeInventory(item!= undefined && item._id)} />
+                <DeleteBtn onClick={() => removeInventory(item!== undefined && item._id)} />
             </ListItem>
             ))}
         </List>

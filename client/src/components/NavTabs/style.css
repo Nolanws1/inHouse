@@ -32,15 +32,9 @@
     background-color: #EAF4F4;
 }
 
-@media only screen and (max-width: 500px) {
-  .nav-tabs {
-    display: none;
-  }
- 
-}
 
 @media only screen and (max-width: 700px) {
-  .nav-tabs {
+  .no-display {
     display: none;
    }
   }

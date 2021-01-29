@@ -10,7 +10,7 @@ function FormRow({ item, index, removeItem }) {
             <td>{item !== undefined && item.itemNumber}</td>
             <td>{item !== undefined && item.itemName}</td>
             <td>{item !== undefined && item.qty}</td>
-            <td><DeleteBtn onClick={() => removeItem(item != undefined && item._id)} className={deleteBtnClass} /></td>
+            <td><DeleteBtn onClick={() => removeItem(item !== undefined && item._id)} className={deleteBtnClass} /></td>
         </tr>
     )
 }
