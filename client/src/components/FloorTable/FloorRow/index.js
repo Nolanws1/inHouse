@@ -6,12 +6,12 @@ function FloorRow({ item, handleClick, index }) {
             <td onClick={handleClick}
                 data-number={item.itemNumber}
                 data-name={item.itemName}>
-                {item != undefined && item.itemNumber}
+                {item !== undefined && item.itemNumber}
             </td>
             <td onClick={handleClick}
                 data-number={item.itemNumber}
                 data-name={item.itemName}>
-                {item != undefined && item.itemName}
+                {item !== undefined && item.itemName}
             </td>
         </tr>
     )

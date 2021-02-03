@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import { useStoreContext } from "../../utils/GlobalState";
-import { ADD_INVENTORY, UPDATE_WAREHOUSE, LOADING, UPDATE_LAYOUT, UPDATE_ITEM, UPDATE_INVENTORY, UPDATE_BINQTY, DD_WAREHOUSE, DD_BIN, DD_SHELF } from "../../utils/actions";
+import { LOADING, UPDATE_ITEM, UPDATE_INVENTORY, DD_WAREHOUSE, DD_BIN, DD_SHELF } from "../../utils/actions";
 import API from "../../utils/API";
 
 function UpdateInventoryForm() {
@@ -91,10 +91,10 @@ function UpdateInventoryForm() {
     var itemNum = itemNumRef.current.value;
     var updateSkipped = false;
 
-    if (trxTypeRef.current.value == 'OUT') {
+    if (trxTypeRef.current.value === 'OUT') {
       quantity = parseInt(trxQtyRef.current.value) * -1;
     }
-    if (trxTypeRef.current.value == 'IN') {
+    if (trxTypeRef.current.value === 'IN') {
       quantity = parseInt(trxQtyRef.current.value);
     }
 
@@ -106,7 +106,7 @@ function UpdateInventoryForm() {
         var inserted = false;
         for (i = 0; i < bins.length; i++) {
           // if exists, run update
-          if (bins[i].bin == binNum && bins[i].itemNumber == itemNum) {
+          if (bins[i].bin === binNum && bins[i].itemNumber === itemNum) {
             let updatedBinQty = parseInt(bins[i].binQty) + quantity;
 
             // if binQty will be less than 1, skip update
@@ -236,27 +236,27 @@ function UpdateInventoryForm() {
       <form className="form-group mt-5 mb-5" onSubmit={handleSubmit}>
         <label>Warehouse</label>
         <select className="form-control mb-5" ref={warehouseRef} placeholder="Warehouse">
-          {state.ddWarehouse.length > 0 && state.ddWarehouse.map(wh =>
-            <option>{wh}</option>
+          {state.ddWarehouse.length > 0 && state.ddWarehouse.map((wh, warehouse) =>
+            <option key={warehouse}>{wh}</option>
           )};
             </select>
         <label>Item Number</label>
         <select className="form-control mb-5" ref={itemNumRef} placeholder="Item Number">
-          {state.items.length > 0 && state.items.map(item =>
-            <option>{item.itemNumber}</option>
+          {state.items.length > 0 && state.items.map((item, product) =>
+            <option key={product}>{item.itemNumber}</option>
           )};
             </select>
         {/* <input className="form-control mb-5" ref={itemNameRef} placeholder="Item Name" /> */}
         <label>Bin</label>
         <select className="form-control mb-5" ref={binRef}>
-          {state.ddBin.length > 0 && state.ddBin.map(bin =>
-            <option>{bin}</option>
+          {state.ddBin.length > 0 && state.ddBin.map((bin, container )=>
+            <option key={container}>{bin}</option>
           )};
             </select>
         <label>Shelf</label>
         <select className="form-control mb-5" ref={shelfRef}>
-          {state.ddShelf.length > 0 && state.ddShelf.map(shelfNo =>
-            <option>{shelfNo}</option>
+          {state.ddShelf.length > 0 && state.ddShelf.map((shelfNo, shelf) =>
+            <option key={shelf}>{shelfNo}</option>
           )};
             </select>
         <select className="form-control mb-5" ref={trxTypeRef} placeholder="Trx Type">

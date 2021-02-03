@@ -21,73 +21,73 @@ function FloorplanDiagram(props) {
     });
 
     function updateBinColors() {
-        if (bins && bins.A1 != "") {
+        if (bins && bins.A1 !== "") {
             binA1.style.fill = "#8AAABB";
         }
         if (bins && bins.A1 === "") {
             binA1.style.fill = "white";
         }
-        if (bins && bins.A2 != "") {
+        if (bins && bins.A2 !== "") {
             binA2.style.fill = "#8AAABB";
         }
         if (bins && bins.A2 === "") {
             binA2.style.fill = "white";
         }
-        if (bins && bins.B1 != "") {
+        if (bins && bins.B1 !== "") {
             binB1.style.fill = "#8AAABB";
         }
         if (bins && bins.B1 === "") {
             binB1.style.fill = "white";
         }
-        if (bins && bins.B2 != "") {
+        if (bins && bins.B2 !== "") {
             binB2.style.fill = "#8AAABB";
         }
         if (bins && bins.B2 === "") {
             binB2.style.fill = "white";
         }
-        if (bins && bins.B3 != "") {
+        if (bins && bins.B3 !== "") {
             binB3.style.fill = "#8AAABB";
         }
         if (bins && bins.B3 === "") {
             binB3.style.fill = "white";
         }
-        if (bins && bins.B4 != "") {
+        if (bins && bins.B4 !== "") {
             binB4.style.fill = "#8AAABB";
         }
         if (bins && bins.B4 === "") {
             binB4.style.fill = "white";
         }
-        if (bins && bins.C1 != "") {
+        if (bins && bins.C1 !== "") {
             binC1.style.fill = "#8AAABB";
         }
         if (bins && bins.C1 === "") {
             binC1.style.fill = "white";
         }
-        if (bins && bins.C2 != "") {
+        if (bins && bins.C2 !== "") {
             binC2.style.fill = "#8AAABB";
         }
         if (bins && bins.C2 === "") {
             binC2.style.fill = "white";
         }
-        if (bins && bins.C3 != "") {
+        if (bins && bins.C3 !== "") {
             binC3.style.fill = "#8AAABB";
         }
         if (bins && bins.C3 === "") {
             binC3.style.fill = "white";
         }
-        if (bins && bins.C4 != "") {
+        if (bins && bins.C4 !== "") {
             binC4.style.fill = "#8AAABB";
         }
         if (bins && bins.C4 === "") {
             binC4.style.fill = "white";
         }
-        if (bins && bins.D1 != "") {
+        if (bins && bins.D1 !== "") {
             binD1.style.fill = "#8AAABB";
         }
         if (bins && bins.D1 === "") {
             binD1.style.fill = "white";
         }
-        if (bins && bins.D2 != "") {
+        if (bins && bins.D2 !== "") {
             binD2.style.fill = "#8AAABB";
         }
         if (bins && bins.D2 === "") {
