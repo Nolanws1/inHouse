@@ -14,6 +14,7 @@ function CreateItemForm() {
   const handleSubmit = e => {
     e.preventDefault();
     dispatch({ type: LOADING });
+    var itemNum=itemNumRef.current.value;
     API.saveItem({
       itemNumber: itemNumRef.current.value,
       itemName: itemNameRef.current.value,
@@ -25,8 +26,32 @@ function CreateItemForm() {
           type: ADD_ITEM,
           post: result.data
         });
+
+        console.log("before insert bin qty");
+        API.saveBinQuantity({
+          warehouseCode: "CA",
+            bin: "NA",
+            itemNumber: itemNum,
+            binQty: 0,
+            modifiedDate: Date.now
+        }).then(results => {
+          console.log(results);
+          
+        })
+        .catch(err => console.log(err));
       })
-      .catch(err => console.log(err));
+      .catch(err => {
+        const errString = err.toString();
+        
+        if (errString.includes("500"))
+        {
+          alert('Error occurred: '+itemNum+' already exists');
+        }
+        else
+        {
+          alert('Error occurred: ' + err.message);
+        }
+      });
 
     itemNumRef.current.value = "";
     itemNameRef.current.value = "";
