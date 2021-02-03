@@ -16,7 +16,20 @@ module.exports = {
   createItem: function(req, res) {
     db.Item.create(req.body)
       .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
+      .catch( err => {
+        const errString = err.toString();
+        
+        if (errString.includes("E11000"))
+        {
+          return res.status(500).send('Item already exists');
+        }
+        else
+        {
+          return res.status(422).json(err);
+        }
+        
+        
+    });
   },
   updateItem: function(req, res) {
     db.Item.findOneAndUpdate({ _id: req.params.id }, req.body)
