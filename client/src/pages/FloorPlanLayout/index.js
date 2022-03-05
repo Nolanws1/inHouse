@@ -5,7 +5,6 @@ import API from "../../utils/API";
 import "./style.css";
 import FloorplanDiagram from "../../components/FloorplanDiagram";
 import FloorTable from '../../components/FloorTable';
-import { useAuth0 } from '@auth0/auth0-react';
 
 function FloorPlanLayout() {
     const [state, dispatch] = useStoreContext();
@@ -16,7 +15,6 @@ function FloorPlanLayout() {
         //currentMessage: `Click an item in the list to display quantities.`
     });
     const [currentMsg, setCurrentMsg] = useState(`Click an item in the list to display quantities.`);
-    const { isAuthenticated } = useAuth0();
     var quantities = state.binQuantities;
 
     useEffect(() => {
@@ -106,7 +104,7 @@ function FloorPlanLayout() {
     }
 
     return (
-        isAuthenticated && (
+
             <div className="floorplan-container">
 
                 <header className="main-head">
@@ -122,7 +120,6 @@ function FloorPlanLayout() {
                 </div>
 
             </div>
-        )
     );
 }
 

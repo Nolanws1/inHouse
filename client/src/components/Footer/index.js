@@ -1,12 +1,9 @@
 import React from 'react';
 import './style.css';
-import { useAuth0 } from '@auth0/auth0-react';
 
 const Footer = () => {
-  const { isAuthenticated } = useAuth0();
 
   return (
-    isAuthenticated && (
     <div className='main-footer'>
       <div className='container'>
         <div className='row'>
@@ -46,7 +43,6 @@ const Footer = () => {
         </div>
       </div>
     </div>
-  )
   )
 }
 

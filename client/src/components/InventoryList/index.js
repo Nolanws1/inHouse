@@ -37,7 +37,6 @@ useEffect(() => {
 }, []);
 
 return (
-    // isAuthenticated && (
     <div>
         <h1>All Items</h1>
         <h3 className="mb-5 mt-5">Click on a item to view</h3>
@@ -61,7 +60,6 @@ return (
         <Link to="favorites">View favorites</Link>
         </div> */}
     </div>
-    //)
 );
 }
 
